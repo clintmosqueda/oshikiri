@@ -1,0 +1,14 @@
+.show-pc {
+
+  @include viewport($md) {
+    display: none;
+  }
+}
+
+.show-sp {
+  display: none;
+
+  @include viewport($md) {
+    display: block;
+  }
+}

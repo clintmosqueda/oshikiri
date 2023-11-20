@@ -1,0 +1,451 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  display: none;
+  // padding-top: 198px;
+  // padding-top: 100px;
+
+  &.is-open {
+    display: block;
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(color(blue), 0.5);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+  }
+
+  &-wrapper {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    // padding-top: 100px;
+    padding-top: 198px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+
+    @include viewport($md) {
+      padding-top: 202px;
+    }
+  }
+
+  &-main {
+    max-width: 800px;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    background-color: color(white);
+    position: relative;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px color(lightGray);
+    padding: 0 50px 59px;
+
+    @include viewport($md) {
+      border-radius: 15px;
+      padding: 0 20px 59px;
+      width: calc(100% - 40px);
+      box-shadow: inset 0 0 0 5px color(lightGray);
+    }
+  }
+
+  &-close {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: color(white);
+    position: absolute;
+    top: -58px;
+    right: -50px;
+    box-shadow: inset 0 0 0 5px color(lightGray);
+    cursor: pointer;
+
+    @include viewport($md) {
+      top: -151px;
+      right: -3px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 17px;
+      height: 2px;
+      border-radius: 50px;
+      background-color: color(blue);
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &-feature {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -98px;
+    margin-bottom: -98px;
+
+    @include viewport($md) {
+      width: 280px;
+      top: -80px;
+      margin-bottom: -80px;
+    }
+
+    &-profile {
+      height: 400px;
+      width: 400px;
+      background-color: color(blue);
+      border-radius: 15px;
+      overflow: hidden;
+
+      @include viewport($md) {
+        height: 280px;
+        width: 280px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-name {
+      background-color: color(red);
+      color: color(white);
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-flex;
+      padding: 17px 38px;
+      border-radius: 50px;
+      margin-top: -23px;
+
+      @include viewport($md) {
+        padding: 12px 26px;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+  }
+
+  &-division {
+    font-size: 14px;
+    position: relative;
+    border-right: 1px solid rgba(color(blue), 0.5);
+    padding-right: 12px;
+    margin-right: 12px;
+
+    @include viewport($md) {
+      font-size: 12px;
+    }
+  }
+
+  &-joined {
+    font-size: 14px;
+
+    @include viewport($md) {
+      font-size: 12px;
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color(lightGray);
+    margin-top: 20px;
+    margin-bottom: 33px;
+    line-height: 1.5;
+
+    @include viewport($md) {
+      font-size: 18px;
+    }
+  }
+
+  &-discussions {
+    display: flex;
+    flex-direction: column;
+    gap: 64px 0;
+  }
+
+  &-discussion {}
+
+  &-question {
+    background-color: color(lightGray);
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 7px 22px;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 0 28px;
+    line-height: 1.56;
+
+    @include viewport($md) {
+      font-size: 14px;
+      align-items: flex-start;
+      border-radius: 5px;
+      padding: 15px 12px;
+      gap: 0 18px;
+    }
+
+    &-q {
+      font-family: $font-poppins;
+      font-size: 35px;
+      font-weight: 700;
+      color: color(blue);
+      position: relative;
+      line-height: 1;
+
+      @include viewport($md) {
+        font-size: 25px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 11px;
+        right: -17px;
+        content: '';
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: rgba(color(blue), 0.2);
+        box-shadow: 0 8px 0 0 rgba(color(blue), 0.2);
+
+        @include viewport($md) {
+          top: 4px;
+          right: -12px;
+        }
+      }
+    }
+  }
+
+  &-answer {
+    padding-left: 30px;
+    margin-top: 28px;
+
+    @include viewport($md) {
+      padding-left: 0;
+    }
+  }
+
+  &-desc {
+    padding-left: 17px;
+    font-size: 16px;
+    border-left: 2px solid color(lightGray);
+    line-height: 1.9;
+
+    @include viewport($md) {
+      font-size: 14px;
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  &-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 39px;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-schedule {
+    background-color: color(lightGray);
+    border-radius: 10px;
+    padding: 22px 50px 29px;
+    margin-top: 59px;
+
+    @include viewport($md) {
+      padding: 22px 10px 29px;
+    }
+
+    &-heading {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+
+      @include viewport($md) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-timeline {
+    background-color: color(white);
+    border-radius: 10px;
+    margin-top: 24px;
+    padding: 29px 30px 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    position: relative;
+    z-index: 1;
+
+    @include viewport($md) {
+      gap: 13px 0;
+      padding: 15px 16px 18px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 29px;
+      left: 63px;
+      height: calc(100% - 50px);
+      width: 3px;
+      content: '';
+      background-color: color(blue);
+      z-index: -1;
+
+      @include viewport($md) {
+        left: 38px;
+      }
+    }
+
+    dl {
+      display: flex;
+      align-items: center;
+      gap: 0 26px;
+
+      @include viewport($md) {
+        gap: 0 10px;
+      }
+    }
+
+    dt {
+      background-color: color(blue);
+      color: color(white);
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 50px;
+      padding: 9px 14px;
+
+      @include viewport($md) {
+        font-size: 12px;
+        padding: 4px 9px;
+      }
+    }
+
+    dd {
+      font-size: 16px;
+
+      @include viewport($md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-orginazation-chart {
+    margin-top: 48px;
+
+    &-title {
+      font-size: 22px;
+      font-weight: 600;
+      border-bottom: 1px solid color(lightGray);
+      padding-bottom: 21px;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      padding-left: 16px;
+
+      @include viewport($md) {
+        font-size: 18px;
+      }
+    }
+
+    &-figure {
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-job-description {
+    margin-top: 33px;
+
+    &-title {
+      font-size: 22px;
+      font-weight: 600;
+      border-bottom: 1px solid color(lightGray);
+      padding-bottom: 21px;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      padding-left: 16px;
+
+      @include viewport($md) {
+        font-size: 18px;
+      }
+    }
+
+    &-figure {
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-button {
+    max-width: 141px;
+    width: 100%;
+    margin: 60px auto 0;
+    background-color: color(lightGray);
+    color: color(blue);
+    flex-direction: row-reverse;
+    font-size: 16px;
+    padding: 0 10px;
+    height: 56px;
+
+    .button-icon {
+      top: -4px;
+    }
+
+    svg {
+      transform: scale(-1, -1);
+      stroke: color(blue);
+    }
+  }
+}

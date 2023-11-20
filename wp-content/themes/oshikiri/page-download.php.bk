@@ -1,0 +1,117 @@
+<?php
+/*
+* Template name: Download
+*/
+get_header(); ?>
+<?php
+  $breadcrumbs = [
+    array(
+      'text' => 'TOP',
+      'url' => resolve_url(),
+    ),
+    array(
+      'text' => '資料ダウンロード',
+      'url' => '#',
+    ),
+  ];
+?>
+
+<?php import_part('banner', array(
+  'modifier' => 'banner-alt',
+  'text_jp' => '資料ダウンロード',
+  'text_en' => 'Download.',
+  'circle_count' => 30,
+  'breadcrumbs' => $breadcrumbs
+));?>
+
+<?php import_part('/composition-slots/composition-start', array(
+  'breadcrumbs' => $breadcrumbs
+));?>
+
+<div class="contact contact-download">
+  <div class="contact-form">
+    <div class="contact-form-fields">
+      <div class="contact-group">
+        <label class="contact-label is-required">会社名</label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="株式会社オシキリ">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">資料名</label>
+        <div class="contact-field">
+          <div class="contact-select">
+            <select name="" id="">
+              <option value="">資料名</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">お名前</label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="田中太郎">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">メールアドレス</label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="example@oshikiri.com">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">お客様分類</label>
+        <div class="contact-field">
+          <div class="contact-select">
+            <select name="" id="">
+              <option value="">選択してください</option>
+              <option value="パンメーカー">パンメーカー</option>
+              <option value="食品メーカー">食品メーカー</option>
+              <option value="商社・代理店">商社・代理店</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">お問い合わせ内容</label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="お問い合わせ内容を入力してください">
+          </div>
+        </div>
+      </div>
+
+    <div class="contact-agree">
+      <div class="contact-agree-wrap">
+        <input id="contact-agree-checkbox" class="contact-agree-checkbox" type="checkbox">
+        <label for="contact-agree-checkbox" class="contact-agree-label"></label>
+        <p class="contact-agree-text">
+          <a href="/privacy" target="_blank">プライバシーポリシー</a>
+          に同意します
+        </p>
+      </div>
+      <span class="contact-agree-error">同意にチェックをつけてください</span>
+    </div>
+
+    <div class="contact-actions">
+      <button class="contact-button contact-button-confirm">確認する</button>
+    </div>
+
+  </div>
+</div>
+
+<?php import_part('/composition-slots/composition-end');?>
+<?php
+get_footer();

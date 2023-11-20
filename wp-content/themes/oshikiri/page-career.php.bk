@@ -1,0 +1,143 @@
+<?php
+/*
+* Template name: Career
+*/
+get_header(); ?>
+<?php
+  $breadcrumbs = [
+    array(
+      'text' => 'TOP',
+      'url' => resolve_url(),
+    ),
+    array(
+      'text' => 'お問い合わせ',
+      'url' => '#',
+    ),
+  ];
+
+  $progress = [
+    array(
+      'text' => '入力',
+      'modifier' => 'is-active'
+    ),
+    array(
+      'text' => '確認',
+      'modifier' => ''
+    ),
+    array(
+      'text' => '完了',
+      'modifier' => ''
+    ),
+  ]
+?>
+
+<?php import_part('banner', array(
+  'modifier' => 'banner-alt',
+  'text_jp' => '中途採用エントリーフォーム',
+  'text_en' => 'Entry.',
+  'circle_count' => 30,
+  'breadcrumbs' => $breadcrumbs
+));?>
+
+<?php import_part('/composition-slots/composition-start', array(
+  'breadcrumbs' => $breadcrumbs
+));?>
+
+<div class="contact">
+  <?php import_part('progress', array(
+    'lists' => $progress
+  ))?>
+
+  <div class="contact-form">
+<div class="contact-form-fields">
+  <div class="contact-group">
+    <label class="contact-label is-required">お名前</label>
+    <div class="contact-field">
+      <div class="contact-input">
+        <input type="text" placeholder="田中太郎">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-group">
+    <label class="contact-label is-required">お名前（カナ）</label>
+    <div class="contact-field">
+      <div class="contact-input">
+        <input type="text" placeholder="たなかたろう">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-group">
+    <label class="contact-label is-required">電話番号</label>
+    <div class="contact-field">
+      <div class="contact-input">
+        <input type="text" placeholder="0901235678">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-group">
+    <label class="contact-label is-required">メールアドレス</label>
+    <div class="contact-field">
+      <div class="contact-input">
+        <input type="text" placeholder="example@oshikiri.com">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-group">
+    <label class="contact-label">履歴書</label>
+    <div class="contact-field contact-field-upload">
+      <div class="contact-upload">
+        <label class="contact-upload-button">
+          ファイルを選択
+          <input type="file" class="js-contact-upload-file">
+        </label>
+        <span class="contact-upload-filename js-contact-upload-filename">選択されていません</span>
+        <!-- <span class="contact-upload-clear">x</span> -->
+      </div>
+      <div class="contact-note">※Word、Excel、PDFのいずれか
+        ※最大5MBまで
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-group">
+    <label class="contact-label">職務経歴書</label>
+    <div class="contact-field contact-field-upload">
+      <div class="contact-upload">
+        <label class="contact-upload-button">
+          ファイルを選択
+          <input type="file" class="js-contact-upload-file">
+        </label>
+        <span class="contact-upload-filename js-contact-upload-filename">選択されていません</span>
+        <!-- <span class="contact-upload-clear">x</span> -->
+      </div>
+      <div class="contact-note">※Word、Excel、PDFのいずれか
+        ※最大5MBまで
+      </div>
+    </div>
+  </div>
+
+<div class="contact-agree">
+  <div class="contact-agree-wrap">
+    <input id="contact-agree-checkbox" class="contact-agree-checkbox" type="checkbox">
+    <label for="contact-agree-checkbox" class="contact-agree-label"></label>
+    <p class="contact-agree-text">
+      <a href="/privacy" target="_blank">プライバシーポリシー</a>
+      に同意します
+    </p>
+  </div>
+  <span class="contact-agree-error">同意にチェックをつけてください</span>
+</div>
+
+<div class="contact-actions">
+  <button class="contact-button contact-button-confirm">確認する</button>
+</div>
+  </div>
+</div>
+
+<?php import_part('/composition-slots/composition-end');?>
+<?php
+get_footer();

@@ -1,0 +1,117 @@
+.mapsite {
+  padding-right: 54px;
+
+  @include viewport($md) {
+    padding: 0 20px;
+  }
+
+  &-label {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    color: color(blue);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.14em;
+    gap: 0 31px;
+
+    @include viewport($md) {
+      font-size: 24px;
+      gap: 0 12px;
+    }
+
+    &-icon {
+      height: 46px;
+      width: 8px;
+      border-radius: 50px;
+      display: block;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+
+      @include viewport($md) {
+        height: 31px;
+        width: 7px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 50%;
+        width: 100%;
+      }
+
+      &::before {
+        background-color: color(blue);
+        top: 0;
+      }
+
+      &::after {
+        background-color: color(red);
+        bottom: 0;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0 0 41px;
+    margin-top: 40px;
+    gap: 30px 40px;
+
+    @include viewport($md) {
+      margin-top: 29px;
+      padding-left: 11px;
+    }
+
+    @include viewport($sm) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 19px;
+    }
+  }
+
+  &-item {
+    width: 100%;
+  }
+
+  &-link {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    border-bottom: 1px solid color(border);
+    letter-spacing: 0.03em;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    position: relative;
+    transition: border-color 300ms ease-in-out;
+
+    @include viewport($md) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      border-color: color(blue);
+    }
+
+    &-icon {
+      position: absolute;
+      top: -3px;
+      right: 0;
+      width: 11px;
+      height: 9px;
+
+      @include viewport($md) {
+        right: 20px;
+        top: 2px
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        stroke: color(blue);
+      }
+    }
+  }
+}

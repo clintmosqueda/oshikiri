@@ -1,0 +1,134 @@
+.cases {
+  margin-top: 140px;
+
+  @include viewport($md) {
+    margin-top: 74px;
+  }
+
+  &-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include viewport($md) {
+      padding: 0 20px;
+    }
+  }
+
+  &-heading {
+    text-align: center;
+    color: color(blue);
+
+    @include viewport($md) {
+      gap: 15px 0;
+    }
+  }
+
+  &-links {
+    background-color: color(lightGray);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 19px;
+    padding: 81px 0;
+    margin-top: 61px;
+
+    @include viewport($md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 20px;
+      padding: 40px 20px 45px;
+      margin-top: 51px;
+    }
+  }
+
+  &-link {
+    color: color(white);
+    background-color: color(darkGray);
+    font-size: 20px;
+    padding: 20px 22px;
+
+    @include viewport($md) {
+      font-size: 17px;
+      padding: 17px 0 18px;
+      text-align: center;
+    }
+  }
+
+  &-articles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 35px;
+    margin-top: 49px;
+
+    @include viewport($md) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      gap: 10px 0;
+    }
+  }
+
+  &-button {
+    background-color: color(lightGray);
+    color: color(blue);
+    width: 163px;
+    margin: 36px auto 0;
+    padding: 0;
+
+    @include viewport($md) {
+      margin-top: 6px;
+    }
+
+    svg {
+      stroke: color(blue);
+    }
+  }
+
+  &-archives {
+    padding-right: 54px;
+
+    @include viewport($md) {
+      padding: 0 20px;
+    }
+
+    .cases-articles {
+      gap: 35px;
+
+      @include viewport($md) {
+        padding: 0 20px;
+        margin-top: 60px;
+        gap: 18px;
+      }
+    }
+
+    .card-cases-figure {
+      @include viewport($md) {
+        padding-top: calc((107 / 155) * 100%);
+        border-radius: 10px;
+      }
+    }
+
+    .card-cases-content {
+      @include viewport($md) {
+        padding: 15px 0;
+        gap: 8px 0;
+      }
+    }
+
+    .card-cases-title {
+      @include viewport($md) {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    .card-cases-par {
+      @include viewport($md) {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+    }
+  }
+}

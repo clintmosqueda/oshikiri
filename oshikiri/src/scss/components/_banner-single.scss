@@ -1,0 +1,177 @@
+.banner-single {
+  &-circle {
+    width: 732px;
+    height: 610px;
+    left: -25px;
+
+    @include viewport($md) {
+      width: 376px;
+      height: 376px;
+      left: auto;
+      right: -48px;
+    }
+
+    .circle-shape {
+
+      @include viewport($md) {
+        height: 94px;
+        width: 94px;
+      }
+
+      &:first-of-type {
+        background-color: color(blue);
+
+        @include viewport($md) {
+          background-color: color(lightGray);
+        }
+      }
+
+      &:nth-of-type(18),
+      &:nth-of-type(24),
+      &:nth-of-type(26),
+      &:nth-of-type(27),
+      &:nth-of-type(28),
+      &:nth-of-type(29),
+      &:nth-of-type(30) {
+        background-color: transparent;
+      }
+
+      &:nth-of-type(4) {
+        @include viewport($md) {
+          background-color: color(blue);
+        }
+      }
+
+      &:nth-of-type(15),
+      &:nth-of-type(14),
+      &:nth-of-type(13),
+      &:nth-of-type(10),
+      &:nth-of-type(9),
+      &:nth-of-type(5) {
+        @include viewport($md) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding: 94px 20px 0;
+
+    @include viewport($md) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 102px 20px 0;
+      gap: 51px 0;
+    }
+  }
+
+  &-wrap {
+    // height: 303px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include viewport($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include viewport($md) {
+      height: auto;
+    }
+  }
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 8px 0;
+    align-items: flex-start;
+    z-index: 1;
+    max-width: 640px;
+    width: 100%;
+
+    @include viewport($md) {
+      gap: 15px 0;
+    }
+
+    &-jp {
+      color: color(white);
+      background-color: color(blue);
+      font-size: 42px;
+      border-radius: 12px;
+      padding: 40px;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+
+      @include viewport($md) {
+        font-size: 28px;
+        padding: 30px 21px;
+        border-radius: 8px;
+      }
+    }
+
+    &-en {
+      font-family: $font-poppins;
+      font-size: 32px;
+      color: color(blue);
+      padding-left: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      @include viewport($md) {
+        font-size: 24px;
+        padding-left: 21px;
+      }
+    }
+  }
+
+  &-figure {
+    position: relative;
+    width: 512px;
+    height: 414px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include viewport($lg) {
+      width: 100%;
+      height: 280px;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+
+      @include viewport($md) {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-news {
+    padding-left: 68px;
+
+    @include viewport($md) {
+      padding-left: 20px;
+    }
+
+    .banner-single-wrap {
+      justify-content: flex-start;
+    }
+
+    .banner-single-heading-jp {
+      padding: 32px 40px;
+
+      @include viewport($md) {
+        padding: 30px 21px;
+      }
+
+
+    }
+  }
+}

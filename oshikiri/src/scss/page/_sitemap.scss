@@ -1,0 +1,10 @@
+.sitemap {
+  display: flex;
+  flex-direction: column;
+  gap: 70px 0;
+  margin-top: 73px;
+
+  @include viewport($md) {
+    gap: 38px 0;
+  }
+}

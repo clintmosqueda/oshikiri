@@ -1,0 +1,26 @@
+.heading {
+  font-weight: bold;
+  font-family: $font-poppins;
+  width: 100%;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px 0;
+
+  @include viewport($md) {
+    font-size: 32px;
+    gap: 9px 0;
+  }
+
+  span {
+    display: block;
+    font-family: $font-noto-sans;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+
+    @include viewport($md) {
+      font-size: 14px;
+    }
+  }
+}

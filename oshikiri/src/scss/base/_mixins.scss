@@ -1,0 +1,31 @@
+@mixin viewport($size, $type: max) {
+  @if $type ==min {
+    $size: $size + 1
+  }
+
+  @media all and (#{$type}-width: $size) {
+    @content
+  }
+}
+
+@mixin line-clamp($number_of_line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $number_of_line;
+}
+
+@mixin bg-default {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin img-ratio {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}

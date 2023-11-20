@@ -1,0 +1,26 @@
+.mv {
+  // background-color: teal;
+  // margin-top: -92px;
+
+  &-wrapper {
+    overflow: hidden;
+    // height: 100vh;
+  }
+
+  &-content {
+    // height: 100vh;
+  }
+
+  &-slide {
+    height: 100vh;
+
+    @include viewport($md) {
+      height: 449px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

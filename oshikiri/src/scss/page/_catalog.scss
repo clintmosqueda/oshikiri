@@ -1,0 +1,83 @@
+.catalog {
+
+  &-sidebar {
+    padding-top: 114px;
+
+    &-heading {
+      font-family: $font-poppins;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    &-list {
+      flex-direction: column;
+      display: inline-flex;
+      gap: 23px 0;
+      padding-left: 22px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-color: rgba(color(blue), 0.2);
+      }
+    }
+
+    &-item {
+      display: inline-block;
+    }
+
+    &-link {
+      font-size: 15px;
+
+      font-weight: 600;
+      border-radius: 50px;
+      display: inline-block;
+
+
+      .is-active & {
+        padding: 9px 16px;
+        background-color: color(blue);
+        color: color(white)
+      }
+    }
+  }
+
+  &-content {
+    padding-right: 56px;
+    padding-top: 114px;
+  }
+
+  &-cards {
+    flex-direction: column;
+    display: flex;
+    gap: 60px 0;
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 32px;
+
+      &:not(:first-child) {
+        border-top: 1px solid color(border);
+        padding-top: 43px;
+      }
+    }
+  }
+
+  &-card {
+    padding-right: 23px;
+    border-top: 1px solid color(border);
+    padding-top: 42px;
+
+    &:nth-child(-n+4) {
+      padding-top: 0;
+      border-top: 0;
+    }
+  }
+}

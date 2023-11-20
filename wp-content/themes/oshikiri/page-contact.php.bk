@@ -1,0 +1,190 @@
+<?php
+/*
+* Template name: Contact
+*/
+get_header(); ?>
+<?php import_part('banner', array(
+  'modifier' => 'banner-alt',
+  'text_jp' => 'お問い合わせ',
+  'text_en' => 'Contact.',
+  'circle_count' => 30
+));?>
+
+<?php
+  $breadcrumbs = [
+    array(
+      'text' => 'TOP',
+      'url' => resolve_url(),
+    ),
+    array(
+      'text' => 'お問い合わせ',
+      'url' => '#',
+    ),
+  ];
+
+  $progress = [
+    array(
+      'text' => '入力',
+      'modifier' => 'is-active'
+    ),
+    array(
+      'text' => '確認',
+      'modifier' => ''
+    ),
+    array(
+      'text' => '完了',
+      'modifier' => ''
+    ),
+  ]
+?>
+
+<?php import_part('/composition-slots/composition-start', array(
+  'breadcrumbs' => $breadcrumbs
+));?>
+
+<div class="contact">
+  <?php import_part('progress', array(
+    'lists' => $progress
+  ))?>
+
+  <div class="contact-form">
+    <div class="contact-form-fields">
+      <div class="contact-group">
+        <label class="contact-label is-required">
+          お問い合わせ種別
+        </label>
+        <div class="contact-field">
+          <div class="contact-select">
+            <select name="" id="">
+              <option value="">選択してください</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label">
+        お客様分類
+        </label>
+        <div class="contact-field">
+          <div class="contact-select">
+            <select name="" id="">
+              <option value="">選択してください</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">
+        会社名
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="株式会社オシキリ">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label">
+        お名前
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="田中太郎">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">
+        郵便番号
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="2520811（ハイフンなしで入力してください）">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label">
+        都道府県
+        </label>
+        <div class="contact-field">
+          <div class="contact-select">
+            <select name="" id="">
+              <option value="">選択してください</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label">
+        住所
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="番地以降、建物名まで入力してください">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">
+        電話番号
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="0901235678">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">
+        メールアドレス
+        </label>
+        <div class="contact-field">
+          <div class="contact-input">
+            <input type="text" placeholder="example@oshikiri.com">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <label class="contact-label is-required">
+        お問い合わせ内容
+        </label>
+        <div class="contact-field">
+          <div class="contact-textarea">
+            <textarea placeholder="お問い合わせ内容を入力してください""></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-agree">
+      <div class="contact-agree-wrap">
+        <input id="contact-agree-checkbox" class="contact-agree-checkbox" type="checkbox">
+        <label for="contact-agree-checkbox" class="contact-agree-label"></label>
+        <p class="contact-agree-text">
+          <a href="/privacy" target="_blank">プライバシーポリシー</a>
+          に同意します
+        </p>
+      </div>
+      <span class="contact-agree-error">同意にチェックをつけてください</span>
+    </div>
+
+    <div class="contact-actions">
+      <button class="contact-button contact-button-confirm">確認する</button>
+    </div>
+
+  </div>
+</div>
+
+<?php import_part('/composition-slots/composition-end');?>
+<?php
+get_footer();

@@ -1,0 +1,135 @@
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  &-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  &-shape {
+    flex-shrink: 0;
+    display: block;
+    border-radius: 50%;
+    width: 122px;
+    height: 122px;
+    background-color: color(lightGray);
+  }
+
+  &-slogan {
+    width: 490px;
+    height: 320px;
+    top: 30px;
+    left: -25px;
+    z-index: -1;
+
+    @include viewport($md) {
+      top: 6px;
+      left: -114px;
+      height: 462px;
+      width: 462px;
+    }
+
+    .circle-group {
+      top: auto;
+      bottom: 0;
+    }
+
+    .circle-shape {
+
+      @include viewport($md) {
+        width: 154px;
+        height: 154px;
+      }
+
+      &:nth-child(9) {
+        background-color: color(blue);
+
+        @include viewport($md) {
+          background-color: color(lightGray);
+        }
+      }
+
+      &:nth-child(4) {
+
+        @include viewport($md) {
+          background-color: color(blue);
+        }
+      }
+
+      &:last-of-type {
+        @include viewport($md) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  // &-banner {
+  //   width: 490px;
+  //   height: 488px;
+  //   top: 0;
+  //   left: -25px;
+
+  //   .circle-group {
+  //     top: 0;
+  //   }
+
+  //   .circle-shape {
+  //     &:nth-child(1) {
+  //       background-color: color(blue);
+  //     }
+
+  //     &:nth-child(14),
+  //     &:nth-child(15),
+  //     &:nth-child(16) {
+  //       background-color: transparent;
+  //     }
+  //   }
+  // }
+
+  &-corporation {
+    width: 610px;
+    height: 488px;
+    top: auto;
+    bottom: -83px;
+    left: -76px;
+
+    @include viewport($md) {
+      bottom: auto;
+      top: -24px;
+      right: -109px;
+      left: auto;
+      width: 304px;
+      height: 456px;
+    }
+
+    .circle-group {
+      top: 0;
+    }
+
+    .circle-shape {
+      background-color: color(white);
+
+      @include viewport($md) {
+        width: 152px;
+        height: 152px;
+      }
+
+      &:nth-child(2) {
+        background-color: color(blue);
+
+        @include viewport($md) {
+          background-color: color(white);
+        }
+      }
+    }
+  }
+}

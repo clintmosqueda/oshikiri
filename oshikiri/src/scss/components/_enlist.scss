@@ -1,0 +1,93 @@
+.enlist {
+  background-color: color(blue);
+  color: color(white);
+  max-width: 1000px;
+  width: 100%;
+  margin: 115px auto 0;
+  border-radius: 30px;
+  position: relative;
+  padding: 61px 70px 47px;
+
+  @include viewport($md) {
+    margin-left: auto;
+    margin-right: 0;
+    width: 95%;
+    border-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: 1;
+    padding: 275px 20px 62px 51px;
+  }
+
+  &-figure {
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    right: 0;
+    width: 565px;
+    height: 495px;
+    overflow: hidden;
+
+    @include viewport($md) {
+      width: 439px;
+      height: 378px;
+      bottom: auto;
+      top: -52px;
+      right: -106px;
+      z-index: -1;
+    }
+
+    img {
+      display: block;
+      width: 621px;
+      height: 535px;
+      object-fit: cover;
+
+      @include viewport($md) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-heading {
+    @include viewport($md) {
+      font-size: 60px;
+      gap: 15px 0;
+    }
+
+    .heading-sub {
+      @include viewport($md) {
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &-par {
+    white-space: pre-line;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    line-height: 2;
+    margin-top: 53px;
+
+    @include viewport($md) {
+      font-size: 14px;
+      margin-top: 33px;
+      line-height: 2.25;
+    }
+  }
+
+  &-button {
+    background-color: color(red);
+    width: 177px;
+    margin-top: 35px;
+
+    @include viewport($md) {
+      margin-top: 29px;
+    }
+
+    svg {
+      stroke: color(white)
+    }
+  }
+}

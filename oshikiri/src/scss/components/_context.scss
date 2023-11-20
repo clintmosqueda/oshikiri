@@ -1,0 +1,343 @@
+.context {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  padding-right: 100px;
+
+  @include viewport($lg) {
+    padding: 0 20px;
+  }
+
+  &-wrap {
+    width: 69.12vw;
+
+    @include viewport($lg) {
+      width: 100%;
+    }
+
+    &>div {
+      margin-top: 50px;
+    }
+
+    div:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 0.12em;
+    margin-bottom: 56px;
+    font-family: $font-noto-sans;
+
+    @include viewport($md) {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 17px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -6px;
+      left: -40px;
+      display: inline-block;
+      flex-shrink: 0;
+      content: '';
+      height: 46px;
+      width: 8px;
+      background-color: color(blue);
+      border-radius: 50px;
+      box-shadow: inset 0 -22px 0 0 color(red);
+
+      @include viewport($md) {
+        left: -20px;
+        height: 31px;
+        width: 7px;
+        box-shadow: inset 0 -13px 0 0 color(red);
+      }
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 56px;
+    border-bottom: 1px solid color(lightGray);
+    letter-spacing: 0.12em;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+    @include viewport($md) {
+      font-size: 18px;
+      padding-bottom: 11px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    white-space: pre-line;
+    line-height: 1.7;
+    margin-bottom: 23px;
+
+    @include viewport($md) {
+      font-size: 14px;
+      line-height: 2;
+      margin: 16px 0 18px;
+    }
+  }
+
+  ul,
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 11px 0;
+    margin-bottom: 43px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 16px;
+    gap: 11px 0;
+
+    @include viewport($md) {
+      gap: 3px 0;
+    }
+  }
+
+  ul {
+    gap: 6px 0;
+    list-style-type: disc;
+    padding-left: 16px;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-line;
+
+    @include viewport($md) {
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &-group {
+    display: flex;
+    gap: 20px;
+
+    @include viewport($sm) {
+      flex-direction: column;
+    }
+
+    &-desc {
+      width: 100%;
+    }
+
+    &-figure {
+      width: 47%;
+      height: 281px;
+      border-radius: 15px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+
+      @include viewport($sm) {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  h3.context-cluster-title {
+    margin-bottom: 40px;
+  }
+
+  &-cluster {
+
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+      margin-bottom: 74px;
+
+      @include viewport($sm) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-figure {
+      height: 272px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-label {
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &-photo {
+    border-radius: 15px;
+    width: 100%;
+    height: 446px;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+
+    @include viewport($md) {
+      height: 250px;
+    }
+
+    img {
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-slider {
+    margin-top: 50px;
+
+    &-figure {
+      width: 100%;
+      height: 420px;
+      border-radius: 15px;
+      overflow: hidden;
+
+      @include viewport($md) {
+        height: 250px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 30px;
+      margin-top: 15px;
+    }
+
+    &-list {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 4px;
+      width: auto !important;
+      cursor: pointer;
+
+      &-item {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: color(lightGray);
+        flex-shrink: 0;
+
+        &.is-active {
+          background-color: color(blue);
+        }
+      }
+    }
+
+    &-button {
+      display: flex;
+      width: 29px;
+      height: 29px;
+      flex-shrink: 0;
+      background-color: color(lightGray);
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 3px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: color(border);
+      }
+
+      svg {
+        stroke: color(blue);
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+      }
+    }
+
+    &-prev {
+      transform: scale(-1, -1);
+    }
+
+    &-next {}
+  }
+
+  &-body {
+
+    tr,
+    th,
+    td {
+      border: 1px solid color(border);
+      font-size: 14px;
+      height: auto !important;
+      letter-spacing: 0.05em;
+    }
+
+    th {
+      background-color: color(lightGray);
+      color: color(blue);
+      padding: 16px 14px;
+    }
+
+    tr,
+    td {
+      padding: 16px 14px;
+    }
+
+  }
+
+  &-title-description {
+    @include viewport($md) {
+      padding: 0 20px
+    }
+  }
+
+  &-title-description-image {
+    @include viewport($md) {
+      padding: 0 20px
+    }
+  }
+}

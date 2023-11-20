@@ -1,0 +1,38 @@
+html {
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
+	background-color: color(white);
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	text-rendering: auto;
+	font-family: $font-noto-sans !important;
+	font-size: 14px;
+	color: color(blue);
+	background-color: color(white);
+
+	@include viewport($md) {
+		min-width: initial;
+	}
+}
+
+.wrapper {
+	width: $wrapper-size + 40px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@include viewport($md) {
+		padding: 0;
+	}
+}
+
+.wrap {
+	position: relative;
+	overflow: clip;
+}

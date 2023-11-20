@@ -1,0 +1,84 @@
+.partner {
+  display: flex;
+  background-color: color(lightGray);
+  padding: 40px;
+  border-radius: 30px;
+  gap: 0 37px;
+
+  @include viewport($md) {
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 31px 20px;
+  }
+
+  &-figure {
+    max-width: 414px;
+    width: 100%;
+    height: 263px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+
+    @include viewport($md) {
+      border-radius: 10px;
+      padding-top: calc((20 / 31) * 100%);
+      height: auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include viewport($md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &-content {
+    color: color(blue);
+    padding-top: 25px;
+
+    @include viewport($md) {
+      padding-top: 33px;
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $font-noto-sans;
+    margin-bottom: 22px;
+
+    @include viewport($md) {
+      font-size: 20px;
+      margin-bottom: 19px;
+    }
+  }
+
+  &-par {
+    font-size: 16px;
+    line-height: 1.85;
+    letter-spacing: 0.001em;
+    margin-top: 15px;
+  }
+
+  &-link {
+    display: inline-block;
+    text-decoration: underline;
+    color: color(white);
+    background-color: color(blue);
+    border-radius: 50px;
+    padding: 20px 26px;
+    margin-top: 13px;
+
+    @include viewport($md) {
+      font-size: 14px;
+    }
+  }
+}

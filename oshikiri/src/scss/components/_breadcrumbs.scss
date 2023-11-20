@@ -1,0 +1,89 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 43px;
+
+  @include viewport($md) {
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  &-link {
+    font-size: 16px;
+    color: color(blue);
+    letter-spacing: 0.03em;
+    position: relative;
+    padding: 0 13px;
+
+    @include viewport($md) {
+      font-size: 12px;
+      padding: 0 11px;
+    }
+
+    &:first-of-type {
+      @include viewport($md) {
+        padding-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:not(:first-of-type):before {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: color(gray);
+
+      @include viewport($md) {
+        height: 10px;
+      }
+    }
+  }
+
+  &-product-archive {
+    margin-top: 50px;
+
+    @include viewport($md) {
+      display: none;
+    }
+  }
+
+  &-composition {
+    @include viewport($md) {
+      display: none;
+    }
+  }
+
+  &-banner {
+    display: none;
+
+    @include viewport($md) {
+      display: flex;
+    }
+  }
+
+  &-banner-single {
+    margin-top: 20px;
+
+    @include viewport($md) {
+      margin-top: 0;
+    }
+
+
+    .breadcrumbs-link {
+      &:last-of-type {
+        @include viewport($md) {
+          display: none;
+        }
+      }
+    }
+  }
+}

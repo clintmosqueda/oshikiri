@@ -1,0 +1,261 @@
+.recruit {
+  padding-right: 56px;
+
+  @include viewport($md) {
+    padding: 0 20px;
+  }
+
+  &-caption {
+    margin-top: 106px;
+
+    .caption-heading {
+      padding-left: 0;
+    }
+  }
+
+  &-excerpt {
+    font-size: 28px;
+    white-space: pre-line;
+    line-height: 1.8;
+    padding-left: 56px;
+    margin-top: 32px;
+
+    @include viewport($md) {
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+
+  &-workspace {
+    margin-top: 38px;
+    border-radius: 30px;
+    padding-top: calc((200 / 519) * 100%);
+    background-color: color(lightGray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include viewport($md) {
+      padding-top: calc((8 / 7) * 100%);
+      border-radius: 15px;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 19px;
+      color: color(blue);
+
+      @include viewport($md) {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &-about {
+    padding: 0 0 0 67px;
+
+    @include viewport($lg) {
+      padding: 0;
+    }
+
+    @include viewport($md) {
+      padding: 0 20px;
+    }
+
+    &-par {
+      font-size: 16px;
+      white-space: pre-line;
+      line-height: 1.9;
+      margin-top: 55px;
+    }
+
+    &-operation {
+      margin-top: 60px;
+
+      .operation-content {
+        min-height: 205px;
+
+        @include viewport($md) {
+          min-height: 152px;
+        }
+      }
+    }
+  }
+
+  &-organization {
+    padding: 0 0 0 67px;
+    margin-top: 65px;
+
+    @include viewport($lg) {
+      padding: 0;
+    }
+
+    &-excerpt {
+      font-size: 16px;
+      line-height: 2;
+
+      @include viewport($md) {
+        font-size: 14px;
+        padding: 0 25px;
+      }
+    }
+  }
+
+  &-interview {
+    box-shadow: inset 0 0 0 2px color(lightGray);
+    border-radius: 15px;
+    position: relative;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    padding-left: 56px;
+    margin-top: 30px;
+    padding-top: 6px;
+
+    @include viewport($md) {
+      padding-left: 0;
+      flex-direction: column-reverse;
+      padding-top: 0;
+      align-items: center;
+      justify-content: center;
+      height: 135px;
+      gap: 13px 0;
+      padding-bottom: 5px;
+    }
+
+    &-link {
+      font-size: 24px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      border-bottom: 1px solid color(blue);
+      padding-bottom: 5px;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 1;
+
+      @include viewport($md) {
+        font-size: 20px;
+      }
+
+      &-icon {
+        svg {
+          width: 16px;
+          height: 13px;
+          stroke: color(blue);
+        }
+      }
+    }
+
+    &-text {
+      font-family: $font-poppins;
+      font-size: 117px;
+      font-weight: 700;
+      color: color(lightGray);
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 522px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      @include viewport($md) {
+        font-size: 59px;
+        width: auto;
+        position: relative;
+        top: auto;
+        right: auto;
+        height: auto;
+        overflow: visible;
+        text-align: center;
+        display: block;
+        line-height: 0.8;
+      }
+
+      span {
+        display: block;
+        white-space: nowrap;
+      }
+    }
+
+    &-figure {
+      position: absolute;
+      bottom: 0;
+      right: 110px;
+      width: 255px;
+
+      @include viewport($lg) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 201px;
+        display: block;
+        object-fit: contain;
+      }
+    }
+
+    &-circle {
+      border-radius: 50%;
+      background-color: color(lightGray);
+      display: block;
+      position: absolute;
+
+      &.small {
+        width: 21px;
+        height: 21px;
+        top: 18px;
+        left: 71px;
+        box-shadow: 31px 124px 0 -4px color(lightGray),
+          96px 11px 0 -7px color(lightGray),
+          356px 0px 0 -1px color(lightGray),
+          406px 13px 0 -1px color(lightGray);
+
+        @include viewport($md) {
+          box-shadow: 81px 53px 0 5px color(lightGray),
+            195px 50px 0 8px color(lightGray),
+            283px -76px 0 4px color(lightGray),
+            324px -47px 0 5px color(lightGray);
+          top: 52px;
+          left: -20px;
+          height: 7px;
+          width: 7px;
+        }
+      }
+
+      &.big {
+        width: 66px;
+        height: 66px;
+        bottom: -11px;
+        left: 40%;
+
+        @include viewport($md) {
+          width: 31px;
+          height: 31px;
+          bottom: auto;
+          left: 10px;
+          top: -9px;
+        }
+      }
+    }
+  }
+
+  &-composition {
+    .composition-sidebar {
+      @include viewport($md) {
+        display: none;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,71 @@
+.corporation {
+  background-color: color(lightGray);
+  margin-top: 121px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @include viewport($md) {
+    margin-top: 61px;
+  }
+
+  &-content {
+    display: flex;
+    width: 100%;
+    gap: 0 108px;
+    padding-top: 90px;
+    padding-bottom: 89px;
+
+    @include viewport($md) {
+      flex-direction: column;
+      padding: 66px 40px 89px;
+    }
+  }
+
+  &-left {
+    @include viewport($md) {
+      margin-bottom: 46px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &-heading {
+    color: color(blue);
+
+    @include viewport($md) {
+      text-align: center;
+      gap: 15px 0;
+    }
+
+    span {
+      margin-left: 10px;
+
+      @include viewport($md) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-right {
+    width: 100%;
+
+    @include viewport($md) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &-par {
+    font-size: 16px;
+    white-space: pre-line;
+    letter-spacing: 0.035em;
+    line-height: 2.4;
+    color: color(blue);
+
+    @include viewport($md) {
+      line-height: 2;
+      text-align: center;
+    }
+  }
+}

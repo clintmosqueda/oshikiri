@@ -1,0 +1,112 @@
+.info {
+  margin-top: 114px;
+
+  @include viewport($md) {
+    margin-top: 57px;
+  }
+
+  &-content {
+    position: relative;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+
+    @include viewport($md) {
+      padding-left: 20px;
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    color: color(blue);
+    font-weight: bold;
+    letter-spacing: 0.11em;
+
+    @include viewport($md) {
+      font-size: 18px;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: color(lightGray);
+    color: color(blue);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 36px;
+    gap: 0 6px;
+    letter-spacing: 0.04em;
+    position: absolute;
+    top: -15px;
+    right: 0;
+
+    @include viewport($md) {
+      position: static;
+      width: 176px;
+      margin: 39px auto 0;
+    }
+
+    &-icon {
+      width: 12px;
+      height: 10px;
+      display: inline-block;
+      margin-top: -4px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        stroke: color(blue);
+      }
+    }
+  }
+
+  &-carousel {
+    margin-top: 34px;
+
+    @include viewport($md) {
+      padding: 0 20px;
+      margin-top: 21px;
+    }
+
+    &-wrap {
+      // padding-right: 182px;
+
+      @include viewport($lg) {
+        padding-right: 0;
+      }
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      width: 320px !important;
+    }
+
+    &-slide {
+      width: 320px;
+    }
+
+    &-scroll {
+      background-color: color(lightGray);
+      height: 4px;
+      margin-top: 39px;
+
+      @include viewport($md) {
+        display: none;
+      }
+
+      .swiper-scrollbar-drag {
+        background-color: color(blue);
+      }
+    }
+  }
+}

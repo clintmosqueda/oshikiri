@@ -1,0 +1,51 @@
+.card-catalog {
+  &-category {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 12px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      content: '';
+      width: 1px;
+      height: 14px;
+      background-color: color(blue);
+    }
+  }
+
+  &-title {
+    font-size: 14px;
+    font-family: $font-noto-base;
+    padding-left: 16px;
+    margin-top: 11px;
+  }
+
+  &-figure {
+    margin-top: 15px;
+    position: relative;
+    padding-top: calc((163 / 118) * 100%);
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid color(border);
+
+    img {
+      @include img-ratio;
+    }
+  }
+
+  &-button {
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: $font-noto-base;
+    background-color: color(border);
+    width: 166px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto 0
+  }
+}

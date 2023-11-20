@@ -1,0 +1,231 @@
+.card {
+  border-radius: 30px;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 3px 12px 0 rgba(color(black), 0.16);
+
+  &-figure {
+    height: 200px;
+    position: relative;
+    padding-top: calc((68 / 109) * 100%);
+
+    @include viewport($md) {
+      padding-top: 0;
+      width: 100%;
+    }
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-content {
+    padding: 20px 24px 30px;
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: color(blue);
+    font-family: $font-noto-sans;
+    letter-spacing: 0.04em;
+    line-height: 1.75;
+  }
+
+  &-tax {
+    display: flex;
+    align-items: baseline;
+    margin-top: 8px;
+    gap: 0 11px;
+
+    @include viewport($md) {
+      margin-top: 15px;
+    }
+  }
+
+  &-category {
+    display: inline-block;
+    background-color: color(lightGray);
+    color: color(blue);
+    font-size: 12px;
+    border-radius: 50px;
+    padding: 6px 14px;
+    letter-spacing: 0.04em;
+  }
+
+  &-tags {
+    display: flex;
+    align-items: center;
+    gap: 0 11px;
+  }
+
+  &-tag {
+    text-decoration: underline;
+    font-size: 12px;
+  }
+
+  &-cases {
+    &:hover & {
+      &-figure {
+        span {
+          box-shadow: inset 0 0 0 5px color(blue);
+        }
+      }
+    }
+
+    &-figure {
+      // height: 200px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      padding-top: calc((20 / 31) * 100%);
+
+      span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: inset 0 0 0 0 color(blue);
+        z-index: 2;
+        border-radius: 15px;
+        transition: all 300ms ease-in-out;
+      }
+    }
+
+    &-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-content {
+      color: color(blue);
+      display: flex;
+      flex-direction: column;
+      gap: 12px 0;
+      padding: 17px 8px;
+
+      @include viewport($md) {
+        padding: 21px 8px;
+        gap: 10px 0;
+      }
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      line-height: 1.7;
+    }
+
+    &-par {
+      font-size: 14px;
+      letter-spacing: 0.033em;
+      line-height: 1.7;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      @include viewport($md) {
+        -webkit-line-clamp: 3;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  &-article {
+    display: block;
+    width: 100%;
+
+    &-figure {
+      // height: 249px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      padding-top: calc((249 / 461) * 100%);
+
+      @include viewport($md) {
+        padding-top: calc((18 / 31) * 100%);
+        border-radius: 10px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      color: color(blue);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px 0;
+      padding: 16px 19px;
+
+      @include viewport($md) {
+        padding: 17px 0;
+        gap: 12px 0;
+      }
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.037em;
+      line-height: 1.8;
+
+      @include viewport($md) {
+        font-size: 14px;
+      }
+    }
+
+    &-desc {
+      font-size: 16px;
+      line-height: 1.8;
+
+      @include viewport($md) {
+        font-size: 14px;
+      }
+    }
+
+    &-button {
+      // display: inline-block;
+      background-color: color(white);
+      // color: color(blue);
+      // border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      height: 55px;
+      // padding: 20px 36px;
+      gap: 0 4px;
+
+      .button-icon {
+        top: -4px;
+      }
+
+      svg {
+        stroke: color(blue)
+      }
+    }
+  }
+}

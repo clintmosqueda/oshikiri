@@ -1,0 +1,58 @@
+.card-employee {
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    .card-employee-feature {
+      padding: 5px 5px 47px;
+      background-color: color(red);
+    }
+
+    .card-employee-title {
+      color: color(red)
+    }
+  }
+
+  &-feature {
+    width: 100%;
+    height: 335px;
+    border-radius: 15px;
+    transition: all 300ms ease-in-out;
+  }
+
+  &-image {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: color(blue);
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-top: 17px;
+    transition: color 300ms ease-in-out;
+  }
+
+  &-info {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-top: 19px;
+  }
+
+  &-department {
+    font-size: 14px;
+    border-right: 1px solid rgba(color(blue), 0.5);
+    padding-right: 12px;
+    margin-right: 12px;
+  }
+
+  &-joined {
+    font-size: 14px;
+  }
+}

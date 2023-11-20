@@ -1,0 +1,86 @@
+.caption {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: color(lightGray);
+    content: '';
+
+    @include viewport($md) {
+      display: none;
+    }
+  }
+
+  &-heading {
+    font-size: 38px;
+    font-weight: 600;
+    color: color(blue);
+    letter-spacing: 0.12em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0 21px;
+    padding-left: 19px;
+    padding-right: 96px;
+    background-color: color(white);
+    z-index: 1;
+
+    @include viewport($md) {
+      font-size: 26px;
+      letter-spacing: 0.07em;
+      gap: 0 16px;
+      padding-left: 4px;
+      padding-right: 0;
+      width: 100%;
+    }
+
+    &-icon {
+      position: relative;
+      width: 30px;
+      height: 8px;
+
+      @include viewport($md) {
+        margin-bottom: 6px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 8px;
+        border-radius: 50px;
+        transform-origin: top right;
+
+        @include viewport($md) {
+          width: 22px;
+          height: 6px;
+        }
+      }
+
+      &::before {
+        background-color: color(blue);
+        transform: rotate(45deg);
+        top: 4px;
+        right: -2px;
+        z-index: 1;
+      }
+
+      &::after {
+        background-color: color(red);
+        transform: rotate(-45deg);
+        top: 0;
+        right: 4px;
+
+        @include viewport($md) {
+          right: 3px;
+        }
+      }
+    }
+  }
+}

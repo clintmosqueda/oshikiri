@@ -1,0 +1,46 @@
+{
+    "key": "group_654cf5d991bfd",
+    "title": "Catalog",
+    "fields": [
+        {
+            "key": "field_654cf5e016f88",
+            "label": "Material PDF",
+            "name": "material_pdf",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "catalog"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "slug"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1699876734
+}

@@ -1,0 +1,211 @@
+.banner {
+  position: relative;
+  height: 506px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 68px;
+  padding-bottom: 62px;
+
+  @include viewport($md) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 102px;
+    height: auto;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  &.banner-alt {
+    height: 408px;
+  }
+
+  &-content {
+    @include viewport($md) {
+      padding: 0 20px;
+      width: 100%;
+    }
+  }
+
+  &-figure {
+    // width: 85.75vw;
+    width: 80vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 50px;
+
+    @include viewport($md) {
+      position: relative;
+      padding-top: calc((32 / 39) * 100%);
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      margin-top: 54px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include viewport($md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 8px 0;
+    align-items: flex-start;
+    z-index: 1;
+
+    @include viewport($md) {
+      gap: 15px 0;
+      margin-top: 53px;
+    }
+
+    &-jp {
+      color: color(white);
+      background-color: color(red);
+      font-size: 42px;
+      border-radius: 12px;
+      padding: 37px 40px;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+
+      @include viewport($md) {
+        font-size: 28px;
+        border-radius: 8px;
+        padding: 29px 27px 29px 20px;
+      }
+
+      .banner-alt & {
+        background-color: color(blue);
+        padding: 40px 45px;
+      }
+    }
+
+    &-en {
+      font-family: $font-poppins;
+      font-size: 32px;
+      color: color(red);
+      padding-left: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      @include viewport($md) {
+        font-size: 24px;
+        padding-left: 20px;
+      }
+
+      .banner-alt & {
+        color: color(blue);
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-circle {
+    width: 490px;
+    height: 488px;
+    top: 0;
+    left: -25px;
+
+    @include viewport($md) {
+      width: 376px;
+      height: 376px;
+      left: auto;
+      right: -47px;
+    }
+
+    .banner-alt & {
+      width: 732px;
+      height: 610px;
+
+      @include viewport($md) {
+        width: 376px;
+        height: 376px;
+      }
+    }
+
+    .circle-group {
+      top: 0;
+    }
+
+    .circle-shape {
+      @include viewport($md) {
+        width: 94px;
+        height: 94px;
+      }
+
+      &:nth-child(1) {
+        background-color: color(blue);
+
+        @include viewport($md) {
+          background-color: color(lightGray);
+        }
+      }
+
+      &:nth-child(4) {
+        @include viewport($md) {
+          background-color: color(blue);
+        }
+      }
+
+      &:nth-child(5),
+      &:nth-child(9),
+      &:nth-child(10),
+      &:nth-child(13) {
+        @include viewport($md) {
+          background-color: transparent;
+        }
+      }
+
+      &:nth-child(14),
+      &:nth-child(15) {
+        .banner-alt & {
+          @include viewport($md) {
+            background-color: transparent !important;
+          }
+        }
+      }
+
+      &:nth-child(14),
+      &:nth-child(15),
+      &:nth-child(16) {
+        background-color: transparent;
+
+        .banner-alt & {
+          background-color: color(lightGray);
+        }
+      }
+
+      &:nth-child(16) {
+        @include viewport($md) {
+          background-color: color(lightGray);
+        }
+      }
+
+      .banner-alt & {
+
+        &:nth-child(30),
+        &:nth-child(29),
+        &:nth-child(28),
+        &:nth-child(27),
+        &:nth-child(26),
+        &:nth-child(24),
+        &:nth-child(18) {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

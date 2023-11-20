@@ -1,0 +1,98 @@
+.assembly {
+  width: 98%;
+  margin: 0 auto;
+  background-color: color(blue);
+  border-radius: 30px;
+  margin-top: 121px;
+
+  @include viewport($md) {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  &-content {
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    .assembly-archive & {
+      padding-bottom: 90px;
+    }
+  }
+
+  &-heading {
+    text-align: center;
+    color: color(white);
+  }
+
+  &-lines {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: inset 0 0 0 1px color(white);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 66px;
+    margin-top: 51px;
+
+    @include viewport($md) {
+      height: 39px;
+    }
+  }
+
+  &-line {
+    color: color(white);
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid color(white);
+    transition: all 300ms ease-in-out;
+
+    @include viewport($md) {
+      font-size: 12px;
+    }
+
+    &:hover,
+    &.is-open {
+      background-color: color(white);
+      color: color(blue)
+    }
+  }
+
+  &-products {
+    margin-top: 103px;
+
+    @include viewport($md) {
+      margin-top: 58px;
+      padding: 0 21px;
+    }
+  }
+
+  &-product {
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  &-button {
+    width: 162px;
+    padding: 0;
+    margin: 59px auto 0;
+    background-color: color(white);
+
+    svg {
+      stroke: color(blue)
+    }
+  }
+
+  &-archive {
+    margin-top: 64px;
+  }
+}

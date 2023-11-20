@@ -1,0 +1,32 @@
+.related-cases {
+  border-top: 1px solid color(lightGray);
+  padding-top: 22px;
+  margin-top: 100px;
+
+  @include viewport($md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-heading {
+    color: color(blue)
+  }
+
+  &-cards {
+    padding-right: 55px;
+    margin-top: 40px;
+
+    @include viewport($lg) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &-carousel {
+    overflow: visible !important;
+
+    .swiper-slide {
+      width: 305px !important;
+    }
+  }
+}

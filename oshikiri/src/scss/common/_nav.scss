@@ -1,0 +1,61 @@
+.nav {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 2.32vw;
+
+    @include viewport($mmd) {
+      gap: 0 42px;
+    }
+  }
+
+  &-item {}
+
+  &-link {
+    font-size: 15px;
+    color: color(blue);
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    font-family: 'Noto Sans JP', sans-serif;
+    position: relative;
+    padding: 39px 0;
+    display: flex;
+
+    @include viewport($mmd) {
+      padding: 15px 0;
+      letter-spacing: 0.04em;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      height: 1px;
+      width: 0%;
+      background-color: color(blue);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &-dropdown {
+    position: relative;
+    align-items: center;
+    gap: 0 5px;
+
+    &::after {
+      content: '';
+      width: 11px;
+      height: 7px;
+      background-image: url('#{$image-path}/icon-caret.svg');
+      @include bg-default;
+    }
+  }
+}

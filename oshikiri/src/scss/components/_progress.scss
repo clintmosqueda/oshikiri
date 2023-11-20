@@ -1,0 +1,58 @@
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 325px;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background-color: color(border);
+    content: '';
+  }
+
+  &-label {
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.07em;
+    gap: 12px 0;
+
+    &:not(:first-of-type) {
+      &.is-active {
+        &::after {
+          position: absolute;
+          content: '';
+          width: 145px;
+          height: 2px;
+          background-color: color(red);
+          top: 5px;
+          right: 15px;
+        }
+      }
+    }
+
+    &.is-active {
+      &::before {
+        background-color: color(red);
+      }
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: color(border);
+    }
+  }
+}

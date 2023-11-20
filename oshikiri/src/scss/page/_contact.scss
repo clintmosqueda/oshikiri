@@ -1,0 +1,464 @@
+.contact {
+  padding-right: 56px;
+  margin-top: 141px;
+
+  @include viewport($lg) {
+    padding-right: 20px;
+  }
+
+  @include viewport($md) {
+    margin-top: 0;
+  }
+
+  @include viewport($md) {
+    padding: 0 20px;
+  }
+
+  &-download {
+    margin-top: 0;
+
+    .contact-form {
+      @include viewport($md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-form {
+    border-radius: 30px;
+    border: 1px solid color(border);
+    padding: 62px 38px 50px 60px;
+    margin-top: 61px;
+
+    @include viewport($lg) {
+      padding: 62px 20px 50px 20px;
+    }
+
+    @include viewport($md) {
+      border-radius: 20px;
+      padding: 32px 20px 50px;
+    }
+
+    &-fields {
+      flex-direction: column;
+      display: flex;
+      gap: 33px 0;
+
+      @include viewport($md) {
+        gap: 28px 0;
+      }
+    }
+  }
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+
+    @include viewport($md) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px 0;
+    }
+  }
+
+  &-label {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    padding-top: 2px;
+    width: 230px;
+    flex-shrink: 0;
+
+    @include viewport($lg) {
+      width: 160px;
+      font-size: 14px;
+    }
+
+    &.is-required {
+      &::after {
+        content: '*';
+        position: relative;
+        top: -2px;
+        right: -1px;
+        color: color(red);
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-field {
+    border-bottom: 2px solid rgba(color(border), 0.5);
+    position: relative;
+    width: 100%;
+    // max-width: 706px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+
+    @include viewport($md) {
+      padding-bottom: 12px;
+      padding-left: 6px;
+    }
+
+    &:has(.error) {
+      border-color: color(red);
+    }
+
+    .error {
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+
+    &-upload {
+      border-bottom: none;
+      padding-left: 0;
+
+      .contact-form-approve &,
+      .contact-form-verify & {
+        padding-left: 14px;
+      }
+
+      @include viewport($md) {
+        border-bottom: 2px solid rgba(color(border), 0.5);
+        padding-left: 6px;
+      }
+
+      .error {
+        top: 20px;
+
+        &+.error {
+          top: 40px;
+        }
+      }
+
+      // .mwform-file-delete {
+      //   display: none;
+      // }
+    }
+  }
+
+  select,
+  input,
+  textarea {
+    appearance: none;
+    border: none;
+    color: color(blue);
+    font-family: $font-noto-base;
+    font-size: 16px;
+    width: 100%;
+    letter-spacing: 0.055em;
+
+    @include viewport($lg) {
+      font-size: 14px;
+    }
+
+    &::placeholder {
+      color: rgba(color(blue), 0.5);
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 80px;
+  }
+
+  &-select {
+    width: 160px;
+    position: relative;
+
+    @include viewport($md) {
+      width: 140px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -1px;
+      right: 1px;
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-right: 1px solid color(blue);
+      border-bottom: 1px solid color(blue);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+
+    select {
+      letter-spacing: 0.055em;
+    }
+  }
+
+  &-input {
+    width: 350px;
+
+    @include viewport($md) {
+      width: 100%;
+    }
+  }
+
+  &-textarea {
+    height: 66px;
+
+    textarea {
+      height: 100%;
+      resize: none;
+    }
+  }
+
+  &-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    @include viewport($md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    input {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      // display: none !important;
+    }
+
+    &-button {
+      display: inline-flex;
+      background-color: color(border);
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      position: relative;
+      align-items: center;
+      letter-spacing: 0.04em;
+      gap: 0 13px;
+      padding: 20px 28px;
+      cursor: pointer;
+
+      .contact-form-confirm &,
+      .contact-form-approve &,
+      .contact-form-verify & {
+        display: none;
+      }
+
+      &::before {
+        content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy4wOTkiIGhlaWdodD0iMTMuMDk5IiB2aWV3Qm94PSIwIDAgMTMuMDk5IDEzLjA5OSI+CiAgPGcgaWQ9Ikdyb3VwXzIzNzUiIGRhdGEtbmFtZT0iR3JvdXAgMjM3NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+CiAgICA8bGluZSBpZD0iTGluZV8yOTUiIGRhdGEtbmFtZT0iTGluZSAyOTUiIHgyPSIxMS4wOTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNS41NDkpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwYjIyNTciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSBpZD0iTGluZV8yOTYiIGRhdGEtbmFtZT0iTGluZSAyOTYiIHgyPSIxMS4wOTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuNTQ5KSByb3RhdGUoOTApIiBmaWxsPSJub25lIiBzdHJva2U9IiMwYjIyNTciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgo8L3N2Zz4K);
+        position: relative;
+      }
+    }
+
+    &-filename {
+      font-size: 16px;
+
+      .contact-form-confirm &,
+      .contact-form-approve &,
+      .contact-form-verify & {
+        display: none;
+      }
+    }
+
+    &-clear {
+      cursor: pointer;
+      display: flex;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+  }
+
+  &-note {
+    font-size: 14px;
+    white-space: pre-line;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    margin-top: 13px;
+
+    .contact-form-verify & {
+      display: none;
+    }
+  }
+
+  &-agree {
+    margin-top: 43px;
+
+    .contact-form-confirm &,
+    .contact-form-verify & {
+      display: none;
+    }
+
+    &-error {
+      font-size: 14px;
+      color: color(red);
+      display: block;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-top: 13px;
+      display: none;
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 10px;
+    }
+
+    &-checkbox {
+      display: none;
+
+      &:checked+.contact-agree-label {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-label {
+      width: 25px;
+      height: 25px;
+      box-shadow: inset 0 0 0 1px color(blue);
+      flex-shrink: 0;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        width: 10px;
+        height: 20px;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 7px;
+        border-right: 2px solid color(blue);
+        border-bottom: 2px solid color(blue);
+        rotate: 45deg;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+
+      @include viewport($md) {
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 0 25px;
+
+    @include viewport($md) {
+      justify-content: space-between;
+    }
+
+    .contact-form-approve &,
+    .contact-form-verify & {
+      margin-top: 0;
+    }
+  }
+
+
+  &-button {
+    flex-shrink: 0;
+    width: auto;
+    height: 56px;
+    border-radius: 50px;
+    color: color(white);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 3px 37px 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 7px;
+    cursor: pointer;
+
+    @include viewport($md) {
+      padding: 3px 25px 0;
+      font-size: 13px;
+      height: 47px;
+    }
+
+    &:after {
+      position: relative;
+      content: '';
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNi40NzgiIGhlaWdodD0iMTQuMTMxIiB2aWV3Qm94PSIwIDAgMTYuNDc4IDE0LjEzMSI+CiAgPHBhdGggaWQ9ImFycm93LXJpZ2h0LXNvbGlkXzFfIiBkYXRhLW5hbWU9ImFycm93LXJpZ2h0LXNvbGlkICgxKSIgZD0iTTE2LjEzNCw3MS44MjJhMS4xNzksMS4xNzksMCwwLDAsMC0xLjY2NkwxMC4yNDgsNjQuMjdhMS4xNzgsMS4xNzgsMCwxLDAtMS42NjYsMS42NjZsMy44ODEsMy44NzdIMS4xNzdhMS4xNzcsMS4xNzcsMCwxLDAsMCwyLjM1NEgxMi40NTlMOC41ODUsNzYuMDQ0YTEuMTc4LDEuMTc4LDAsMCwwLDEuNjY2LDEuNjY2bDUuODg1LTUuODg1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtNjMuOTI1KSIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4K');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 11px;
+      height: 10px;
+      display: inline-block;
+
+      @include viewport($md) {
+        width: 9px;
+        height: 8px;
+      }
+    }
+
+    &-submit,
+    &-confirm {
+      background-color: color(red);
+    }
+
+    &-back {
+      background-color: color(border);
+      flex-direction: row-reverse;
+      color: color(blue);
+
+      &:after {
+        transform: scale(-1, -1);
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNi40NzgiIGhlaWdodD0iMTQuMTMxIiB2aWV3Qm94PSIwIDAgMTYuNDc4IDE0LjEzMSI+CiAgPHBhdGggaWQ9ImFycm93LXJpZ2h0LXNvbGlkXzFfIiBkYXRhLW5hbWU9ImFycm93LXJpZ2h0LXNvbGlkICgxKSIgZD0iTTE2LjEzNCw3MS44MjJhMS4xNzksMS4xNzksMCwwLDAsMC0xLjY2NkwxMC4yNDgsNjQuMjdhMS4xNzgsMS4xNzgsMCwxLDAtMS42NjYsMS42NjZsMy44ODEsMy44NzdIMS4xNzdhMS4xNzcsMS4xNzcsMCwxLDAsMCwyLjM1NEgxMi40NTlMOC41ODUsNzYuMDQ0YTEuMTc4LDEuMTc4LDAsMCwwLDEuNjY2LDEuNjY2bDUuODg1LTUuODg1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtNjMuOTI1KSIgZmlsbD0iIzBiMjI1NyIvPgo8L3N2Zz4K);
+      }
+    }
+
+    &.is-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &-complete {
+
+    &-desc {
+      white-space: pre-line;
+      font-size: 16px;
+      line-height: 1.9;
+      letter-spacing: 0.05em;
+      margin-top: 75px;
+    }
+
+    &-button {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      background-color: color(border);
+      font-weight: bold;
+      height: 61px;
+      margin-top: 53px;
+
+      svg {
+        stroke: color(blue);
+        transform: scale(-1, -1);
+      }
+    }
+  }
+}
