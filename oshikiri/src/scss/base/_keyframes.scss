@@ -1,19 +1,19 @@
-@keyframes fullwidth {
-  from {
-    width: 0;
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(color(white), 1);
   }
 
-  to {
-    width: 100%;
+  100% {
+    box-shadow: 0 0 0 50px rgba(color(white), 0);
   }
 }
 
-@keyframes fullheight {
-  from {
-    height: 0;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(color(white), 1);
   }
 
-  to {
-    height: 100%;
+  100% {
+    box-shadow: 0 0 0 50px rgba(color(white), 0);
   }
 }

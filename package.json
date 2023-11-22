@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "gsap": "^3.11.4",
+    "preload-js": "^0.6.3",
     "swiper": "^9.0.5"
   }
 }

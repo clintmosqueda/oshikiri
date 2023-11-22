@@ -8,7 +8,14 @@ import Products from './components/products'
 import Scrollto from './components/scrollTo'
 import Forms from './components/forms'
 import Catalog from './components/catalog'
+import Preload from './components/preload'
 
+const url = window.location.pathname
+const currenPage = url.split('/').at(-1)
+
+if (currenPage === '') {
+  Preload()
+}
 // Mv()
 Carousel()
 Menu()
@@ -19,3 +26,4 @@ Products()
 Scrollto()
 Forms()
 Catalog()
+

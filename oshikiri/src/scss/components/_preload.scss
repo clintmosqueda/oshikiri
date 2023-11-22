@@ -1,0 +1,59 @@
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: color(white);
+  z-index: 50;
+  overflow: hidden;
+
+  &-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      width: 280px;
+      height: 51px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    &-loading {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: color(blue);
+      mix-blend-mode: lighten;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+  &-image {
+    width: 100vw;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

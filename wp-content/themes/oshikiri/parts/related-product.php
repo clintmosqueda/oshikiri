@@ -9,12 +9,17 @@ $category = get_field('select_category');
     </div>
     <div class="related-products-posts">
       <?php if($category == 'Bread') { ?>
-        <?php import_part("product-type"); ?>
+        <?php import_part("product-type", array(
+          'excludedId' => get_the_ID()
+        )); ?>
       <?php } elseif ($category == 'Line') { ?>
-        <?php import_part("product-line"); ?>
+        <?php import_part("product-line", array(
+          'excludedId' => get_the_ID()
+        )); ?>
       <?php } else { ?>
         <?php import_part("product-category", array(
-          'showCategory' => 'false'
+          'showCategory' => 'false',
+          'excludedId' => get_the_ID()
         )); ?>
       <?php } ?>
     </div>

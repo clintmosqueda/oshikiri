@@ -9,7 +9,8 @@
  * @see https://codex.wordpress.org/Template_Hierarchy
  */
 get_header(); ?>
-<main>
+
+  <?php import_part('preload');?>
   <?php import_part('mv');?>
   <?php import_part('slogan');?>
   <?php import_part('info');?>
@@ -36,6 +37,5 @@ get_header(); ?>
   <?php import_part('cases');?>
   <?php import_part('corporation');?>
   <?php import_part('enlist');?>
-</main>
 <?php
 get_footer();

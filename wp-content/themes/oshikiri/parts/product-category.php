@@ -2,10 +2,12 @@
 $modifier = empty($modifier) ? '' : $modifier;
 $itemPerPage = empty($itemPerPage) ? -1 : $itemPerPage;
 $showCategory = empty($showCategory) ? 'true' : $showCategory;
+$excludedId = empty($excludedId) ? '' : $excludedId;
 
 $args = array(
   'posts_per_page'    => $itemPerPage,
   'post_type'     => PRODUCT_POST_TYPE,
+  'post__not_in'   => array($excludedId),
   'meta_key'      => 'select_category',
   'meta_value'    => 'product'
 );
