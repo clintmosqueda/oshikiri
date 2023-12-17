@@ -28,6 +28,22 @@ get_header(); ?>
   'breadcrumbs' => $breadcrumbs
 ));?>
 
+<?php 
+$catalog = query_custom_post(-1, CATALOG_POST_TYPE);
+// echo '<pre>';
+// print_r($catalog);
+// echo '</pre>';
+?>
+
+<ul class="contact-post-list">
+  <?php if($catalog->have_posts()) : ?>
+    <?php while($catalog->have_posts()): $catalog->the_post();
+    ?>
+      <li class="contact-post-item" data-name="<?php echo the_title();?>" data-pdf="<?php echo the_field('material_pdf'); ?>"></li>
+    <?php endwhile; ?>
+  <?php endif; ?>
+</ul>
+
 <div class="contact contact-download">
   <div class="contact-form">
     <?php while (have_posts()) : the_post(); ?>

@@ -1,3 +1,7 @@
+<?php
+$cases = query_custom_post(3, CASE_POST_TYPE)
+?>
+
 <section class="cases">
   <div class="wrapper">
     <div class="cases-content">
@@ -15,32 +19,22 @@
       </div>
 
       <div class="cases-articles">
-        <?php import_part("card-cases", array(
-          'modifier' => '',
-          'link' => '',
-          'image' => resolve_asset_url('/images/card-cases1.jpg'),
-          'title' => '株式会社三好屋食品工業様',
-          'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
-        ));?>
-        <?php import_part("card-cases", array(
-          'modifier' => '',
-          'link' => '',
-          'image' => resolve_asset_url('/images/card-cases2.jpg'),
-          'title' => '株式会社三好屋食品工業様',
-          'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
-        ));?>
-        <?php import_part("card-cases", array(
-          'modifier' => '',
-          'link' => '',
-          'image' => resolve_asset_url('/images/card-cases3.jpg'),
-          'title' => '株式会社三好屋食品工業様',
-          'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
-        ));?>
+        <?php if($cases->have_posts()): ?>
+          <?php while($cases->have_posts()): $cases->the_post();?>
+            <?php import_part("card-cases", array(
+              'modifier' => '',
+              'link' => get_permalink(),
+              'image' => get_field('featured_image'),
+              'title' => get_the_title(),
+              'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
+            ));?>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </div>
 
       <?php import_part("button", array(
         'modifier' => 'cases-button',
-        'link_url' => '/',
+        'link_url' => resolve_archive_url('case'),
         'link_text' => 'もっとみる',
         'link_icon' => '#arrow'
         ))?>

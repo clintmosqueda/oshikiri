@@ -16,7 +16,7 @@ $modifier = empty($modifier) ? '' : $modifier;
               ))?>
         <?php import_part("button", array(
               'modifier' => 'inquire-mail-button',
-              'link_url' => '/',
+              'link_url' => resolve_url('contact'),
               'link_text' => 'お問い合わせフォーム',
               'link_icon' => '#arrow'
               ))?>

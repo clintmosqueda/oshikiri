@@ -9,7 +9,7 @@
     ),
     array(
       'text' => '最新情報',
-      'url' => '#',
+      'url' => resolve_archive_url('news'),
     ),
     array(
       'text' => get_the_title(),

@@ -1,19 +1,4 @@
 <div class="megamenu">
-  <div class="megamenu-item megamenu-company">
-    <div class="megamenu-label">
-      <span class="megamenu-label-en">Company</span>
-      <h3 class="megamenu-label-jp">会社情報</h3>
-    </div>
-    <div class="megamenu-links">
-      <a class="megamenu-link" href="<?php echo resolve_url('company/philosophy')?>">企業理念</a>
-      <a class="megamenu-link" href="<?php echo resolve_url('company/profile')?>">会社概要</a>
-      <a class="megamenu-link" href="<?php echo resolve_url('company/history')?>">沿革</a>
-      <a class="megamenu-link" href="<?php echo resolve_url('company/branch')?>">拠点一覧</a>
-      <a class="megamenu-link" href="<?php echo resolve_url('company/network')?>">海外ネットワーク</a>
-      <a class="megamenu-link" href="">採用情報</a>
-    </div>
-  </div>
-
   <div class="megamenu-item megamenu-products">
     <div class="megamenu-label">
       <span class="megamenu-label-en">Products</span>
@@ -38,6 +23,21 @@
         </div>
         <span class="megamenu-machine-label">ラインから探す</span>
       </a>
+    </div>
+  </div>
+
+  <div class="megamenu-item megamenu-company">
+    <div class="megamenu-label">
+      <span class="megamenu-label-en">Company</span>
+      <h3 class="megamenu-label-jp">会社情報</h3>
+    </div>
+    <div class="megamenu-links">
+      <a class="megamenu-link" href="<?php echo resolve_url('company/philosophy')?>">企業理念</a>
+      <a class="megamenu-link" href="<?php echo resolve_url('company/profile')?>">会社概要</a>
+      <a class="megamenu-link" href="<?php echo resolve_url('company/history')?>">沿革</a>
+      <a class="megamenu-link" href="<?php echo resolve_url('company/branch')?>">拠点一覧</a>
+      <a class="megamenu-link" href="<?php echo resolve_url('company/network')?>">海外ネットワーク</a>
+      <a class="megamenu-link" href="<?php echo resolve_url('recruit')?>">採用情報</a>
     </div>
   </div>
 </div>

@@ -1,3 +1,6 @@
+<?php
+$modifier = empty($modifier) ? '' : $modifier;
+?>
 <main class="composition <?php echo $modifier; ?>">
   <aside class="composition-sidebar">
     <div class="composition-sidebar-links">

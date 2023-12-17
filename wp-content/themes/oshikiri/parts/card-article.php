@@ -1,9 +1,16 @@
-<div class="card-article" href="">
+<?php
+$modifier = empty($modifier) ? '' : $modifier;
+$image = empty($image) ? '' : $image;
+?>
+
+<div class="card-article <?php echo $modifier; ?>" href="">
   <div class="card-article-figure">
-    <img src="<?php echo resolve_asset_url('/images/about/about-image2.jpg'); ?>" alt="">
+    <img src="<?php echo $image; ?>" alt="">
   </div>
   <div class="card-article-content">
-    <h3 class="card-article-title"><?php echo $title; ?></h3>
+    <?php if(!empty($title)) {?>
+      <h3 class="card-article-title"><?php echo $title; ?></h3>
+    <?php } ?>
     <p class="card-article-desc"><?php echo $desc; ?></p>
     <?php if(!empty($link_url)) {?>
       <?php import_part("button", array(

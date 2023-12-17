@@ -61,6 +61,13 @@
     justify-content: center;
     cursor: pointer;
 
+    .is-open & {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
     @include viewport($md) {
       width: 105px;
       height: 41px;
@@ -72,6 +79,18 @@
       align-items: center;
       justify-content: center;
       gap: 0 10px;
+
+      .previouspostslink,
+      .nextpostslink,
+      .page,
+      .current {
+        display: none;
+      }
+
+      .pages {
+        border: none;
+        font-size: 18px;
+      }
     }
   }
 
@@ -105,8 +124,46 @@
 
   &-list {
     position: absolute;
-    top: 0;
+    top: 56px;
     left: 0;
     opacity: 0;
+    width: 188px;
+    background-color: color(blue);
+    pointer-events: none;
+
+    @include viewport($md) {
+      width: 105px;
+      top: 41px;
+    }
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: auto;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .wp-pagenavi {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0;
+      padding: 10px 0;
+
+      .pages,
+      .previouspostslink,
+      .nextpostslink {
+        display: none;
+      }
+
+      a,
+      span {
+        border: none;
+        color: color(white);
+        font-size: 18px;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+      }
+    }
   }
 }

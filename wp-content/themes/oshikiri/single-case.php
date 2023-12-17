@@ -27,15 +27,7 @@
   'breadcrumbs' => $breadcrumbs
 ));?>
 <main class="vlog vlog-case">
-  <div class="vlog-group">
-    <?php foreach($categories as $category ) {?>
-      <a class="vlog-category" href="<?php echo get_term_link( $category->name, NEWS_POST_TYPE_CATEGORY)?>"><?php echo $category->name; ?></a>
-    <?php } ?>
-    <?php foreach($tags as $tag ) {?>
-      <a class="vlog-tag" href="<?php echo $tag->slug;?>"><?php echo $tag->name; ?></a>
-    <?php } ?>
 
-  </div>
   <h1 class="vlog-title">
     <?php the_title();?>
     <span class="vlog-title-icon"></span>
@@ -83,7 +75,9 @@
     <?php the_content(); ?>
   </div>
 
-  <?php import_part("related-cases"); ?>
+  <?php import_part("related-cases", array(
+    'excludedId' => get_the_ID()
+  )); ?>
 
 </main>
 <?php endwhile; ?>

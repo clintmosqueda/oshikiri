@@ -164,8 +164,13 @@
   }
 
   &-select {
-    width: 160px;
+    width: 180px;
     position: relative;
+    cursor: pointer;
+
+    .mw_wp_form_confirm & {
+      width: 100%;
+    }
 
     @include viewport($md) {
       width: 140px;
@@ -182,10 +187,15 @@
       border-bottom: 1px solid color(blue);
       transform: rotate(45deg);
       pointer-events: none;
+
+      .mw_wp_form_confirm & {
+        display: none;
+      }
     }
 
     select {
       letter-spacing: 0.055em;
+      padding-right: 20px;
     }
   }
 
@@ -286,8 +296,7 @@
   &-agree {
     margin-top: 43px;
 
-    .contact-form-confirm &,
-    .contact-form-verify & {
+    .mw_wp_form_confirm & {
       display: none;
     }
 
@@ -363,14 +372,18 @@
     margin-top: 40px;
     gap: 0 25px;
 
-    @include viewport($md) {
-      justify-content: space-between;
-    }
+
 
     .contact-form-approve &,
     .contact-form-verify & {
       margin-top: 0;
     }
+
+    // .mw_wp_form_input & {
+    //   @include viewport($md) {
+    //     justify-content: center;
+    //   }
+    // }
   }
 
 
@@ -439,12 +452,20 @@
 
   &-complete {
 
+    @include viewport($md) {
+      padding: 0 20px;
+    }
+
     &-desc {
       white-space: pre-line;
       font-size: 16px;
       line-height: 1.9;
       letter-spacing: 0.05em;
       margin-top: 75px;
+
+      @include viewport($md) {
+        font-size: 14px;
+      }
     }
 
     &-button {
@@ -460,5 +481,13 @@
         transform: scale(-1, -1);
       }
     }
+  }
+
+  &-post-list {
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    ;
   }
 }

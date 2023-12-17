@@ -7,30 +7,90 @@
     }
 
     &-filters {
-      display: flex;
-      align-items: center;
-      gap: 0 21px;
-      margin-top: 43px;
-      border-bottom: 1px solid color(lightGray);
-      padding-bottom: 30px;
+      // display: flex;
+      // align-items: center;
+      // gap: 0 21px;
+      // margin-top: 43px;
+      // border-bottom: 1px solid color(lightGray);
+      // padding-bottom: 30px;
     }
 
     &-filter {
-      width: 260px;
+      // width: 260px;
       position: relative;
 
-      &::after {
-        position: absolute;
-        top: 20px;
-        right: 25px;
-        content: '';
-        width: 12px;
-        height: 12px;
-        border-color: color(blue);
-        border-style: solid;
-        border-width: 1px 1px 0 0;
-        rotate: 135deg;
-        pointer-events: none;
+      .wpc-filters-scroll-container {}
+
+      .wpc-edit-filter-set {
+        display: none;
+      }
+
+      .wpc-filters-widget-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0 21px;
+        margin-top: 43px;
+        border-bottom: 1px solid color(lightGray);
+        padding-bottom: 30px;
+
+        @include viewport($md) {
+          justify-content: center;
+        }
+      }
+
+      .wpc-instead-of-posts-found {
+        display: none;
+      }
+
+      .wpc-filter-content {
+        position: relative;
+        width: 260px;
+
+        @include viewport($md) {
+          width: 150px;
+        }
+
+        &::after {
+          position: absolute;
+          top: 20px;
+          right: 25px;
+          content: '';
+          width: 12px;
+          height: 12px;
+          border-color: color(blue);
+          border-style: solid;
+          border-width: 1px 1px 0 0;
+          rotate: 135deg;
+          pointer-events: none;
+
+          @include viewport($md) {
+            top: 13px;
+          }
+        }
+      }
+
+      .wpc-filters-section {
+        margin-bottom: 0;
+      }
+
+      .wpc-filter-title {
+        font-size: 0;
+      }
+
+      .wpc-filters-widget-select {
+        width: 100%;
+        border: 2px solid color(lightGray);
+        border-radius: 10px;
+        height: 60px;
+        font-size: 16px;
+        color: color(blue);
+        font-weight: 500;
+        padding: 0 18px;
+        margin-bottom: 0;
+
+        @include viewport($md) {
+          height: 46px;
+        }
       }
     }
 

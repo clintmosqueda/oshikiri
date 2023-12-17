@@ -1,3 +1,162 @@
 .menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 130px;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  z-index: 20;
+  pointer-events: none;
+  height: 100vh;
+  overflow-y: scroll;
+
+  @include viewport($md) {
+    .is-open & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &-overlay {
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(color(white), 0.05);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in-out;
+
+    @include viewport($md) {
+      .is-open & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-container {
+    background-color: color(white);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 50px 34px 50px 41px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px 0;
+  }
+
+  &-item {
+
+    &-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 0 8px;
+
+      &.is-open {
+
+        &+.menu-sublist {
+          display: grid;
+        }
+
+        .menu-item-caret {
+          transform: scale(-1, -1);
+        }
+      }
+    }
+
+    &-caret {
+      width: 12px;
+      height: 12px;
+      background-image: url('#{$image-path}/icon-caret.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-link {
+    font-size: 15px;
+    color: color(blue);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+  }
+
+  &-button {
+    background-color: color(red);
+    color: color(white);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 132px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-translator {
+
+    &-button {
+      background-color: color(darkGray);
+      color: color(white);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 147px;
+      height: 38px;
+      border-radius: 50px;
+      gap: 0 10px;
+      font-weight: 600;
+      font-family: $font-noto-base;
+      padding: 0 15px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &-sublist {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: color(lightGray);
+    border-radius: 8px;
+    padding: 20px 20px;
+    margin-top: 11px;
+    gap: 19px 0;
+    display: none;
+  }
+
+  &-sublink {
+    position: relative;
+    padding-left: 12px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 7px;
+      left: 0;
+      width: 5px;
+      height: 2px;
+      background-color: rgba(color(gray), 0.5);
+    }
+  }
 }

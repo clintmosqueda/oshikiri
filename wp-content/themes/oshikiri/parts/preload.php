@@ -6,6 +6,6 @@
     </div>
   </div>
   <div class="preload-image">
-    <img src="<?php echo resolve_asset_url('/images/slide1.png'); ?>" alt="">
+    <img src="<?php echo resolve_asset_url('/images/slide1.webp'); ?>" alt="">
   </div>
 </div>

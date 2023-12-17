@@ -8,6 +8,12 @@
 .show-sp {
   display: none;
 
+  @include viewport($sm) {
+    display: block;
+  }
+}
+
+.show-tablet {
   @include viewport($md) {
     display: block;
   }

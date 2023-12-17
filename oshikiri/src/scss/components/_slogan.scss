@@ -8,11 +8,21 @@
     margin-top: -30px;
     padding-bottom: 100px;
 
+    @include viewport($mmd) {
+      gap: 0 45px;
+      margin-top: 0;
+    }
+
     @include viewport($md) {
       flex-direction: column;
-      padding-left: 40px;
       margin-top: 0;
-      padding-top: 55px;
+      align-items: center;
+      padding: 49px 0 72px 52px;
+    }
+
+    @include viewport($sm) {
+      align-items: flex-start;
+      margin-top: 23px;
     }
   }
 
@@ -25,10 +35,19 @@
     flex-direction: column;
     gap: 29px 0;
 
+    @include viewport($lg) {
+      font-size: 59px;
+      min-width: 450px
+    }
+
     @include viewport($md) {
-      font-size: 39px;
       gap: 16px 0;
-      padding-left: 11px;
+      padding-left: 0;
+      min-width: 0;
+    }
+
+    @include viewport($sm) {
+      font-size: 39px;
     }
 
     &-inner {
@@ -49,6 +68,7 @@
 
     @include viewport($md) {
       padding-top: 28px;
+      width: 100%;
     }
   }
 

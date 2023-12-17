@@ -3,12 +3,6 @@
 * Template name: Error
 */
 get_header(); ?>
-<?php import_part('banner', array(
-  'modifier' => 'banner-alt',
-  'text_jp' => 'お問い合わせ',
-  'text_en' => 'Contact.',
-  'circle_count' => 30
-));?>
 
 <?php
   $breadcrumbs = [
@@ -37,6 +31,14 @@ get_header(); ?>
     ),
   ]
 ?>
+
+<?php import_part('banner', array(
+  'modifier' => 'banner-alt',
+  'text_jp' => 'お問い合わせ',
+  'text_en' => 'Contact.',
+  'circle_count' => 30,
+  'breadcrumbs' => $breadcrumbs
+));?>
 
 <?php import_part('/composition-slots/composition-start', array(
   'breadcrumbs' => $breadcrumbs

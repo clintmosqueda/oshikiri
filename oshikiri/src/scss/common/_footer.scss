@@ -19,6 +19,10 @@
         padding-right: 52px;
         position: relative;
 
+        @include viewport($mmd) {
+            padding-right: 0;
+        }
+
         @include viewport($md) {
             flex-direction: column-reverse;
             padding-right: 0;
@@ -26,6 +30,8 @@
             padding-bottom: 53px;
             padding: 48px 40px 53px;
         }
+
+
 
         &::before {
             position: absolute;
@@ -148,14 +154,49 @@
             height: 1px;
             background: color(blue);
         }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: color(blue);
+            bottom: -2px;
+            left: 0;
+            transition: width 300ms ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 
     &-link {
         font-size: 14px;
         font-weight: bold;
+        position: relative;
 
         @include viewport($md) {
             font-weight: 500;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: color(blue);
+            bottom: -2px;
+            left: 0;
+            transition: width 300ms ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
         }
     }
 
@@ -173,6 +214,10 @@
         &:first-child {
             margin-right: 106px;
 
+            @include viewport($xl) {
+                margin-right: 50px;
+            }
+
             @include viewport($md) {
                 margin-right: 0;
             }
@@ -181,6 +226,10 @@
         &:nth-child(2) {
             margin-right: 119px;
 
+            @include viewport($xl) {
+                margin-right: 50px;
+            }
+
             @include viewport($md) {
                 margin-right: 0;
             }
@@ -188,6 +237,10 @@
 
         &:nth-child(3) {
             margin-right: 94px;
+
+            @include viewport($xl) {
+                margin-right: 50px;
+            }
 
             @include viewport($md) {
                 margin-right: 0;
@@ -209,5 +262,6 @@
         display: flex;
         flex-direction: column;
         gap: 20px 0;
+        align-items: flex-start;
     }
 }

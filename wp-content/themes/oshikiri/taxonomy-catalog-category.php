@@ -22,7 +22,7 @@ get_header(); ?>
 ));?>
 
 
-<main class="composition cataglog">
+<main class="composition catalog">
   <aside class="composition-sidebar catalog-sidebar">
     <div class="composition-sidebar-links">
       <h3 class="catalog-sidebar-heading">Category</h3>
@@ -44,7 +44,7 @@ get_header(); ?>
       </ul>
     </div>
   </aside>
-  <section class="composition-body">
+  <section class="composition-body catalog-body">
     <?php import_part('breadcrumbs', array(
       'breadcrumbs' => $breadcrumbs
     ))?>
@@ -53,12 +53,19 @@ get_header(); ?>
       <div class="catalog-cards">
         <?php if ( have_posts() ) : ?>
           <?php $count = 0;?>
-          <?php while ( have_posts() ) : the_post(); // Start Loop: ?>
+          <?php while ( have_posts() ) : the_post(); 
+          $categories = get_the_terms(get_the_ID(), CATALOG_POST_TYPE_CATEGORY);
+          // Start Loop: ?>
             <?php if ( $count % 4 ==  0) : ?>
               <?php echo $count > 0 ? "</div>" : "" ?>
               <?php echo "<div class='catalog-cards-row'>"?>
             <?php endif;?>
-            <?php import_part('card-catalog')?>
+            <?php import_part('card-catalog', array(
+              'title' => get_the_title(),
+              'img' => get_eyecatch_data(get_the_ID(), 'card-catalog', ''),
+              'categories' => $categories,
+              'file' =>  get_field('material_pdf')
+            ))?>
           <?php $count++; endwhile; // End Loop. ?>
         <?php else: ?>
           <p>no post found</p>

@@ -8,7 +8,7 @@ export default function Forms() {
   if (contact) {
     fileUpdates.forEach((el, index) => {
       el.addEventListener('change', (e) => {
-        console.log('e', e)
+        // console.log('e', e)
         let filename = e.target.files[0].name
         outputFilenames[index].innerHTML = filename
       })

@@ -2,7 +2,11 @@
   margin-top: 53px;
 
   @include viewport($md) {
-    border-top: 1px solid color(border);
+    // border-top: 1px solid color(border);
+    display: flex;
+    flex-direction: column;
+    margin-top: 62px;
+    gap: 60px 0;
   }
 
   &-excerpt {
@@ -25,7 +29,9 @@
     margin-top: 73px;
 
     @include viewport($md) {
-      margin-top: 29px;
+      margin-top: 0;
+      border-top: 1px solid color(border);
+      padding-top: 28px;
     }
   }
 
@@ -132,6 +138,12 @@
   &-composition {
     @include viewport($md) {
       flex-direction: column;
+    }
+  }
+
+  &-related-cases {
+    @include viewport($md) {
+      margin-top: 0;
     }
   }
 }

@@ -1,5 +1,8 @@
 <?php
-get_header(); ?>
+get_header(); 
+global $wp_query; 
+$itemsFound = $wp_query->found_posts;
+?>
 <?php
   $breadcrumbs = [
     array(
@@ -22,7 +25,7 @@ get_header(); ?>
 ));?>
 
 
-<main class="composition cataglog">
+<main class="composition catalog">
   <aside class="composition-sidebar catalog-sidebar">
     <div class="composition-sidebar-links">
       <h3 class="catalog-sidebar-heading">Category</h3>
@@ -44,7 +47,7 @@ get_header(); ?>
       </ul>
     </div>
   </aside>
-  <section class="composition-body">
+  <section class="composition-body catalog-body">
     <?php import_part('breadcrumbs', array(
       'breadcrumbs' => $breadcrumbs
     ))?>
@@ -69,6 +72,9 @@ get_header(); ?>
           <?php $count++; endwhile; // End Loop. ?>
         <?php endif; ?>
       </div>
+      <?php if($itemsFound > 12) { ?>
+        <?php import_part ('pagination')?>
+      <?php  } ?>
     </div>
   </section>
 </main>

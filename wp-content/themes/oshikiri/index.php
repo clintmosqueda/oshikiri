@@ -29,7 +29,9 @@ get_header(); ?>
         )); ?>
       </div>
       <div class="assembly-product" id="category" data-assembly="category">
-        <?php import_part("product-category"); ?>
+        <?php import_part("product-category", array(
+          'itemPerPage' => 6
+        )); ?>
       </div>
     </div>
   <?php import_part('assembly/assembly-end');?>

@@ -138,9 +138,9 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
+      font-family: $font-noto-base;
 
       @include viewport($md) {
-        -webkit-line-clamp: 3;
         font-size: 16px;
         line-height: 1.8;
       }

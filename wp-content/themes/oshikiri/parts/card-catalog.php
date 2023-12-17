@@ -19,5 +19,5 @@ $file = empty($file) ? '' : $file;
   <a 
     data-material="<?php echo $file; ?>"
     class="card-catalog-button" 
-    href="<?php echo resolve_url('download'); ?>">資料ダウンロード</a>
+    href="<?php echo resolve_url('download?document='. $title); ?>">資料ダウンロード</a>
 </div>

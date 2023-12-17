@@ -41,6 +41,20 @@
       transform="translate(12561.205 14417.414)" fill="none" stroke="#9a9a9a" stroke-linecap="round"
       stroke-linejoin="round" stroke-width="2" />
   </symbol>
+
+  <symbol id="data" viewBox="0 0 17 22">
+    <g clip-path="url(#clip0_274_2)">
+      <path d="M15.773 3.765V20.546C15.773 20.7993 15.6724 21.0422 15.4933 21.2213C15.3142 21.4004 15.0713 21.501 14.818 21.501H1.455C1.20172 21.501 0.95881 21.4004 0.779713 21.2213C0.600615 21.0422 0.5 20.7993 0.5 20.546V1.455C0.5 1.20172 0.600615 0.95881 0.779713 0.779713C0.95881 0.600616 1.20172 0.5 1.455 0.5H14.818" stroke="blue" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.5 5.5H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.5 8.5H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.5 12.5H8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_274_2">
+        <rect width="16.273" height="22" fill="green" stroke="green"/>
+      </clipPath>
+    </defs>
+  </symbol>
 </svg>
 
 <span class="<?php echo $svg_class; ?>">

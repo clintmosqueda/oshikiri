@@ -1,6 +1,6 @@
 <section class="enlist">
   <div class="enlist-figure">
-    <img src="<?php echo resolve_asset_url('/images/recruit-model.png'); ?>" alt="">
+    <img src="<?php echo resolve_asset_url('/images/recruit-model-v2.png'); ?>" alt="">
   </div>
   <?php import_part("heading", array(
     'modifier' => 'enlist-heading',
@@ -15,7 +15,7 @@
 
   <?php import_part("button", array(
     'modifier' => 'enlist-button',
-    'link_url' => '/',
+    'link_url' => resolve_url('recruit'),
     'link_text' => 'もっとみる',
     'link_icon' => '#arrow'
   ))?>

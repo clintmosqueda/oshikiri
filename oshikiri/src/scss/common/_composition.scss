@@ -37,6 +37,10 @@
 
       .logged-in & {
         top: 40px;
+
+        @include viewport($md) {
+          top: 0;
+        }
       }
     }
 
@@ -53,7 +57,7 @@
       @include viewport($md) {
         text-align: center;
         font-weight: 500;
-        background-color: color(lightGray);
+        // background-color: color(lightGray);
         border-radius: 5px;
         box-shadow: inset 0 0 0 1px color(border);
         padding: 16px 0;

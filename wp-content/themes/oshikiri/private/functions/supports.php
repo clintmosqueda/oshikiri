@@ -8,6 +8,7 @@ add_image_size( 'card-cases', 620, 400, true );
 add_image_size( 'card-info', 640, 400, true );
 add_image_size( 'card-employee', 600, 670, true );
 add_image_size( 'card-catalog', 472, 652, true );
+add_image_size( 'card-news', 654, 408, true );
 add_image_size( 'product-type-thumbnail', 380, 296, true );
 add_image_size( 'product-line-thumbnail', 470, 386, true );
 add_image_size( 'product-thumbnail', 500, 414, true );

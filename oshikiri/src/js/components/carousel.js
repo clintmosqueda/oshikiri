@@ -33,7 +33,7 @@ export default function Carousel() {
   if (aboutSlider) {
     const infoSliderSwiper = new Swiper('.js-about-carousel', {
       speed,
-      slidesPerView: 1,
+      slidesPerView: 'auto',
       spaceBetween: 25,
       watchSlidesProgress: true,
       on: {
@@ -41,12 +41,12 @@ export default function Carousel() {
           // console.log(swiper)
         }
       },
-      breakpoints: {
-        391: {
-          slidesPerView: 3,
-          spaceBetween: 32,
-        }
-      },
+      // breakpoints: {
+      //   391: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 32,
+      //   }
+      // },
     });
   }
 
@@ -85,7 +85,7 @@ export default function Carousel() {
       },
       on: {
         slideChange: swiper => {
-          console.log(swiper)
+          // console.log(swiper)
         }
       },
     });

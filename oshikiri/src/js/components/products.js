@@ -2,6 +2,7 @@ export default function Products() {
   const tabs = document.querySelectorAll('.assembly-line')
   const contents = document.querySelectorAll('.assembly-product')
   const megaMenuProduct = document.querySelectorAll('.megamenu-machine')
+  const footerSublink = document.querySelectorAll('.footer-sublink')
   const IS_OPEN = 'is-open'
 
   if (tabs.length) {
@@ -33,6 +34,12 @@ export default function Products() {
   }
 
   megaMenuProduct.forEach(el => {
+    el.addEventListener('click', () => {
+      localStorage.setItem("tab", el.dataset.tab);
+    })
+  })
+
+  footerSublink.forEach(el => {
     el.addEventListener('click', () => {
       localStorage.setItem("tab", el.dataset.tab);
     })

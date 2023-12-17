@@ -1,6 +1,12 @@
 export default function Catalog() {
   const catalogButtons = document.querySelectorAll('.card-catalog-button')
-  const contactComplete = document.querySelector('.contact-complete')
+  const contactComplete = document.querySelector('.contact-done')
+  const downloadItem = document.querySelectorAll('.contact-post-item')
+  const select = document.querySelector('[name="document"]')
+  // console.log('referrer', document.referrer)
+  const prevLink = document.referrer
+  const regex = /document/g
+  // console.log(prevLink.match(regex))
 
   if (catalogButtons.length) {
     catalogButtons.forEach(el => {
@@ -22,11 +28,23 @@ export default function Catalog() {
     if (url) {
       let materialName = url.split('/').slice(-1)
       download(url, materialName)
-    }
 
-    setInterval(() => {
+      setInterval(() => {
+        localStorage.removeItem('material')
+      }, 1000);
+    } else {
       localStorage.removeItem('material')
-    }, 1000);
+    }
+  }
+  if (select) {
+    select.addEventListener('change', (event) => {
+      const value = event.target.value
+      downloadItem.forEach(el => {
+        if (value === el.dataset.name) {
+          localStorage.setItem("material", el.dataset.pdf);
+        }
+      })
+    })
   }
 
 

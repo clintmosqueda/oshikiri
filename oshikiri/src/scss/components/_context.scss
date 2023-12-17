@@ -94,14 +94,45 @@
   ol {
     display: flex;
     flex-direction: column;
-    gap: 11px 0;
     margin-bottom: 43px;
+    position: relative;
   }
 
   ol {
-    list-style-type: decimal;
-    padding-left: 16px;
-    gap: 11px 0;
+    gap: 8px 0;
+    list-style-type: none;
+    counter-reset: item;
+
+    &>li {
+      counter-increment: item;
+
+      &:before {
+        font-family: $font-noto-base;
+        content: counters(item, " - ") ". ";
+      }
+    }
+
+    & ol {
+      margin-top: 9px;
+      font-size: 14px;
+      padding-left: 15px;
+      margin-bottom: 0;
+      gap: 6px 0;
+
+      &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        background-color: color(lightGray);
+        position: absolute;
+      }
+
+      li {
+        font-size: 14px;
+      }
+    }
 
     @include viewport($md) {
       gap: 3px 0;
@@ -110,14 +141,52 @@
 
   ul {
     gap: 6px 0;
-    list-style-type: disc;
+    list-style-type: none;
     padding-left: 16px;
+
+    & ul {
+      padding-left: 11px;
+      list-style: none;
+      gap: 8px 0;
+      margin-top: 7px;
+
+      &:before {
+        position: absolute;
+        top: 4px;
+        left: -15px;
+        content: '';
+        height: 90%;
+        width: 1px;
+        background-color: color(border);
+      }
+
+      &>li {
+        &:before {
+          background-color: color(border);
+        }
+      }
+    }
+
+    &>li {
+      position: relative;
+      font-size: 14px;
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: -15px;
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: color(blue);
+      }
+    }
   }
 
   li {
     font-size: 16px;
     line-height: 1.8;
-    white-space: pre-line;
 
     @include viewport($md) {
       font-size: 14px;
@@ -314,30 +383,98 @@
       font-size: 14px;
       height: auto !important;
       letter-spacing: 0.05em;
+
+      @include viewport($md) {
+        font-size: 12px;
+      }
     }
 
     th {
       background-color: color(lightGray);
       color: color(blue);
       padding: 16px 14px;
+
+      @include viewport($md) {
+        padding: 10px 8px;
+      }
     }
 
     tr,
     td {
       padding: 16px 14px;
+
+      @include viewport($md) {
+        padding: 10px 8px;
+      }
     }
 
   }
 
   &-title-description {
     @include viewport($md) {
-      padding: 0 20px
+      padding: 0 10px
     }
   }
 
   &-title-description-image {
     @include viewport($md) {
-      padding: 0 20px
+      padding: 0 10px
+    }
+  }
+
+  &-product {
+    padding-top: 60px;
+  }
+
+  &-request {
+    position: fixed;
+    background-color: color(red);
+    width: 54px;
+    height: 191px;
+    bottom: 50px;
+    right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+
+    @include viewport($md) {
+      height: 45px;
+      width: 176px;
+      bottom: 0;
+      right: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 10px;
+    }
+
+    &-link {
+      color: color(white);
+      font-size: 14px;
+      font-weight: bold;
+      writing-mode: tb;
+      letter-spacing: 0.345em;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 5px;
+
+      @include viewport($md) {
+        writing-mode: unset;
+        letter-spacing: 0.1em;
+      }
+    }
+
+    &-icon {
+      width: 15.27px;
+      height: 21px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

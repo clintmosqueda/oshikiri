@@ -5,6 +5,11 @@
     padding-left: 12px;
     position: relative;
 
+    @include viewport($md) {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
     &::before {
       position: absolute;
       top: 5px;
@@ -21,6 +26,11 @@
     font-family: $font-noto-base;
     padding-left: 16px;
     margin-top: 11px;
+
+    @include viewport($md) {
+      font-size: 12px;
+      margin-top: 6px;
+    }
   }
 
   &-figure {
@@ -46,6 +56,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 12px auto 0
+    margin: 12px auto 0;
+
+    @include viewport($md) {
+      font-size: 12px;
+      width: 133px;
+      height: 34px;
+      padding-top: 2px;
+    }
   }
 }

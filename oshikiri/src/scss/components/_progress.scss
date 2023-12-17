@@ -6,6 +6,11 @@
   width: 100%;
   position: relative;
 
+  @include viewport($md) {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
   &::before {
     position: absolute;
     top: 5px;
@@ -36,6 +41,10 @@
           background-color: color(red);
           top: 5px;
           right: 15px;
+
+          @include viewport($md) {
+            width: 108px;
+          }
         }
       }
     }

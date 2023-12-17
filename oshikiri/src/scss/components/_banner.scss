@@ -90,6 +90,10 @@
       .banner-alt & {
         background-color: color(blue);
         padding: 40px 45px;
+
+        @include viewport($md) {
+          padding: 30px 20px
+        }
       }
     }
 

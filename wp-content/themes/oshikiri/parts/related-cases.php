@@ -1,4 +1,17 @@
-<section class="related-cases">
+<?php
+$modifier = empty($modifier) ? '' : $modifier;
+$excludedId = empty($excludedId) ? '' : $excludedId;
+$args = array(
+  'posts_per_page'    => 3,
+  'post_type'     => CASE_POST_TYPE,
+  'post__not_in'   => array($excludedId),
+);
+
+$cases = new WP_Query( $args )
+?>
+
+<?php if( $cases->have_posts() ): ?>
+<section class="related-cases <?php echo $modifier?>">
   <?php import_part("heading", array(
     'modifier' => 'related-cases-heading',
     'heading' => 'Cases',
@@ -7,19 +20,20 @@
   <div class="related-cases-cards">
     <div class="swiper related-cases-carousel js-related-cases-carousel">
       <div class="swiper-wrapper">
-        <?php for ($x = 1; $x <= 3; $x++) { ?>
+        <?php while( $cases->have_posts() ) : $cases->the_post(); ?>
           <div class="swiper-slide">
-            <?php import_part("card-cases", array(
+          <?php import_part("card-cases", array(
               'modifier' => '',
-              'link' => '',
-              'image' => resolve_asset_url('/images/card-cases1.jpg'),
-              'title' => '株式会社三好屋食品工業様',
-              'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
+              'link' => get_permalink(),
+              'image' => get_field('featured_image'),
+              'title' => get_the_title(),
+              'desc' => wp_strip_all_tags(get_first_paragraph(50))
             ));?>
           </div>
-        <?php } ?>
+        <?php endwhile; ?>
       </div>
     </div>
   </div>
 </section>
-
+<?php endif; ?>
+<?php wp_reset_query();?>

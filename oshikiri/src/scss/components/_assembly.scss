@@ -14,6 +14,11 @@
     padding-top: 90px;
     padding-bottom: 60px;
 
+    @include viewport($md) {
+      padding-bottom: 71px;
+      padding-top: 58px;
+    }
+
     .assembly-archive & {
       padding-bottom: 90px;
     }
@@ -22,6 +27,10 @@
   &-heading {
     text-align: center;
     color: color(white);
+
+    @include viewport($md) {
+      gap: 14px 0;
+    }
   }
 
   &-lines {
@@ -38,6 +47,7 @@
 
     @include viewport($md) {
       height: 39px;
+      margin-top: 32px;
     }
   }
 
@@ -82,10 +92,23 @@
   }
 
   &-button {
-    width: 162px;
+    width: 176px;
     padding: 0;
     margin: 59px auto 0;
     background-color: color(white);
+
+    @include viewport($md) {
+      margin-top: 32px;
+    }
+
+    &:hover {
+      background-color: color(red);
+      color: color(white);
+
+      svg {
+        stroke: color(white)
+      }
+    }
 
     svg {
       stroke: color(blue)

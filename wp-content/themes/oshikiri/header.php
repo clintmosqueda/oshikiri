@@ -50,7 +50,7 @@
           <div class="header-actions">
             <?php import_part('nav');?>
             <div class="header-links">
-              <a class="header-link" href="">お問い合わせ</a>
+              <a class="header-link" href="<?php echo resolve_url('contact'); ?>">お問い合わせ</a>
               <?php import_part('translator');?>
             </div>
           </div>
