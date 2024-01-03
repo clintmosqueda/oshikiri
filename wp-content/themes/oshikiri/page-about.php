@@ -112,14 +112,14 @@ get_header(); ?>
             'modifier' => '',
             'image' => resolve_asset_url('/images/about/about-image5.jpg'),
             'desc' => '戦後間もない頃から製パン機械を製造してきました。現在は国内の大手パン工場のほとんどに当社の製品を導入いただいています。',
-            'link_url' => '/',
+            'link_url' => resolve_url('company/history'),
             'link_text' => '沿革',
           ));?>
           <?php import_part('card-article', array(
             'modifier' => '',
             'image' => resolve_asset_url('/images/about/about-image6.jpg'),
             'desc' => '国内だけでなく、海外のお客様からも高い評価を受けており、積極的に海外に向けた製品の販売や製パンの指導も行っています。',
-            'link_url' => '/',
+            'link_url' => resolve_url('company/network'),
             'link_text' => '海外ネットワーク',
           ));?>
         </div>

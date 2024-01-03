@@ -35,7 +35,7 @@
       height: 1px;
       width: 0%;
       background-color: color(blue);
-      transition: width 0.3s ease-in-out;
+      transition: width 0.3s $cubic-bezier;
     }
 
     &:hover {

@@ -21,6 +21,7 @@
     position: relative;
     letter-spacing: 0.12em;
     margin-bottom: 56px;
+    line-height: 140%;
 
     @include viewport($md) {
       font-size: 24px;
@@ -30,7 +31,7 @@
 
     &::before {
       position: absolute;
-      top: -6px;
+      top: 0;
       left: -40px;
       display: inline-block;
       flex-shrink: 0;
@@ -42,6 +43,7 @@
       box-shadow: inset 0 -22px 0 0 color(red);
 
       @include viewport($md) {
+        top: 3px;
         left: -20px;
         height: 31px;
         width: 7px;

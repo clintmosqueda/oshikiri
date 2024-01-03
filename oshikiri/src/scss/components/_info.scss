@@ -46,7 +46,7 @@
     position: absolute;
     top: -15px;
     right: 0;
-    transition: box-shadow 300ms ease-in-out;
+    transition: box-shadow 300ms $cubic-bezier;
 
     &:hover {
       box-shadow: inset 0 0 0 2px color(blue);

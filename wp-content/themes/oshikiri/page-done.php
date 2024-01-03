@@ -10,7 +10,7 @@ get_header(); ?>
       'url' => resolve_url(),
     ),
     array(
-      'text' => 'お問い合わせ',
+      'text' => '資料ダウンロード',
       'url' => '#',
     ),
   ];
@@ -33,8 +33,8 @@ get_header(); ?>
 
 <?php import_part('banner', array(
   'modifier' => 'banner-alt',
-  'text_jp' => 'お問い合わせ',
-  'text_en' => 'Contact.',
+  'text_jp' => '資料ダウンロード',
+  'text_en' => 'Download.',
   'circle_count' => 30,
   'breadcrumbs' => $breadcrumbs
 ));?>

@@ -348,7 +348,7 @@
         border-bottom: 2px solid color(blue);
         rotate: 45deg;
         opacity: 0;
-        transition: opacity 200ms ease-in-out;
+        transition: opacity 200ms $cubic-bezier;
       }
     }
 

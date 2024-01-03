@@ -45,7 +45,7 @@
       display: block;
       width: 11px;
       height: 11px;
-      transition: transform 300ms ease-in-out;
+      transition: transform 300ms $cubic-bezier;
 
       svg {
         stroke: color(blue);
@@ -130,7 +130,7 @@
         height: 14px;
         transform-origin: center center;
         transform: rotate(-45deg);
-        transition: transform 300ms ease-in-out;
+        transition: transform 300ms $cubic-bezier;
 
         svg {
           stroke: color(blue);

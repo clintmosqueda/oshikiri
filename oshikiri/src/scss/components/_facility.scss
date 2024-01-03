@@ -146,7 +146,7 @@
     box-shadow: inset 0 0 0 1px color(border);
     overflow: hidden;
     height: 0;
-    transition: height 300ms ease-in-out;
+    transition: height 300ms $cubic-bezier;
 
     &-wrap {
       display: flex;

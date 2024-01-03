@@ -67,7 +67,7 @@
   }
 
   &-wrap {
-    // height: 303px;
+    min-height: 303px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +82,7 @@
     }
 
     @include viewport($md) {
-      height: auto;
+      min-height: 0;
     }
   }
 
@@ -168,6 +168,10 @@
 
     .banner-single-wrap {
       justify-content: flex-start;
+
+      @include viewport($lg) {
+        justify-content: center;
+      }
     }
 
     .banner-single-heading-jp {

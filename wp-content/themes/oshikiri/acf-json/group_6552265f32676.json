@@ -178,12 +178,12 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_65523b632d033",
-                            "label": "Image",
-                            "name": "Image",
+                            "key": "field_658abb3ed04d9",
+                            "label": "Photo",
+                            "name": "photo",
                             "type": "image",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -199,7 +199,7 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": "jpg, png"
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -207,8 +207,8 @@
                 },
                 "layout_65523bbf2d034": {
                     "key": "layout_65523bbf2d034",
-                    "name": "title_&_images",
-                    "label": "Title & Images",
+                    "name": "title_description_images_list",
+                    "label": "Title Description and Image list",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -229,6 +229,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_65843fb78447b",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
                         },
                         {
                             "key": "field_65523be32d036",
@@ -331,5 +350,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1700180544
+    "modified": 1703590743
 }

@@ -5,10 +5,10 @@ export default function Facility() {
   const facilityBottomWrap = document.querySelectorAll('.facility-bottom-wrap')
   const close = document.querySelectorAll('.facility-access')
 
-  let facilityBottomWrapHeight = facilityBottomWrap[0].clientHeight
-  facilityBottom[0].style.height = `${facilityBottomWrapHeight}px`
-
   if (facility.length) {
+    let facilityBottomWrapHeight = facilityBottomWrap[0].clientHeight
+    facilityBottom[0].style.height = `${facilityBottomWrapHeight}px`
+
     facilityTop.forEach((el, index) => {
       el.addEventListener('click', (e) => {
         let facilityBottomWrapHeight = facilityBottomWrap[index].clientHeight

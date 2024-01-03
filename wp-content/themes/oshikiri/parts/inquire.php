@@ -30,7 +30,7 @@ $modifier = empty($modifier) ? '' : $modifier;
               'svg_id' => '#phone'
               ))?>
         <div class="inquire-phone-numbers">
-          <p class="inquire-phone-number">Tel <span>0466-44-6011</span></p>
+          <p class="inquire-phone-number">Tel <a href="tel:0466446011">0466-44-6011</a></p>
           <p class="inquire-phone-number">Fax <span>0466-44-6969</span></p>
         </div>
       </div>

@@ -86,7 +86,7 @@
       justify-content: center;
       opacity: 0;
       pointer-events: none;
-      transition: all 300ms ease-in-out;
+      transition: all 300ms $cubic-bezier;
       position: absolute;
       top: 92px;
       left: 0;
@@ -131,7 +131,7 @@
     font-family: $font-noto-sans;
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s $cubic-bezier;
 
     &:hover {
       box-shadow: inset 0 0 0 2px color(red);

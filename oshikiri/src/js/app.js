@@ -11,6 +11,8 @@ import Forms from './components/forms'
 import Catalog from './components/catalog'
 import Preload from './components/preload'
 import Pagination from './components/pagination'
+import Table from './components/table'
+import sideNav from './components/sideNav'
 
 const url = window.location.pathname
 const currenPage = url.split('/').at(-1)
@@ -31,4 +33,6 @@ Scrollto()
 Forms()
 Catalog()
 Pagination()
+Table()
+sideNav()
 

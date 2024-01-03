@@ -163,7 +163,7 @@
             background-color: color(blue);
             bottom: -2px;
             left: 0;
-            transition: width 300ms ease-in-out;
+            transition: width 300ms $cubic-bezier;
         }
 
         &:hover {
@@ -190,7 +190,7 @@
             background-color: color(blue);
             bottom: -2px;
             left: 0;
-            transition: width 300ms ease-in-out;
+            transition: width 300ms $cubic-bezier;
         }
 
         &:hover {

@@ -77,7 +77,7 @@ get_header(); ?>
     <p class="recruit-organization-excerpt">オシキリで働く先輩たちの声を集めました。興味のある方は参考にしてみてください。</p>
 
     <div class="recruit-interview">
-      <a class="recruit-interview-link" href="">
+      <a class="recruit-interview-link" href="<?php echo resolve_archive_url('employee'); ?>">
         オシキリを支える人と技術
         <span class="recruit-interview-link-icon">
           <?php import_part("svg", array(

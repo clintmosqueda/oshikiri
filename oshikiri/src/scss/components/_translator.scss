@@ -10,7 +10,7 @@
     border-radius: 50px;
     font-size: 13px;
     font-weight: 600;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s $cubic-bezier;
     cursor: pointer;
     gap: 0 5px;
 
@@ -39,7 +39,7 @@
 
     path {
       fill: color(white);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s $cubic-bezier;
     }
   }
 

@@ -89,10 +89,16 @@
         color: rgba(color(blue), 0.5)
       }
 
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
       .is-active & {
         padding: 9px 16px;
         background-color: color(blue);
         color: color(white);
+        text-decoration: none;
 
         @include viewport($md) {
           padding: 6px 15px;

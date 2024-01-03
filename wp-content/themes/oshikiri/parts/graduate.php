@@ -4,7 +4,7 @@
       New Graduate
     </h2>
     <div class="graduate-posts">
-      <a href="" class="graduate-post">
+      <a target="_blank" href="https://job.rikunabi.com/2024/company/r475700017/" class="graduate-post">
         <span class="graduate-label">2024年4月入社の4年制大学及び高等専門学校新卒の方</span>
         <div class="graduate-figure">
           <img src="<?php echo resolve_asset_url('/images/recruit/recruit-graduate-logo.png')?>" alt="">
@@ -17,7 +17,7 @@
           </span>
         </div>
       </a>
-      <a href="" class="graduate-post">
+      <a target="_blank" href="https://job.rikunabi.com/2025/company/r475700017/" class="graduate-post">
         <span class="graduate-label">2025年4月卒業予定の方</span>
         <div class="graduate-figure">
           <img src="<?php echo resolve_asset_url('/images/recruit/recruit-graduate-logo.png')?>" alt="">

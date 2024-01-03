@@ -11,7 +11,7 @@
           <a class="menu-link" href="<?php echo resolve_url('product'); ?>">製品を探す</a>
           <span class="menu-item-caret"></span>
         </div>
-        <div class="menu-sublist">
+        <div class="menu-sublist menu-sublist-product">
           <a 
           class="menu-sublink" 
           data-tab="category" 

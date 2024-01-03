@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  position: relative;
+  z-index: 1;
 
   &-nav {
     display: flex;
@@ -11,6 +13,16 @@
     font-size: 16px;
     font-weight: 600;
     gap: 0 14px;
+
+    &:hover {
+      .pagination-nav-icon {
+        background-color: color(border);
+
+        svg {
+          stroke: color(blue);
+        }
+      }
+    }
 
     &-icon {
       flex-shrink: 0;
@@ -21,6 +33,7 @@
       height: 56px;
       border-radius: 50%;
       background-color: color(blue);
+      transition: background-color 300ms ease-in-out;
 
       @include viewport($md) {
         width: 40px;
@@ -35,6 +48,7 @@
         stroke: color(white);
         width: 16px;
         height: 13px;
+        transition: stroke 300ms ease-in-out;
 
         @include viewport($md) {
           width: 11px;
@@ -83,6 +97,8 @@
       .previouspostslink,
       .nextpostslink,
       .page,
+      .extend,
+      .last,
       .current {
         display: none;
       }
@@ -130,6 +146,8 @@
     width: 188px;
     background-color: color(blue);
     pointer-events: none;
+    max-height: 200px;
+    overflow-y: auto;
 
     @include viewport($md) {
       width: 105px;
@@ -150,9 +168,11 @@
       padding: 10px 0;
 
       .pages,
+      .extend,
+      .last,
       .previouspostslink,
       .nextpostslink {
-        display: none;
+        display: none !important;
       }
 
       a,

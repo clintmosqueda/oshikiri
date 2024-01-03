@@ -21,7 +21,7 @@ $jobs = get_field('job', 'option');
           </div>
           <div class="career-job-group js-career-job-group">
             <div class="career-job-details js-career-job-details">
-              <?php foreach( $job[info] as $info ):?>
+              <?php foreach( $job['info'] as $info ):?>
                 <dl>
                   <dt><?php echo $info['info_label']; ?></dt>
                   <dd><?php echo $info['info_description']; ?></dd>

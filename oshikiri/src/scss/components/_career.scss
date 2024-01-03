@@ -73,7 +73,7 @@
       position: relative;
       border-radius: 50%;
       box-shadow: inset 0 0 0 2px color(border);
-      transition: transform 300ms ease-in-out, background 300ms ease-in-out;
+      transition: transform 300ms $cubic-bezier, background 300ms $cubic-bezier;
       background-color: color(border);
 
       .is-open~& {
@@ -118,7 +118,7 @@
     &-group {
       overflow: hidden;
       height: 0;
-      transition: height 300ms ease-in-out;
+      transition: height 300ms $cubic-bezier;
     }
 
     &-details {
@@ -182,6 +182,16 @@
       color: color(white);
       font-size: 16px;
       font-weight: 600;
+
+      &:hover {
+        background-color: color(border);
+        color: color(darkBlue);
+        box-shadow: inset 0 0 0 2px color(border);
+
+        svg {
+          stroke: color(darkBlue);
+        }
+      }
 
       svg {
         stroke: color(white)

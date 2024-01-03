@@ -54,15 +54,21 @@
           <div class="context-group-desc">
             <?php the_sub_field('description');?>
           </div>
-          <div class="context-group-figure">
-            <img src="<?php the_sub_field('Image');?>" alt="">
-          </div>
+          <?php
+            $photo = get_sub_field('photo');
+            if($photo) : 
+          ?>
+            <div class="context-group-figure">
+              <img src="<?php the_sub_field('photo');?>" alt="">
+            </div>
+          <?php endif; ?>
         </div>
       </div>
 
-    <?php elseif( get_row_layout() == 'title_&_images' ): ?>
+    <?php elseif( get_row_layout() == 'title_description_images_list' ): ?>
       <div class="context-title-images">
         <h3 class="context-cluster-title"><?php the_sub_field('title');?></h3>
+        <div class="context-cluster-desc"><?php the_sub_field('description');?></div>
         <div class="context-cluster-cards">
           <?php if( have_rows('photo_list') ): ?>
             <?php while( have_rows('photo_list') ): the_row(); ?>

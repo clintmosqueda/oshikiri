@@ -17,7 +17,7 @@
     width: 100%;
     height: 335px;
     border-radius: 15px;
-    transition: all 300ms ease-in-out;
+    transition: all 300ms $cubic-bezier;
   }
 
   &-image {
@@ -35,7 +35,7 @@
     font-weight: 600;
     line-height: 1.7;
     margin-top: 17px;
-    transition: color 300ms ease-in-out;
+    transition: color 300ms $cubic-bezier;
   }
 
   &-info {
