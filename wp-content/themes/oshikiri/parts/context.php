@@ -3,7 +3,12 @@
 
     <?php if( get_row_layout() == 'title_&_description' ): ?>
       <div class="context-title-description">
+        <?php 
+        $title = get_sub_field('title');
+        if($title):
+        ?>
         <h2 class="context-heading"><?php the_sub_field('title');?></h2>
+        <?php endif; ?>
         <div class="context-body"><?php the_sub_field('description');?></div>
       </div>
 

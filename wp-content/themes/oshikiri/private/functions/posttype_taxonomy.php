@@ -108,7 +108,7 @@ $args = array(
     'hierarchical' => false,
     'menu_position' => 5,
     'rewrite' => true,
-    'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
+    'supports' => array('title', 'author', 'thumbnail', 'excerpt'),
     'show_in_rest' => true
 );
 

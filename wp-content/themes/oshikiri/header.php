@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <?php if( !is_single() || is_archive() ) : ?>
-  <meta property="og:image" content="<?php echo resolve_asset_url('/images/ogp.png'); ?>">
-  <?php elseif(is_single() && !get_the_post_thumbnail()) : ?>
-  <meta property="og:image" content="<?php echo resolve_asset_url('/images/ogp.png'); ?>">
-  <?php endif; ?>
+  <?php if(is_404()) {?>
+    <meta name="description" content="製パン機械・製菓機械の設計・製造・販売｜株式会社オシキリ"></meta>
+    <meta property="og:description" content="製パン機械・製菓機械の設計・製造・販売｜株式会社オシキリ"></meta>
+    <meta name="twitter:description" content="製パン機械・製菓機械の設計・製造・販売｜株式会社オシキリ"></meta>
+  <?php }?>
 
   <link rel="icon" type="image/x-icon" href="<?php echo resolve_asset_url('/images/favicon.ico'); ?>">
 

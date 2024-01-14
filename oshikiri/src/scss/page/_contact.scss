@@ -141,6 +141,7 @@
   select,
   input,
   textarea {
+    -webkit-appearance: none;
     appearance: none;
     border: none;
     color: color(blue);
@@ -148,6 +149,7 @@
     font-size: 16px;
     width: 100%;
     letter-spacing: 0.055em;
+    background-color: transparent;
 
     @include viewport($lg) {
       font-size: 14px;
@@ -167,6 +169,11 @@
     width: 180px;
     position: relative;
     cursor: pointer;
+
+    &.is-large {
+      max-width: 500px;
+      width: 100%;
+    }
 
     .mw_wp_form_confirm & {
       width: 100%;

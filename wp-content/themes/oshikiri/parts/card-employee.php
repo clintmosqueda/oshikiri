@@ -13,6 +13,7 @@
           <div class="card-employee-image" style="background-image: url('<?php echo get_sub_field('employee_profile')?>')">
             <!-- <img src="<?php echo get_sub_field('employee_profile')?>" alt=""> -->
           </div>
+          <span class="card-employee-feature-icon"></span>
         </div>
         <h3 class="card-employee-title"><?php the_title(); ?></h3>
         <div class="card-employee-info">

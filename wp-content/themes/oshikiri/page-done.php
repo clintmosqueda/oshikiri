@@ -47,8 +47,7 @@ get_header(); ?>
 <?php import_part('progress', array(
     'lists' => $progress
   ))?>
-  <p class="contact-complete-desc">お問い合わせありがとうございました。
-担当者の確認後、折り返しご連絡いたします。</p>
+  <p class="contact-complete-desc">資料ダウンロードいただきありがとうございました。</p>
   <?php import_part("button", array(
     'modifier' => 'contact-complete-button',
     'link_url' => resolve_url(),

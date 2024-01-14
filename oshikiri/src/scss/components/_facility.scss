@@ -7,10 +7,15 @@
     border-radius: 10px;
   }
 
+  &.has-detail {
+    .facility-top {
+      cursor: pointer;
+    }
+  }
+
   &-top {
     display: flex;
     // background-color: color(white);
-    cursor: pointer;
 
     @include viewport($md) {
       flex-direction: column;

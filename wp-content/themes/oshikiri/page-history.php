@@ -59,59 +59,7 @@ get_header(); ?>
 
 <div class="company-history">
   <div class="company-history-info">
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">押切龍雄が神奈川県横浜市鶴見にて、製パン用の小型低速 横型ミキサを開発、販売をはじめる。</p>
-        <div class="company-history-figure">
-          <img src="<?php echo resolve_asset_url('/images/history/history-image1.jpg')?>" alt="">
-        </div>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">東京 大森で法人化。</p>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">学校給食や食生活の洋風化が進み、新製品の竪型ミキサ、生地分割機などを開発。</p>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">学校給食や食生活の洋風化が進み、新製品の竪型ミキサ、生地分割機などを開発。</p>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">押切龍雄が神奈川県横浜市鶴見にて、製パン用の小型低速 横型ミキサを開発、販売をはじめる。</p>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">押切龍雄が神奈川県横浜市鶴見にて、製パン用の小型低速 横型ミキサを開発、販売をはじめる。</p>
-      </dd>
-    </dl>
-
-    <dl class="company-history-list">
-      <dt class="company-history-term">1949</dt>
-      <dd class="company-history-description">
-        <p class="company-history-par">押切龍雄が神奈川県横浜市鶴見にて、製パン用の小型低速 横型ミキサを開発、販売をはじめる。</p>
-      </dd>
-    </dl>
-
+    <?php import_part('history');?>
   </div>
 </div>
 

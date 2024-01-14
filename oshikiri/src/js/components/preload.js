@@ -20,6 +20,8 @@ export default function Preload() {
   const logoMask = document.querySelector('.preload-logo-loading')
   const preloadImage = document.querySelector('.preload-image')
   const mvCircles = document.querySelectorAll('.mv-slide-circle')
+  const mvOrbText = document.querySelector('.mv-orb-text')
+  const swiperSlideText = document.querySelectorAll('.swiper-slide-text')
 
   const mql = window.matchMedia("(max-width: 640px)").matches;
   const preloadImageHeight = mql ? '449px' : '580px'
@@ -36,7 +38,6 @@ export default function Preload() {
     watchSlidesProgress: true,
     on: {
       slideChange: swiper => {
-        // console.log('swiper', swiper)
         // console.log(swiper)
       }
     },
@@ -75,7 +76,10 @@ export default function Preload() {
     },
   })
 
-  mvSliderSwiper.on('realIndexChange', function () {
+  mvOrbText.innerHTML = swiperSlideText[0].dataset.text
+
+  mvSliderSwiper.on('realIndexChange', function (e) {
+    mvOrbText.innerHTML = swiperSlideText[this.realIndex].dataset.text
     navSwiperleft.slideTo(this.realIndex, duration, false)
     navSwiperRight.slideTo(this.realIndex, duration, false)
   })

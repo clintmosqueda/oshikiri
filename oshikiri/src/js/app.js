@@ -13,6 +13,7 @@ import Preload from './components/preload'
 import Pagination from './components/pagination'
 import Table from './components/table'
 import sideNav from './components/sideNav'
+import Translator from './components/translator'
 
 const url = window.location.pathname
 const currenPage = url.split('/').at(-1)
@@ -21,7 +22,7 @@ const currenPage = url.split('/').at(-1)
 if (currenPage === '') {
   Preload()
 }
-// Mv()
+Mv()
 Carousel()
 Menu()
 megaMenu()
@@ -35,4 +36,5 @@ Catalog()
 Pagination()
 Table()
 sideNav()
+Translator()
 

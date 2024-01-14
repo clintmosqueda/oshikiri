@@ -76,7 +76,7 @@ get_header(); ?>
           <h3 class="partner-title">PT.MACHINDOTAMA ABADI</h3>
           <p class="partner-par">Pasar Modern Paramount Serpong,Ruko Tematik Blok R Nomor 17,Jalan Raya Serpong,Kelurahan Curug Sangereng,Kecamatan Kalapa Dua,Kabupaten Tangerang,Provinsi Banten 15810</p>
           <p class="partner-par">Tel：+62 21 543 74659</p>
-          <a class="partner-link" target="_blank" href="www.baro.co.id">www.baro.co.id</a>
+          <a class="partner-link" target="_blank" href="https://www.baro.co.id">www.baro.co.id</a>
         </div>
       </div>
 
@@ -88,7 +88,7 @@ get_header(); ?>
           <h3 class="partner-title">JCG Marketing Group,Inc.</h3>
           <p class="partner-par">1308 Oroquieta Street,Sta.Cruz Manila,Philippines 1003</p>
           <p class="partner-par">Tel:(632)7337032,7359650<br>Fax:(632)7334216</p>
-          <a class="partner-link" target="_blank" href="www.jcgmarketing.com">www.jcgmarketing.com</a>
+          <a class="partner-link" target="_blank" href="https://www.jcgmarketing.com">www.jcgmarketing.com</a>
         </div>
       </div>
 

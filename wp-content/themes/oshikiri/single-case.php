@@ -72,7 +72,7 @@
   </div>
 
   <div class="single single-content">
-    <?php the_content(); ?>
+  <?php import_part('context'); ?>
   </div>
 
   <?php import_part("related-cases", array(

@@ -48,7 +48,8 @@
     </ul>
     <div class="menu-buttons">
       <a class="menu-button" href="<?php echo resolve_url('contact'); ?>">お問い合わせ</a>
-      <div class="menu-translator">
+      <?php import_part('translator')?>
+      <!-- <div class="menu-translator">
         <div class="menu-translator-button">
           <?php import_part("svg", array(
             'svg_class' => '',
@@ -56,7 +57,7 @@
           )); ?>
           Japanese
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

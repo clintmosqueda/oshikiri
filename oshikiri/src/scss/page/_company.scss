@@ -164,7 +164,7 @@
         transform: translateY(-50%);
         left: 7px;
         content: '';
-        height: 110%;
+        height: 104%;
         width: 1px;
         background-color: color(red);
 
@@ -641,14 +641,21 @@
 
       dd {
         font-size: 16px;
-        text-decoration: underline;
         line-height: 1.9;
-        display: inline-flex;
-        gap: 0 10px;
+
 
         @include viewport($md) {
           font-size: 14px;
           text-decoration: none;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        &.company-branch-legend-group {
+          display: inline-flex;
+          gap: 0 10px;
         }
       }
     }

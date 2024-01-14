@@ -1,6 +1,8 @@
 .mv {
   // background-color: teal;
   // margin-top: -92px;
+  position: relative;
+  overflow: hidden;
 
   &-wrapper {
     overflow: hidden;
@@ -235,6 +237,76 @@
 
     @include viewport($sm) {
       gap: 0;
+    }
+  }
+
+  &-orb {
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    // transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+    width: 233px;
+    height: 233px;
+    border-radius: 50%;
+    background-color: color(white);
+    animation: pulse 2s infinite;
+    transition: opacity 300ms $cubic-bezier;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include viewport($sm) {
+      opacity: 1;
+      position: absolute;
+      top: auto;
+      width: 215px;
+      height: 58px;
+      border-radius: 50px;
+      bottom: 10px;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 1px;
+      background-color: blue;
+
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      @include viewport($sm) {
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+
+      @include viewport($sm) {
+        font-size: 14px;
+      }
     }
   }
 }

@@ -15,4 +15,14 @@
       </svg>
     </span>
   </div>
+  <div class="translator-menu">
+    <div class="translator-group">
+      <ul class="translator-list">
+        <li class="translator-item"><a class="translator-country" target="_blank" href="https://oshikiri.com/top.html">Japan</a></li>
+        <li class="translator-item"><a class="translator-country" target="_blank" href="https://oshikiri.com/0top.html">Africa, Asia, Europe, Oceania</a></li>
+        <li class="translator-item"><a class="translator-country" target="_blank" href="https://oshikiri.com/1top.html">China</a></li>
+        <li class="translator-item"><a class="translator-country" target="_blank" href="https://oshikiri.com/2top.html">North America, South America</a></li>
+      </ul>
+    </div>
+  </div>
 </div>

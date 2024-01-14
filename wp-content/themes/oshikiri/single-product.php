@@ -36,15 +36,20 @@ get_header();
   <div class="context-wrap">
     <?php while (have_posts()) : the_post(); ?>
       <?php import_part('context'); ?>
+      <?php 
+        $catalog = get_field('catalog_list');
+      ?>
+      <?php if(!empty($catalog)): ?>
+        <div class="context-request">
+          <a class="context-request-link" href="<?php echo resolve_url('download?document='. $catalog->post_title); ?>">
+            カタログ請求
+            <span class="context-request-icon">
+              <img src="<?php echo resolve_asset_url('/images/data.svg'); ?>" alt="">
+            </span>
+          </a>
+        </div>
+      <?php endif; ?>
     <?php endwhile; ?>
-  </div>
-  <div class="context-request">
-    <a class="context-request-link" href="<?php echo resolve_archive_url('catalog'); ?>">
-      カタログ請求
-      <span class="context-request-icon">
-        <img src="<?php echo resolve_asset_url('/images/data.svg'); ?>" alt="">
-      </span>
-    </a>
   </div>
 </div>
 

@@ -337,6 +337,13 @@
                 "operator": "==",
                 "value": "news"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case"
+            }
         ]
     ],
     "menu_order": 0,
@@ -345,10 +352,11 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "the_content",
         "excerpt",
         "author"
     ],
     "active": 1,
     "description": "",
-    "modified": 1703590743
+    "modified": 1704252842
 }

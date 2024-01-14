@@ -3,6 +3,7 @@ export default function Catalog() {
   const contactComplete = document.querySelector('.contact-done')
   const downloadItem = document.querySelectorAll('.contact-post-item')
   const select = document.querySelector('[name="document"]')
+  const contactDownload = document.querySelector('.contact-download')
   // console.log('referrer', document.referrer)
   const prevLink = document.referrer
   const regex = /document/g
@@ -44,6 +45,16 @@ export default function Catalog() {
           localStorage.setItem("material", el.dataset.pdf);
         }
       })
+    })
+  }
+
+  if (contactDownload) {
+    const url = new URL(window.location.href)
+    const urlDecode = decodeURI(url.searchParams.get('document'))
+    downloadItem.forEach(el => {
+      if (urlDecode === el.dataset.name) {
+        localStorage.setItem("material", el.dataset.pdf);
+      }
     })
   }
 

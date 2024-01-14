@@ -390,8 +390,8 @@
     }
 
     th {
-      background-color: color(lightGray);
-      color: color(blue);
+      // background-color: color(lightGray);
+      // color: color(blue);
       padding: 16px 14px;
 
       @include viewport($md) {

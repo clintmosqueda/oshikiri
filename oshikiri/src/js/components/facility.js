@@ -10,10 +10,13 @@ export default function Facility() {
     facilityBottom[0].style.height = `${facilityBottomWrapHeight}px`
 
     facilityTop.forEach((el, index) => {
-      el.addEventListener('click', (e) => {
-        let facilityBottomWrapHeight = facilityBottomWrap[index].clientHeight
-        facilityBottom[index].style.height = `${facilityBottomWrapHeight}px`
-      })
+      if (facilityBottom[index]) {
+        el.addEventListener('click', (e) => {
+          let facilityBottomWrapHeight = facilityBottomWrap[index].clientHeight
+          facilityBottom[index].style.height = `${facilityBottomWrapHeight}px`
+        })
+      }
+
     })
 
     close.forEach((el, index) => {

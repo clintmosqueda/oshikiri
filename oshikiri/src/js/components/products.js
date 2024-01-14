@@ -5,12 +5,14 @@ export default function Products() {
   const footerSublink = document.querySelectorAll('.footer-sublink')
   const IS_OPEN = 'is-open'
 
+
   if (tabs.length) {
     let tab = localStorage.getItem('tab')
     if (tab) {
       document.getElementById(tab).classList.add(IS_OPEN)
       document.getElementById(`assembly-${tab}`).classList.add(IS_OPEN)
     } else {
+      localStorage.removeItem('tab')
       localStorage.setItem('tab', 'type');
       document.getElementById('type').classList.add(IS_OPEN)
       document.getElementById('assembly-type').classList.add(IS_OPEN)
