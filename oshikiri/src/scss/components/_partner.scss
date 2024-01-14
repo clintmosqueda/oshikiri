@@ -58,6 +58,7 @@
     @include viewport($md) {
       font-size: 20px;
       margin-bottom: 19px;
+      line-height: 120%;
     }
   }
 
@@ -66,6 +67,10 @@
     line-height: 1.85;
     letter-spacing: 0.001em;
     margin-top: 15px;
+
+    @include viewport($xs) {
+      font-size: 14px;
+    }
   }
 
   &-link {

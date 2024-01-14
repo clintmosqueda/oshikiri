@@ -36,6 +36,10 @@
         @include viewport($md) {
           justify-content: center;
         }
+
+        @include viewport($xs) {
+          gap: 0 5px;
+        }
       }
 
       .wpc-instead-of-posts-found {

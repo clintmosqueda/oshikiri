@@ -82,6 +82,10 @@
         padding: 40px 40px 33px;
         gap: 16px 30px;
       }
+
+      @include viewport($md) {
+        padding: 40px 20px 33px;
+      }
     }
 
     &-case {

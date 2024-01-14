@@ -70,6 +70,11 @@
         font-size: 14px;
         padding: 15px 0 13px 20px
       }
+
+      @include viewport($xs) {
+        padding: 15px 0 13px 15px;
+        font-size: 13px;
+      }
     }
 
     &-term {
@@ -207,6 +212,11 @@
         line-height: 1.7;
       }
 
+      @include viewport($xs) {
+        gap: 0 8px;
+        font-size: 14px;
+      }
+
       &::before {
         content: '';
         height: 15px;
@@ -266,6 +276,10 @@
       @include viewport($md) {
         letter-spacing: 0.045em;
         line-height: 2;
+      }
+
+      @include viewport($xs) {
+        font-size: 12px;
       }
     }
   }
@@ -330,6 +344,10 @@
 
       @include viewport($md) {
         padding: 43px 40px 0;
+      }
+
+      @include viewport($xs) {
+        padding: 43px 20px 0;
       }
 
       &::before {
@@ -438,6 +456,8 @@
           white-space: normal;
           line-height: 2;
         }
+
+        @include viewport($xs) {}
       }
     }
 
@@ -467,6 +487,10 @@
       align-items: center;
       gap: 0 37px;
 
+      @include viewport($xs) {
+        font-size: 13px;
+      }
+
       @include viewport($md) {
         gap: 0 12px;
         line-height: 1.8;
@@ -487,6 +511,11 @@
         flex-shrink: 0;
         content: counter(count);
         border: 1px solid #D3DCE5;
+
+        @include viewport($xs) {
+          width: 38px;
+          height: 38px;
+        }
       }
     }
 

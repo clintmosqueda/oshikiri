@@ -90,12 +90,20 @@
       top: auto;
       bottom: 0;
       left: auto;
-      right: -140px
+      right: -140px;
+      position: static;
+      opacity: 1;
+      display: none;
+      margin-top: 3px;
     }
 
     .is-show & {
       opacity: 1;
       pointer-events: auto;
+
+      @include viewport($sm) {
+        display: block;
+      }
     }
   }
 

@@ -361,6 +361,7 @@
 
     &-text {
       font-size: 16px;
+      line-height: 140%;
 
       @include viewport($md) {
         font-size: 14px;

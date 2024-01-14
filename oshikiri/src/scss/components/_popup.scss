@@ -112,6 +112,10 @@
       margin-bottom: -80px;
     }
 
+    @include viewport($xs) {
+      width: 240px;
+    }
+
     &-profile {
       height: 400px;
       width: 400px;
@@ -122,6 +126,11 @@
       @include viewport($md) {
         height: 280px;
         width: 280px;
+      }
+
+      @include viewport($xs) {
+        width: 100%;
+        height: 240px;
       }
 
       img {

@@ -27,6 +27,10 @@
 
     .swiper-slide {
       width: 305px !important;
+
+      @include viewport($xs) {
+        width: 280px !important;
+      }
     }
   }
 }

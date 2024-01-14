@@ -69,6 +69,16 @@
       @include viewport($md) {
         left: -17px;
       }
+
+      @include viewport($xs) {
+        font-size: 20px;
+      }
+    }
+
+    .caption-heading-icon {
+      @include viewport($xs) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -88,6 +98,10 @@
 
     @include viewport($sm) {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include viewport($xs) {
+      padding: 0;
     }
   }
 }

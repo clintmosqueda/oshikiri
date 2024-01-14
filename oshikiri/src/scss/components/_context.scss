@@ -9,6 +9,10 @@
     padding: 0 20px;
   }
 
+  @include viewport($xs) {
+    padding: 0;
+  }
+
   &-wrap {
     width: 69.12vw;
 
@@ -37,6 +41,10 @@
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 17px;
+    }
+
+    @include viewport($xs) {
+      font-size: 22px;
     }
 
     &::before {
@@ -74,6 +82,10 @@
       font-size: 18px;
       padding-bottom: 11px;
     }
+
+    @include viewport($xs) {
+      font-size: 16px;
+    }
   }
 
   p {
@@ -87,6 +99,10 @@
       font-size: 14px;
       line-height: 2;
       margin: 16px 0 18px;
+    }
+
+    @include viewport($xs) {
+      font-size: 12px;
     }
   }
 
@@ -119,6 +135,11 @@
       margin-bottom: 0;
       gap: 6px 0;
 
+      @include viewport($xs) {
+        font-size: 12px;
+        gap: 8px 0;
+      }
+
       &::before {
         content: '';
         top: 0;
@@ -131,6 +152,10 @@
 
       li {
         font-size: 14px;
+
+        @include viewport($xs) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -149,6 +174,7 @@
       list-style: none;
       gap: 8px 0;
       margin-top: 7px;
+      margin-bottom: 0;
 
       &:before {
         position: absolute;
@@ -171,6 +197,10 @@
       position: relative;
       font-size: 14px;
 
+      @include viewport($xs) {
+        font-size: 12px;
+      }
+
       &:before {
         position: absolute;
         top: 8px;
@@ -180,6 +210,11 @@
         height: 7px;
         border-radius: 50%;
         background-color: color(blue);
+
+        @include viewport($xs) {
+          width: 5px;
+          height: 5px;
+        }
       }
     }
   }

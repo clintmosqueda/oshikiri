@@ -39,13 +39,21 @@
       width: 100%;
     }
 
+    @include viewport($xs) {
+      font-size: 20px;
+    }
+
     &-icon {
       position: relative;
-      width: 30px;
+      width: 22px;
       height: 8px;
 
       @include viewport($md) {
         margin-bottom: 6px;
+      }
+
+      @include viewport($xs) {
+        margin-bottom: 0;
       }
 
       &::before,

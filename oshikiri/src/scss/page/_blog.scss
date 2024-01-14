@@ -20,6 +20,10 @@
       padding: 0 19px;
       margin-bottom: 12px;
     }
+
+    @include viewport($xs) {
+      padding: 0;
+    }
   }
 
   &-category {
@@ -49,6 +53,13 @@
     @include viewport($md) {
       font-size: 30px;
       padding: 0 19px;
+      line-height: 1.2;
+    }
+
+    @include viewport($xs) {
+      font-size: 26px;
+      padding: 0;
+
     }
 
     &-icon {

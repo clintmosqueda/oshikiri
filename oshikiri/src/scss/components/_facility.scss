@@ -70,6 +70,7 @@
     letter-spacing: 0.05em;
     margin-top: 22px;
     margin-bottom: 17px;
+    line-height: 150%;
 
     @include viewport($md) {
       font-size: 14px;

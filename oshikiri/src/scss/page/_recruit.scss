@@ -68,6 +68,10 @@
       padding: 0 20px;
     }
 
+    @include viewport($xs) {
+      padding: 0;
+    }
+
     &-par {
       font-size: 16px;
       white-space: pre-line;
@@ -145,6 +149,10 @@
         font-size: 20px;
       }
 
+      @include viewport($xs) {
+        font-size: 16px;
+      }
+
       &-icon {
         svg {
           width: 16px;
@@ -179,6 +187,10 @@
         text-align: center;
         display: block;
         line-height: 0.8;
+      }
+
+      @include viewport($xs) {
+        font-size: 46px;
       }
 
       span {
@@ -230,6 +242,10 @@
           left: -20px;
           height: 7px;
           width: 7px;
+        }
+
+        @include viewport($xs) {
+          box-shadow: 81px 53px 0 5px color(lightGray), 195px 50px 0 8px color(lightGray), 213px -76px 0 4px color(lightGray), 253px -47px 0 5px color(lightGray);
         }
       }
 
