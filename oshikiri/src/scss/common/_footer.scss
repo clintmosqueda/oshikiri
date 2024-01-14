@@ -31,7 +31,9 @@
             padding: 48px 40px 53px;
         }
 
-
+        @include viewport($xs) {
+            padding: 48px 20px 53px;
+        }
 
         &::before {
             position: absolute;

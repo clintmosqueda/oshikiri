@@ -20,6 +20,10 @@
       flex-direction: column;
       padding: 66px 40px 89px;
     }
+
+    @include viewport($xs) {
+      padding: 66px 20px 89px;
+    }
   }
 
   &-left {

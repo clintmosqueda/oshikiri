@@ -156,6 +156,10 @@
             gap: 0 30px;
             justify-content: space-between;
 
+            @include viewport($xs) {
+                font-size: 20px;
+            }
+
             span,
             a {
                 font-weight: bold;

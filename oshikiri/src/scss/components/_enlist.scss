@@ -19,6 +19,10 @@
     padding: 275px 20px 62px 51px;
   }
 
+  @include viewport($xs) {
+    padding-left: 18px;
+  }
+
   &-figure {
     position: absolute;
     pointer-events: none;

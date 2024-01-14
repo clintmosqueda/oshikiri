@@ -44,11 +44,16 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 50px 34px 50px 41px;
-    width: 350px;
+    max-width: 350px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 42px 0;
     margin-bottom: 100px;
+
+    @include viewport($xs) {
+      padding: 50px 25px 50px 25px;
+    }
   }
 
   &-list {
@@ -150,6 +155,10 @@
     gap: 19px 0;
     display: none;
 
+    @include viewport($xs) {
+      padding: 20px 15px;
+    }
+
     &-product {
       grid-template-columns: repeat(1, auto);
     }
@@ -158,6 +167,10 @@
   &-sublink {
     position: relative;
     padding-left: 12px;
+
+    @include viewport($xs) {
+      font-size: 12px;
+    }
 
     &::before {
       position: absolute;

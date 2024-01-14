@@ -94,10 +94,18 @@
 
     .swiper-slide {
       width: 320px !important;
+
+      @include viewport($xs) {
+        width: 260px !important;
+      }
     }
 
     &-slide {
       width: 320px;
+
+      @include viewport($xs) {
+        width: 260px;
+      }
     }
 
     &-scroll {

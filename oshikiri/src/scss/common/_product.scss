@@ -93,6 +93,10 @@
         font-size: 14px;
         font-weight: 500;
       }
+
+      @include viewport($xs) {
+        font-size: 12px;
+      }
     }
   }
 

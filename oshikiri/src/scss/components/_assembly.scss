@@ -67,6 +67,10 @@
       font-size: 12px;
     }
 
+    @include viewport($xs) {
+      font-size: 10px;
+    }
+
     &:hover,
     &.is-open {
       background-color: color(white);
@@ -80,6 +84,10 @@
     @include viewport($md) {
       margin-top: 58px;
       padding: 0 21px;
+    }
+
+    @include viewport($xs) {
+      padding: 0 15px
     }
   }
 

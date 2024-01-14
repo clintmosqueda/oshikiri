@@ -14,7 +14,7 @@ export default function Carousel() {
     const infoSliderSwiper = new Swiper('.js-info-carousel', {
       speed,
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 15,
       // cssMode: true,
       centeredSlides: false,
       scrollbar: {
@@ -25,6 +25,11 @@ export default function Carousel() {
       on: {
         slideChange: swiper => {
           // console.log(swiper)
+        }
+      },
+      breakpoints: {
+        321: {
+          spaceBetween: 25,
         }
       },
     });
