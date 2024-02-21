@@ -1,7 +1,5 @@
 <section class="enlist">
-  <div class="enlist-figure">
-    <img src="<?php echo resolve_asset_url('/images/recruit-model-v2.png'); ?>" alt="">
-  </div>
+  <div class="enlist-image"></div>
   <?php import_part("heading", array(
     'modifier' => 'enlist-heading',
     'heading' => 'Recruit',

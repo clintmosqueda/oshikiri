@@ -70,7 +70,7 @@
         </div>
       </div>
 
-    <?php elseif( get_row_layout() == 'title_description_images_list' ): ?>
+    <?php elseif( get_row_layout() == 'title_&_images' ): ?>
       <div class="context-title-images">
         <h3 class="context-cluster-title"><?php the_sub_field('title');?></h3>
         <div class="context-cluster-desc"><?php the_sub_field('description');?></div>

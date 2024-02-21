@@ -14,6 +14,8 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" id="js-viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:image" content="<?php echo resolve_asset_url('/images/ogp.jpg'); ?>">
+  <meta name="twitter:image" content="<?php echo resolve_asset_url('/images/ogp.jpg'); ?>"></meta>
 
   <?php if(is_404()) {?>
     <meta name="description" content="製パン機械・製菓機械の設計・製造・販売｜株式会社オシキリ"></meta>

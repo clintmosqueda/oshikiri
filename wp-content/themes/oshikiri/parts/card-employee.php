@@ -59,7 +59,9 @@
 
         <div class="popup-discussions">
           <?php if( have_rows('discussions') ):?>
-            <?php while ( have_rows('discussions') ) : the_row();?>
+            <?php while ( have_rows('discussions') ) : the_row();
+              $q_image = get_sub_field('photo')
+            ?>
               <div class="popup-discussion">
                 <h2 class="popup-question">
                   <span class="popup-question-q">Q</span>
@@ -68,17 +70,18 @@
                 <div class="popup-answer">
                   <p class="popup-desc"><?php echo get_sub_field('answer') ?></p>
                 </div>
-
-                <div class="popup-photo">
-                  <img src="<?php echo get_sub_field('photo')?>" alt="">
-                </div>
+                <?php if($q_image):?>
+                  <div class="popup-photo">
+                    <img src="<?php echo get_sub_field('photo')?>" alt="">
+                  </div>
+                <?php endif; ?>
               </div>
             <?php endwhile; ?>
           <?php endif; ?>
         </div>
 
         <div class="popup-schedule">
-          <span class="popup-schedule-heading">A.Hさんの一日のスケジュール</span>
+          <span class="popup-schedule-heading">1日のスケジュール</span>
           <div class="popup-timeline">
             <?php if( have_rows('schedule') ):?>
               <?php while ( have_rows('schedule') ) : the_row();?>

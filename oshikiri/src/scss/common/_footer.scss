@@ -1,14 +1,12 @@
 .footer {
     background-color: color(lightGray);
-    margin-top: 100px;
-
-    @include viewport($md) {
-        margin-top: 61px;
-    }
 
     @include viewport($md) {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
+        margin-top: -25px;
+        z-index: 1;
+        position: relative;
     }
 
     &-inner {

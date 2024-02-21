@@ -13,5 +13,5 @@ $current_url = home_url( add_query_arg( array(), $wp->request ) );
       <div class="assembly-lines">
         <span class="assembly-line" id="assembly-type" data-tab="type">パンの種類から探す</span>
         <span class="assembly-line" id="assembly-line" data-tab="line">ラインから探す</span>
-        <span class="assembly-line" id="assembly-category" data-tab="category">製品カテゴリ一覧</span>
+        <span class="assembly-line" id="assembly-category" data-tab="category">製品カテゴリから探す</span>
       </div>

@@ -23,7 +23,7 @@
           <div class="footer-groups">
             <span class="footer-label">製品を探す</span>
             <div class="footer-group">
-              <a class="footer-sublink" data-tab="category" href="<?php echo resolve_archive_url(PRODUCT_POST_TYPE)?>">単体機種</a>
+              <a class="footer-sublink" data-tab="category" href="<?php echo resolve_archive_url(PRODUCT_POST_TYPE)?>">製品カテゴリから探す</a>
               <a class="footer-sublink" data-tab="line" href="<?php echo resolve_archive_url(PRODUCT_POST_TYPE)?>">ラインから探す</a>
               <a class="footer-sublink" data-tab="type" href="<?php echo resolve_archive_url(PRODUCT_POST_TYPE)?>">パンから探す</a>
             </div>
@@ -38,20 +38,21 @@
           </div>
 
           <div class="footer-groups">
-            <span class="footer-label">会社情報</span>
+            <span class="footer-label"><a href="<?php echo resolve_url('company')?>">会社情報</a></span>
             <div class="footer-group">
               <a class="footer-sublink" href="<?php echo resolve_url('company/philosophy')?>">企業理念</a>
-              <a class="footer-sublink" href="<?php echo resolve_url('company')?>">会社概要</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('company/profile')?>">会社概要</a>
               <a class="footer-sublink" href="<?php echo resolve_url('company/history')?>">沿革</a>
               <a class="footer-sublink" href="<?php echo resolve_url('company/branch')?>">事業所一覧</a>
               <a class="footer-sublink" href="<?php echo resolve_url('company/network')?>">海外ネットワーク</a>
               <a class="footer-sublink" href="<?php echo resolve_url('recruit')?>">採用情報</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('employee')?>">オシキリを支える人と技術</a>
               <a class="footer-sublink" href="<?php echo resolve_url('about')?>">オシキリの強み</a>
             </div>
           </div>
 
           <div class="footer-groups">
-            <span class="footer-label">お問い合わせ</span>
+            <span class="footer-label"><a href="<?php echo resolve_url('contact')?>">お問い合わせ</a></span>
             <div class="footer-group">
               <a class="footer-link" href="<?php echo resolve_url('sitemap'); ?>">サイトマップ</a>
               <a class="footer-link" href="<?php echo resolve_archive_url('news'); ?>">ニュース</a>

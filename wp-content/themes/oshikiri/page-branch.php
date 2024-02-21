@@ -115,7 +115,7 @@
       'modifier' => '',
       'id' => 'facility8',
       'image' => resolve_asset_url('/images/branch/facility8.jpg'),
-      'name' => 'OCA',
+      'name' => 'Oshikiri Corporation of America',
       'address' => '10425 Drummond Road, Philadelphia, PA 19154, U.S.A.',
       'tel' => '(+1)215-637-6005',
       'fax' => '(+1)215-637-6041',
@@ -158,24 +158,24 @@ get_header(); ?>
         </dl>
         <dl>
           <dt>工場</dt>
-          <dd><a href="#facility2">山形（東根）</a></dd>
+          <dd><a href="#facility2">山形工場</a></dd>
         </dl>
         <dl>
           <dt>営業所</dt>
           <dd class="company-branch-legend-group">
+            <span><a href="#facility6">札幌</a></span>
+            <span><a href="#facility7">仙台</a></span>
+            <span><a href="#facility1">東京</a></span>
             <span><a href="#facility3">名古屋</a></span>
             <span><a href="#facility4">大阪</a></span>
             <span><a href="#facility5">福岡</a></span>
           </dd>
         </dl>
         <dl>
-          <dt>販売会社</dt>
-          <dd><a href="#facility6">オシキリ北日本札幌営業所オシキリ北日本本社</a></dd>
-        </dl>
-        <dl>
           <dt>オシキリグループ</dt>
           <dd>
-          <a href="#facility7">株式会社オシキリ北日本</a><br>
+          <span href="#facility7">富士物産株式会社</span><br>
+          <span href="#facility7">広州昌洋有限公司</span><br>
             <a href="#facility8">オシキリ・コーポレーション・オブ・アメリカ</a>
           </dd>
         </dl>

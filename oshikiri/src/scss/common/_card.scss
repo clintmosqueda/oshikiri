@@ -36,6 +36,7 @@
     font-family: $font-noto-sans;
     letter-spacing: 0.04em;
     line-height: 1.75;
+    min-height: 56px;
 
     @include viewport($xs) {
       font-size: 14px;

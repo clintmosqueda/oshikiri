@@ -6,7 +6,7 @@
   <ul class="mapsite-list">
     <?php foreach($links as $link) { ?>
       <li class="mapsite-item">
-        <a class="mapsite-link" href="<?php echo $link["url"]; ?>">
+        <a class="mapsite-link <?php echo $link["class"]?>" data-tab="<?php echo $link["data-tab"]?>" href="<?php echo $link["url"]; ?>">
           <?php echo $link["text"]; ?>
           <span class="mapsite-link-icon">
             <?php import_part("svg", array(

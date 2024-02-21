@@ -11,12 +11,12 @@ $cases = query_custom_post(3, CASE_POST_TYPE)
         'subheading' => '導入事例'
       ));?>
 
-      <div class="cases-links">
+      <!-- <div class="cases-links">
         <a href="" class="cases-link">導入会社ロゴ</a>
         <a href="" class="cases-link">導入会社ロゴ</a>
         <a href="" class="cases-link">導入会社ロゴ</a>
         <a href="" class="cases-link">導入会社ロゴ</a>
-      </div>
+      </div> -->
 
       <div class="cases-articles">
         <?php if($cases->have_posts()): ?>
@@ -26,7 +26,7 @@ $cases = query_custom_post(3, CASE_POST_TYPE)
               'link' => get_permalink(),
               'image' => get_field('featured_image'),
               'title' => get_the_title(),
-              'desc' => 'ベルトドライブプルーファ後、チェーンカス等の異物混入の不安がなくなりました。'
+              'desc' => wp_strip_all_tags(get_first_paragraph(50))
             ));?>
           <?php endwhile; ?>
         <?php endif; ?>

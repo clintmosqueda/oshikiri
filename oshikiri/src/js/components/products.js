@@ -2,13 +2,14 @@ export default function Products() {
   const tabs = document.querySelectorAll('.assembly-line')
   const contents = document.querySelectorAll('.assembly-product')
   const megaMenuProduct = document.querySelectorAll('.megamenu-machine')
+  const sitemapProduct = document.querySelectorAll('.mapsite-products')
   const footerSublink = document.querySelectorAll('.footer-sublink')
   const IS_OPEN = 'is-open'
 
 
   if (tabs.length) {
     let tab = localStorage.getItem('tab')
-    if (tab) {
+    if (tab && tab !== 'undefined') {
       document.getElementById(tab).classList.add(IS_OPEN)
       document.getElementById(`assembly-${tab}`).classList.add(IS_OPEN)
     } else {
@@ -40,6 +41,15 @@ export default function Products() {
       localStorage.setItem("tab", el.dataset.tab);
     })
   })
+
+  if (sitemapProduct) {
+    sitemapProduct.forEach(el => {
+      el.addEventListener('click', () => {
+        localStorage.setItem("tab", el.dataset.tab);
+      })
+    })
+  }
+
 
   footerSublink.forEach(el => {
     el.addEventListener('click', () => {

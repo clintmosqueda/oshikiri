@@ -15,7 +15,7 @@ get_header();
     ),
     array(
       'text' => '製品情報',
-      'url' => '#',
+      'url' => resolve_archive_url(PRODUCT_POST_TYPE),
     ),
     array(
       'text' => get_the_title(),

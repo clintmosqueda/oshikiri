@@ -6,21 +6,48 @@
           <div class="swiper-slide swiper-slide-text" data-text="オシキリについて">
             <div class="mv-slide">
               <a href="<?php echo resolve_url('about'); ?>" class="mv-slide-figure">
-                <img src="<?php echo resolve_asset_url('/images/slide1.webp'); ?>" alt="">
+                <picture>
+                  <source 
+                  srcset="<?php echo resolve_asset_url('/images/mv-slide1.webp'); ?>"
+                  media="(min-width: 768px)"
+                  />
+                  <img 
+                  src="<?php echo resolve_asset_url('/images/mv-slide1-sp.webp'); ?>" 
+                  alt=""
+                  />
+                </picture>
               </a>
             </div>
           </div>
           <div class="swiper-slide swiper-slide-text" data-text="導入事例">
             <div class="mv-slide">
               <a href="<?php echo resolve_archive_url('case'); ?>" class="mv-slide-figure">
-                <img src="<?php echo resolve_asset_url('/images/slide2.webp'); ?>" alt="">
+              <picture>
+                  <source 
+                  srcset="<?php echo resolve_asset_url('/images/mv-slide2.webp'); ?>"
+                  media="(min-width: 768px)"
+                  />
+                  <img 
+                  src="<?php echo resolve_asset_url('/images/mv-slide2-sp.webp'); ?>" 
+                  alt=""
+                  />
+                </picture>
               </a>
             </div>
           </div>
           <div class="swiper-slide swiper-slide-text" data-text="製品情報">
             <div class="mv-slide" >
               <a href="<?php echo resolve_archive_url('product'); ?>" class="mv-slide-figure">
-                <img src="<?php echo resolve_asset_url('/images/slide3.webp'); ?>" alt="">
+              <picture>
+                  <source 
+                  srcset="<?php echo resolve_asset_url('/images/mv-slide3.webp'); ?>"
+                  media="(min-width: 768px)"
+                  />
+                  <img 
+                  src="<?php echo resolve_asset_url('/images/mv-slide3-sp.webp'); ?>" 
+                  alt=""
+                  />
+                </picture>
               </a>
             </div>
           </div>

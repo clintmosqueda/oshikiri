@@ -1,27 +1,59 @@
 .inquire {
-    max-width: 1000px;
-    width: calc(100% - 40px);
+    width: 100%;
     margin: 100px auto 0;
-    box-shadow: inset 0 0 0 5px color(red);
-    border-radius: 30px;
-    padding-top: 61px;
+    padding-top: 83px;
     padding-bottom: 74px;
     gap: 62px 0;
     display: flex;
     flex-direction: column;
+    height: 480px;
+    background-image: url('#{$image-path}/inquiry.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 
     @include viewport($md) {
         box-shadow: none;
-        gap: 20px 0;
+        gap: 22px 0;
         padding-bottom: 0;
-        padding-top: 0;
+        padding-top: 56px;
         margin-top: 67px;
+        height: 520px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background-image: linear-gradient(#255279 0%, #285986 100%);
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
     }
 
     &-heading {
         text-align: center;
-        color: color(red);
+        color: color(white);
+        font-size: 65px;
+        letter-spacing: 0.07em;
+        gap: 23px 0;
 
+        @include viewport($md) {
+            font-size: 32px;
+            gap: 10px 0;
+        }
+
+        span {
+            font-size: 19px;
+
+            @include viewport($md) {
+                font-size: 14px;
+            }
+        }
     }
 
     &-method {
@@ -36,9 +68,7 @@
         }
 
         @include viewport($md) {
-            box-shadow: inset 0 0 0 4px color(red);
             flex-direction: column;
-            border-radius: 30px;
             max-width: 310px;
             width: 100%;
             margin: 0 auto;
@@ -53,12 +83,12 @@
             transform: translateX(-50%);
             width: 1px;
             height: 120px;
-            background-color: color(red);
+            background-color: color(white);
 
             @include viewport($md) {
                 height: 2px;
                 width: 100%;
-                top: 49%;
+                top: 47%;
                 transform: translate(-50%, -50%);
             }
         }
@@ -69,7 +99,7 @@
         justify-content: center;
 
         @include viewport($md) {
-            padding: 31px 0 31px;
+            padding: 31px 0 22px;
         }
 
         &-content {
@@ -85,32 +115,36 @@
         &-icon {
             align-self: center;
             display: block;
-            width: 35px;
-            height: 32px;
+            width: 40px;
+            height: 38px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('#{$image-path}/icon-mail.png');
 
-            svg {
-                width: 100%;
-                height: 100%;
+            @include viewport($md) {
+                width: 32px;
+                height: 30px;
             }
         }
 
         &-button {
-            background-color: color(red);
-            color: color(white);
-
+            background-color: color(white);
+            color: color(blue);
+            font-size: 16px;
 
             &:hover {
-                background-color: transparent;
-                color: color(red);
-                box-shadow: inset 0 0 0 2px color(red);
+                background-color: color(blue);
+                color: color(white);
+                // box-shadow: inset 0 0 0 2px color(blue);
 
                 svg {
-                    stroke: color(red)
+                    stroke: color(white)
                 }
             }
 
             svg {
-                stroke: color(white)
+                stroke: color(blue)
             }
         }
     }
@@ -120,7 +154,7 @@
         justify-content: center;
 
         @include viewport($md) {
-            padding: 22px 0;
+            padding: 32px 0;
         }
 
         &-content {
@@ -132,12 +166,16 @@
         &-icon {
             align-self: center;
             display: block;
-            width: 33px;
-            height: 33px;
+            width: 40px;
+            height: 40px;
+            background-image: url('#{$image-path}/icon-phone.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 
-            svg {
-                width: 100%;
-                height: 100%;
+            @include viewport($md) {
+                width: 31px;
+                height: 31px;
             }
         }
 
@@ -150,7 +188,7 @@
         &-number {
             font-size: 24px;
             font-family: $font-poppins;
-            color: color(red);
+            color: color(white);
             display: flex;
             align-items: center;
             gap: 0 30px;

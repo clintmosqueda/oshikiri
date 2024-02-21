@@ -10,10 +10,7 @@ $modifier = empty($modifier) ? '' : $modifier;
   <div class="inquire-method">
     <div class="inquire-mail">
       <div class="inquire-mail-content">
-        <?php import_part("svg", array(
-              'svg_class' => 'inquire-mail-icon',
-              'svg_id' => '#email'
-              ))?>
+        <span class="inquire-mail-icon"></span>
         <?php import_part("button", array(
               'modifier' => 'inquire-mail-button',
               'link_url' => resolve_url('contact'),
@@ -25,10 +22,7 @@ $modifier = empty($modifier) ? '' : $modifier;
     </div>
     <div class="inquire-phone">
       <div class="inquire-phone-content">
-        <?php import_part("svg", array(
-              'svg_class' => 'inquire-phone-icon',
-              'svg_id' => '#phone'
-              ))?>
+        <span class="inquire-phone-icon"></span>
         <div class="inquire-phone-numbers">
           <p class="inquire-phone-number">Tel <a href="tel:0466446011">0466-44-6011</a></p>
           <p class="inquire-phone-number">Fax <span>0466-44-6969</span></p>

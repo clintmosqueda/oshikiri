@@ -19,7 +19,8 @@ $category = get_field('select_category');
       <?php } else { ?>
         <?php import_part("product-category", array(
           'showCategory' => 'false',
-          'excludedId' => get_the_ID()
+          'excludedId' => get_the_ID(),
+          'isRelated' => 'true'
         )); ?>
       <?php } ?>
     </div>

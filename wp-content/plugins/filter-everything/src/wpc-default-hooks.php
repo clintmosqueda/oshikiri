@@ -272,7 +272,7 @@ function flrt_hierarchy_opened() {
  * @since 1.7.1
  */
 function flrt_dropdown_default_option( $filter ) {
-    return apply_filters( 'wpc_dropdown_default_option', sprintf( __( '- Select %s -', 'filter-everything' ),  $filter['label'] ), $filter );
+    return apply_filters( 'wpc_dropdown_default_option', sprintf( __( '%s', 'filter-everything' ),  $filter['label'] ), $filter );
 }
 
 function flrt_brand_filter_entities(){

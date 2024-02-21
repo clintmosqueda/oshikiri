@@ -33,8 +33,8 @@
         'modifier' => 'cases-archive-card',
         'link' => get_permalink(),
         'image' => get_field('featured_image'),
-        'title' => get_the_title(),
-        'desc' => wp_strip_all_tags(get_first_paragraph(50))
+        'title' => get_field('company_name'),
+        'desc' => get_the_title(),
       ));?>
     <?php endwhile; // End Loop. ?>
   <?php endif; ?>

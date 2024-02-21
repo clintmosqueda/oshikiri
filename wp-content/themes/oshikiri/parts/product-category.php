@@ -3,6 +3,9 @@ $modifier = empty($modifier) ? '' : $modifier;
 $itemPerPage = empty($itemPerPage) ? -1 : $itemPerPage;
 $showCategory = empty($showCategory) ? 'true' : $showCategory;
 $excludedId = empty($excludedId) ? '' : $excludedId;
+$isRelated = empty($isRelated) ? '' : $isRelated;
+
+$mpc = get_field('main_product_categories')->name;
 
 $args = array(
   'posts_per_page'    => $itemPerPage,
@@ -11,7 +14,20 @@ $args = array(
   'meta_key'      => 'select_category',
   'meta_value'    => 'product'
 );
-$the_query = new WP_Query( $args );
+$args2 = array(
+  'posts_per_page'    => $itemPerPage,
+  'post_type'     => PRODUCT_POST_TYPE,
+  'post__not_in'   => array($excludedId),
+  'tax_query'      => array(
+    array(
+      'taxonomy' => PRODUCT_CATEGORY,
+      'field'    => 'slug',
+      'terms'    => $mpc
+    )
+  )
+);
+
+$the_query = $isRelated ? new WP_Query( $args2 )  : new WP_Query( $args );
 
 $args = array(
   'taxonomy' => PRODUCT_CATEGORY,

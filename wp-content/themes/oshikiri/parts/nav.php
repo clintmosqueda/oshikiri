@@ -16,7 +16,7 @@
       <a class="nav-link" href="<?php echo resolve_archive_url('case'); ?>">導入事例</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo resolve_archive_url('news'); ?>">ニュース</a>
+      <a class="nav-link" href="<?php echo resolve_url('recruit')?>">採用情報</a>
     </li>
   </ul>
 </nav>

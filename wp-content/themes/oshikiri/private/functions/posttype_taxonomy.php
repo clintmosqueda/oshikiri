@@ -5,7 +5,7 @@ $args = array(
     
     'labels' => array(
         'singular_name' => ucfirst(PRODUCT_POST_TYPE), 
-        'menu_name' => 'Product', 
+        'menu_name' => '製品', 
         'add_new_item' => 'Add New Product Post Title', 
         'add_new' => 'Add New Product' , 
         'new_item' => 'New Item', 
@@ -88,7 +88,7 @@ $args = array(
     
     'labels' => array(
         'singular_name' => ucfirst(CASE_POST_TYPE), 
-        'menu_name' => 'Case', 
+        'menu_name' => '導入事例', 
         'add_new_item' => 'Add New Case Post Title', 
         'add_new' => 'Add New Case' , 
         'new_item' => 'New Item', 
@@ -120,7 +120,7 @@ $args = array(
     
     'labels' => array(
         'singular_name' => ucfirst(NEWS_POST_TYPE), 
-        'menu_name' => 'News', 
+        'menu_name' => 'ニュース', 
         'add_new_item' => 'Add New News Post Title', 
         'add_new' => 'Add New News' , 
         'new_item' => 'New Item', 
@@ -186,7 +186,7 @@ $args = array(
   
   'labels' => array(
       'singular_name' => ucfirst(EMPLOYEE_POST_TYPE), 
-      'menu_name' => 'Employee', 
+      'menu_name' => '社員インタビュー', 
       'add_new_item' => 'Add New Employee Post Title', 
       'add_new' => 'Add New Employee' , 
       'new_item' => 'New Item', 
@@ -236,7 +236,7 @@ $args = array(
   
   'labels' => array(
       'singular_name' => ucfirst(CATALOG_POST_TYPE), 
-      'menu_name' => 'Catalog', 
+      'menu_name' => 'カタログ', 
       'add_new_item' => 'Add New Catalog Post Title', 
       'add_new' => 'Add New Catalog' , 
       'new_item' => 'New Item', 

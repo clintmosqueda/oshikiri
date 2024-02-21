@@ -98,7 +98,16 @@ get_header(); ?>
 
   <div class="company-philosophy-figure">
     <div class="company-philosophy-image">
-      <img src="<?php echo resolve_asset_url('/images/philosophy/machinery.jpg')?>" alt="machinery">
+      <picture>
+        <source 
+        srcset="<?php echo resolve_asset_url('/images/philosophy/machinery.jpg')?>"
+        media="(min-width: 768px)"
+        />
+        <img 
+        src="<?php echo resolve_asset_url('/images/philosophy/machinery_sp.jpg')?>" 
+        alt=""
+        />
+      </picture>
     </div>
   </div>
 

@@ -69,21 +69,21 @@ get_header(); ?>
     <div class="company-network-partners">
 
       <div class="partner">
-        <div class="partner-figure">
+        <!-- <div class="partner-figure">
           <img src="<?php echo resolve_asset_url('/images/network/partner-image1.jpg')?>" alt="">
-        </div>
+        </div> -->
         <div class="partner-content">
           <h3 class="partner-title">PT.MACHINDOTAMA ABADI</h3>
-          <p class="partner-par">Pasar Modern Paramount Serpong,Ruko Tematik Blok R Nomor 17,Jalan Raya Serpong,Kelurahan Curug Sangereng,Kecamatan Kalapa Dua,Kabupaten Tangerang,Provinsi Banten 15810</p>
+          <p class="partner-par">Pasar Modern Paramount Serpong,Ruko Tematik Blok R Nomor 17,Jalan Raya Serpong,Kelurahan Curug <br class="show-pc"/> Sangereng,Kecamatan Kalapa Dua,Kabupaten Tangerang,Provinsi Banten 15810</p>
           <p class="partner-par">Tel：+62 21 543 74659</p>
           <a class="partner-link" target="_blank" href="https://www.baro.co.id">www.baro.co.id</a>
         </div>
       </div>
 
       <div class="partner">
-        <div class="partner-figure">
+        <!-- <div class="partner-figure">
           <img src="<?php echo resolve_asset_url('/images/network/partner-image1.jpg')?>" alt="">
-        </div>
+        </div> -->
         <div class="partner-content">
           <h3 class="partner-title">JCG Marketing Group,Inc.</h3>
           <p class="partner-par">1308 Oroquieta Street,Sta.Cruz Manila,Philippines 1003</p>
@@ -93,9 +93,9 @@ get_header(); ?>
       </div>
 
       <div class="partner">
-        <div class="partner-figure">
+        <!-- <div class="partner-figure">
           <img src="<?php echo resolve_asset_url('/images/network/partner-image1.jpg')?>" alt="">
-        </div>
+        </div> -->
         <div class="partner-content">
           <h3 class="partner-title">KWANG IL TRADING CO.（光一貿易）</h3>
           <p class="partner-par">Triflex #309-317,PungjeonRo 37-9,DanwonGu,AnsanSi,GyounggiDo,Korea</p>

@@ -51,7 +51,7 @@ get_header(); ?>
   共に大きな可能性に挑戦しませんか？</p>
 
   <div class="recruit-workspace">
-    <span>[写真]　オシキリの社員の働いている姿</span>
+    <span><img src="<?php echo resolve_asset_url('/images/recruit/recruit-image1.jpg')?>" alt=""></span>
   </div>
 
   <?php import_part('caption', array(
@@ -76,8 +76,8 @@ get_header(); ?>
   <div class="recruit-organization">
     <p class="recruit-organization-excerpt">オシキリで働く先輩たちの声を集めました。興味のある方は参考にしてみてください。</p>
 
-    <div class="recruit-interview">
-      <a class="recruit-interview-link" href="<?php echo resolve_archive_url('employee'); ?>">
+    <a class="recruit-interview" href="<?php echo resolve_archive_url('employee'); ?>">
+      <div class="recruit-interview-link">
         オシキリを支える人と技術
         <span class="recruit-interview-link-icon">
           <?php import_part("svg", array(
@@ -85,16 +85,16 @@ get_header(); ?>
             'svg_id' => '#arrow'
           ))?>
         </span>  
-      </a>
+      </div>
       <div class="recruit-interview-text">
         <span>Interview</span>
         <span class="recruit-interview-circle small"></span>
       </div>
       <span class="recruit-interview-circle big"></span>
       <div class="recruit-interview-figure">
-        <img src="<?php echo resolve_asset_url('/images/recruit-model.png')?>" alt="">
+        <img src="<?php echo resolve_asset_url('/images/recruit/recruit-interview.png')?>" alt="">
       </div>
-    </div>
+    </a>
   </div>
 
   <?php import_part('graduate')?>

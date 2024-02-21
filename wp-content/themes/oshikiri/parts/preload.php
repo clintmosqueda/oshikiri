@@ -6,6 +6,15 @@
     </div>
   </div>
   <div class="preload-image">
-    <img src="<?php echo resolve_asset_url('/images/slide1.webp'); ?>" alt="">
+  <picture>
+    <source 
+    srcset="<?php echo resolve_asset_url('/images/mv-slide1.webp'); ?>"
+    media="(min-width: 768px)"
+    />
+    <img 
+    src="<?php echo resolve_asset_url('/images/mv-slide1-sp.webp'); ?>" 
+    alt=""
+    />
+  </picture>
   </div>
 </div>

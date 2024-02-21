@@ -28,20 +28,23 @@
 ));?>
 <main class="vlog vlog-news">
   <div class="vlog-group">
-    <?php foreach($categories as $category ) {?>
-      <a class="vlog-category" href="<?php echo get_term_link( $category->name, NEWS_POST_TYPE_CATEGORY)?>"><?php echo $category->name; ?></a>
-    <?php } ?>
-    <?php foreach($tags as $tag ) {?>
-      <a class="vlog-tag" href="<?php echo $tag->slug;?>"><?php echo $tag->name; ?></a>
-    <?php } ?>
-
+    <?php if($categories): ?>
+      <?php foreach($categories as $category ) {?>
+        <a class="vlog-category" href="<?php echo get_term_link( $category->name, NEWS_POST_TYPE_CATEGORY)?>"><?php echo $category->name; ?></a>
+      <?php } ?>
+    <?php endif; ?>
+    <?php if($tags) : ?>
+      <?php foreach($tags as $tag ) {?>
+        <a class="vlog-tag" href="<?php echo $tag->slug;?>"><?php echo $tag->name; ?></a>
+      <?php } ?>
+    <?php endif; ?>
   </div>
   <h1 class="vlog-title">
     <?php the_title();?>
     <span class="vlog-title-icon"></span>
   </h1>
   <?php if (has_post_thumbnail()) { ?>
-    <div class="vlog-figure vlog-figure-news">
+    <div class="vlog-figure-news">
       <img src="<?php the_post_thumbnail_url('featured-news'); ?>" alt="">
     </div>
   <?php } ?>
@@ -51,7 +54,7 @@
       <div class="vlog-button">
         <?php import_part("button", array(
           'modifier' => '',
-          'link_url' => resolve_url(),
+          'link_url' => resolve_archive_url('news'),
           'link_text' => '一覧へ戻る',
           'link_icon' => '#arrow'
         ))?>

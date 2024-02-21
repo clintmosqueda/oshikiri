@@ -50,12 +50,13 @@ get_header(); ?>
   <p class="contact-complete-desc">資料ダウンロードいただきありがとうございました。</p>
   <?php import_part("button", array(
     'modifier' => 'contact-complete-button',
-    'link_url' => resolve_url(),
+    'link_url' => resolve_url('/'),
     'link_text' => 'TOPへ戻る',
     'link_icon' => '#arrow'
     ))?>
 </div>
 
 <?php import_part('/composition-slots/composition-end');?>
+
 <?php
 get_footer();

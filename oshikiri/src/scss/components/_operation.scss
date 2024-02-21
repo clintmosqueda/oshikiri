@@ -22,7 +22,7 @@
 
     &:hover {
       .operation-content {
-        box-shadow: inset 0 -250px 60px 0 rgba(color(blue), 0.9);
+        box-shadow: inset 0 -250px 60px 0 rgba(color(darkBlue), 0.9);
       }
 
       .operation-icon {
@@ -42,7 +42,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    box-shadow: inset 0 -125px 60px 0 rgba(color(blue), 0.79);
+    box-shadow: inset 0 -125px 60px 0 rgba(color(darkBlue), 0.79);
     transition: all 300ms $cubic-bezier;
 
     @include viewport($md) {

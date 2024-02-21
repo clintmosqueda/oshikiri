@@ -8,26 +8,20 @@
   <symbol id="email" viewBox="0 0 34 32">
     <g id="_839_ma_h" data-name="839_ma_h" transform="translate(-7 -8)">
       <rect id="Rectangle_2801" data-name="Rectangle 2801" width="32" height="30" rx="2.88" transform="translate(8 9)"
-        fill="none" stroke="#c00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
       <path id="Path_647" data-name="Path 647" d="M13.47,19.1l8.45,6.34a3.39,3.39,0,0,0,4.16,0L34.63,19" fill="none"
-        stroke="#c00" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
     </g>
   </symbol>
 
-  <symbol id="phone" viewBox="0 0 34.155 34.135">
-    <g id="_466_s_h" data-name="466_s_h" transform="translate(-7.04 -6.805)">
-      <path id="Path_648" data-name="Path 648" d="M9,8c-.93.17-1,1.42-.93,2.12C9,27,22,39,38,39.94c.65,0,2-.24,2-.94"
-        fill="none" stroke="#c00" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-      <path id="Path_649" data-name="Path 649" d="M17.35,20.78a26.08,26.08,0,0,0,9.93,9.9" fill="none" stroke="#c00"
-        stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-      <path id="Path_650" data-name="Path 650" d="M40,29l-8.99-2.02-3.73,3.7" fill="none" stroke="#c00"
-        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-      <path id="Path_651" data-name="Path 651" d="M19,8l2.02,8.99-3.66,3.79" fill="none" stroke="#c00"
-        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-      <line id="Line_179" data-name="Line 179" x2="10" transform="translate(9 8)" fill="none" stroke="#c00"
-        stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-      <line id="Line_180" data-name="Line 180" y2="10" transform="translate(40 29)" fill="none" stroke="#c00"
-        stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+  <symbol id="phone" viewBox="0 0 42.213 42.188">
+    <g id="_466_s_h" data-name="466_s_h" transform="translate(-9.068 -8.822)">
+      <path id="Path_648" data-name="Path 648" d="M9.24,8c-1.165.213-1.252,1.778-1.165,2.655C9.24,31.791,25.518,46.817,45.552,47.994c.814,0,2.5-.3,2.5-1.177" transform="translate(2.03 2.017)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_649" data-name="Path 649" d="M17.35,20.78a32.656,32.656,0,0,0,12.434,12.4" transform="translate(4.375 5.24)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_650" data-name="Path 650" d="M43.207,29.509,31.951,26.98,27.28,31.613" transform="translate(6.879 6.803)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_651" data-name="Path 651" d="M19.414,8l2.529,11.257L17.36,24" transform="translate(4.377 2.017)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_179" data-name="Line 179" x2="13" transform="translate(11 10.104)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_180" data-name="Line 180" y2="13" transform="translate(50 36.104)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </symbol>
 

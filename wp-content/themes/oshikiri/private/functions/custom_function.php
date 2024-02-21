@@ -97,3 +97,5 @@ function filter_catalog_archive( $query ) {
   return $query;
 }
 add_action( 'pre_get_posts', 'filter_catalog_archive' );
+
+

@@ -58,7 +58,16 @@ get_header(); ?>
 
       <div class="about-content">
         <div class="about-content-figure">
-          <img src="<?php echo resolve_asset_url('/images/about/about-image1.jpg'); ?>" alt="">
+          <picture>
+            <source 
+            srcset="<?php echo resolve_asset_url('/images/about/about-image1.jpg'); ?>"
+            media="(min-width: 768px)"
+            />
+            <img 
+            src="<?php echo resolve_asset_url('/images/about/about-image1-sp.jpg'); ?>" 
+            alt=""
+            />
+          </picture>
         </div>
         <div class="about-content-company">
         <?php import_part('card-article', array(
@@ -105,7 +114,16 @@ get_header(); ?>
       ));?>
       <div class="about-content">
         <div class="about-content-figure">
-          <img src="<?php echo resolve_asset_url('/images/about/about-image4.jpg'); ?>" alt="">
+          <picture>
+            <source 
+            srcset="<?php echo resolve_asset_url('/images/about/about-image4.jpg'); ?>"
+            media="(min-width: 768px)"
+            />
+            <img 
+            src="<?php echo resolve_asset_url('/images/about/about-image4-sp.jpg'); ?>" 
+            alt=""
+            />
+          </picture>
         </div>
         <div class="about-content-company">
           <?php import_part('card-article', array(
@@ -133,7 +151,16 @@ get_header(); ?>
       ));?>
       <div class="about-content">
         <div class="about-content-figure">
-          <img src="<?php echo resolve_asset_url('/images/about/about-image7.jpg'); ?>" alt="">
+          <picture>
+            <source 
+            srcset="<?php echo resolve_asset_url('/images/about/about-image7.jpg'); ?>"
+            media="(min-width: 768px)"
+            />
+            <img 
+            src="<?php echo resolve_asset_url('/images/about/about-image7-sp.jpg'); ?>" 
+            alt=""
+            />
+          </picture>
         </div>
         <div class="about-content-company">
           <?php import_part('card-article', array(

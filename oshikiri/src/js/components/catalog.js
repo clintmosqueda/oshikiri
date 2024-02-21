@@ -36,6 +36,12 @@ export default function Catalog() {
     } else {
       localStorage.removeItem('material')
     }
+    var array = document.cookie.split("=");
+    const cookies = document.cookie.split(";");
+    console.log('cookies', cookies)
+    document.cookie = "name=mw-wp-form_session_mw-wp-form-291-validation-error;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    document.cookie = "name=mw-wp-form_session_mw-wp-form-291;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    document.cookie = "name=mw-wp-form_session_mw-wp-form-291-meta;expires=Thu, 01 Jan 1970 00:00:00 GMT"
   }
   if (select) {
     select.addEventListener('change', (event) => {

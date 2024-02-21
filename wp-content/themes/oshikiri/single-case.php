@@ -39,9 +39,20 @@
         <img src="<?php the_field('featured_image') ?>" alt="">
       </div>
       <div class="vlog-case-acf-details">
-        <div class="vlog-case-acf-logo">企業LOGO</div>
+        <?php 
+          $logo = get_field('logo'); 
+        ?>
+        <?php if($logo):?>
+        <div class="vlog-case-acf-logo">
+          <img src="<?php the_field('logo') ?>" alt="">
+        </div>
+        <?php endif;?>
 
         <div class="vlog-case-acf-info">
+          <dl class="vlog-case-acf-info-list">
+            <dt class="vlog-case-acf-info-title">会社名</dt>
+            <dd class="vlog-case-acf-info-desc"><?php the_field('company_name') ?></dd>
+          </dl>
           <?php if( have_rows('info') ):?>
             <?php while ( have_rows('info') ) : the_row();?>
               <dl class="vlog-case-acf-info-list">

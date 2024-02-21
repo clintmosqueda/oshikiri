@@ -7,7 +7,7 @@ if ( in_array( 'administrator', (array) $user->roles ) ) {
 
 		acf_add_options_page(array(
 			'page_title' 	=> 'Job Openings',
-			'menu_title'	=> 'Job Openings',
+			'menu_title'	=> '募集要項',
 			'menu_slug' 	=> 'job openings',
 			'capability'	=> 'edit_posts',
 			'redirect'		=> false,
