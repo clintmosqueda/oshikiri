@@ -25,7 +25,10 @@ $categories = get_categories($args);
   <div class="product-machine-post">
     <?php if(have_posts()) { ?>
     <ul class="product-machine-list">
-      <?php while (have_posts()) : the_post(); ?>
+      <?php while (have_posts()) : the_post();
+        $type = get_field('select_category');
+        if($type == 'Product'):
+       ?>
         <li class="product-machine-item">
           <a class="product-machine-link" href="<?php echo get_permalink();?>">
             <div class="product-machine-content">
@@ -37,7 +40,7 @@ $categories = get_categories($args);
             </div>
           </a>
         </li>
-      <?php endwhile; ?>
+      <?php endif; endwhile; ?>
     </ul>
     <?php } else { ?>
       <p class="product-machine-post-empty">No Post Found</p>

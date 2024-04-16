@@ -17,7 +17,7 @@ import Translator from './components/translator'
 
 const url = window.location.pathname
 const currenPage = url.split('/').at(-1)
-// console.log('currenPage', currenPage)
+console.log('currenPage', document.referrer)
 
 if (currenPage === '') {
   Preload()

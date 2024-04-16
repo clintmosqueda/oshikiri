@@ -22,8 +22,8 @@
 
 <?php import_part('banner-single', array(
   'modifier' => 'banner-single-news',
-  'text_jp' => '最新情報',
-  'text_en' => 'News.',
+  'text_jp' => '導入事例',
+  'text_en' => 'Case.',
   'breadcrumbs' => $breadcrumbs
 ));?>
 <main class="vlog vlog-case">

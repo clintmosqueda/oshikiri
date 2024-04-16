@@ -95,7 +95,7 @@
       'modifier' => '',
       'id' => 'facility6',
       'image' => resolve_asset_url('/images/branch/facility6.jpg'),
-      'name' => '札幌営業所',
+      'name' => '株式会社オシキリ北日本札幌営業所',
       'address' => '〒004-0054 北海道札幌市厚別区厚別中央四条5-6-1',
       'tel' => '011-893-0678',
       'fax' => '011-801-2768',
@@ -105,7 +105,7 @@
       'modifier' => '',
       'id' => 'facility7',
       'image' => resolve_asset_url('/images/branch/facility7.jpg'),
-      'name' => '仙台営業所',
+      'name' => '株式会社オシキリ北日本',
       'address' => '〒989-3123 宮城県仙台市青葉区錦ヶ丘8-12-22',
       'tel' => '022-391-6196',
       'fax' => '022-391-6195',
@@ -163,8 +163,6 @@ get_header(); ?>
         <dl>
           <dt>営業所</dt>
           <dd class="company-branch-legend-group">
-            <span><a href="#facility6">札幌</a></span>
-            <span><a href="#facility7">仙台</a></span>
             <span><a href="#facility1">東京</a></span>
             <span><a href="#facility3">名古屋</a></span>
             <span><a href="#facility4">大阪</a></span>
@@ -174,6 +172,7 @@ get_header(); ?>
         <dl>
           <dt>オシキリグループ</dt>
           <dd>
+          <span href="#facility7"><a href="#facility7">株式会社オシキリ北日本</a></span><br>
           <span href="#facility7">富士物産株式会社</span><br>
           <span href="#facility7">広州昌洋有限公司</span><br>
             <a href="#facility8">オシキリ・コーポレーション・オブ・アメリカ</a>
