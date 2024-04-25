@@ -30,25 +30,6 @@ function query_custom_post($item = 6, $post_type = PRODUCT_POST_TYPE) {
   return new WP_Query( $args );
 }
 
-// query post by category
-// function query_custom_post_by_cat($cat, $item = 6 , $post_type = ARTICLE_POST_TYPE) {
-//   $args = array(
-//     'orderby'        => 'post_date',
-//     'post_type'      => $post_type,
-//     'post_status'    => 'publish',
-//     'posts_per_page' => $item,
-//     'order'          => 'DESC',
-//     'tax_query'      => array(
-//       array(
-//         'taxonomy' => ARTICLE_POST_TYPE_CATEGORY,
-//         'field'    => 'slug',
-//         'terms'    => $cat
-//       )
-//     )
-//   );
-
-//   return new WP_Query( $args );
-// }
 
 //hide default post in admin
 add_action( 'admin_menu', 'remove_default_post_type' );
@@ -88,9 +69,42 @@ function filter_case_archive( $query ) {
 add_action( 'pre_get_posts', 'filter_case_archive' );
 
 function filter_catalog_archive( $query ) {
+  
   if( $query->is_main_query() && !is_admin() && is_post_type_archive( CATALOG_POST_TYPE ) ) {
+      $categoryIDArray = [];
+      $args = array(
+        'taxonomy' => CATALOG_POST_TYPE_CATEGORY,
+        'orderby' => 'name',
+        'order'   => 'ASC',
+        'hide_empty' => false,
+      );
+      $categories = get_categories($args);
+
+      foreach($categories as $category) {
+        echo '<pre>';
+        print_r($category);
+        echo '</pre>';
+        array_push($categoryIDArray, $category->cat_ID);
+      }
+
+      print_r($categoryIDArray);
+
+      $taxquery = array(
+        array(
+            'taxonomy' => CATALOG_POST_TYPE_CATEGORY,
+            'field' => 'term_id',
+            // 'terms' => array(13, 14, 15, 16),
+            'terms' => $categoryIDArray,
+            'operator'=> 'IN',
+            // 'orderby' => 'term_id',
+            // 'order' => 'DESC',
+        )
+    );
+      
       $query->set( 'post_type', CATALOG_POST_TYPE );
       $query->set( 'posts_per_page', '12' );
+      $query->set( 'order', 'DESC' );
+      $query->set( 'tax_query', $taxquery );
       $query->set( 'post_status', 'publish' );
   }
 

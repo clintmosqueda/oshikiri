@@ -149,7 +149,7 @@ get_header(); ?>
     </div>
     <div class="company-branch-map">
       <div class="company-branch-location">
-        <img src="<?php echo resolve_asset_url('/images/branch/sitemap.png')?>" alt="sitemap">
+        <img src="<?php echo resolve_asset_url('/images/branch/sitemap2.png')?>" alt="sitemap">
       </div>
       <div class="company-branch-legend">
         <dl>
@@ -172,9 +172,9 @@ get_header(); ?>
         <dl>
           <dt>オシキリグループ</dt>
           <dd>
-          <span href="#facility7"><a href="#facility7">株式会社オシキリ北日本</a></span><br>
-          <span href="#facility7">富士物産株式会社</span><br>
-          <span href="#facility7">広州昌洋有限公司</span><br>
+          <span><a href="#facility7">株式会社オシキリ北日本</a></span><br>
+          <span>富士物産株式会社</span><br>
+          <span>広州昌洋有限公司</span><br>
             <a href="#facility8">オシキリ・コーポレーション・オブ・アメリカ</a>
           </dd>
         </dl>

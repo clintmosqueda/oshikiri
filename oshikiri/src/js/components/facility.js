@@ -6,13 +6,16 @@ export default function Facility() {
   const close = document.querySelectorAll('.facility-access')
 
   if (facility.length) {
-    let facilityBottomWrapHeight = facilityBottomWrap[0].clientHeight
-    facilityBottom[0].style.height = `${facilityBottomWrapHeight}px`
+    setTimeout(() => {
+      let facilityBottomWrapHeight = facilityBottomWrap[0].getBoundingClientRect().height
+      facilityBottom[0].style.height = `${facilityBottomWrapHeight}px`
+    }, 300);
+
 
     facilityTop.forEach((el, index) => {
       if (facilityBottom[index]) {
         el.addEventListener('click', (e) => {
-          let facilityBottomWrapHeight = facilityBottomWrap[index].clientHeight
+          let facilityBottomWrapHeight = facilityBottomWrap[index].getBoundingClientRect().height
           facilityBottom[index].style.height = `${facilityBottomWrapHeight}px`
         })
       }

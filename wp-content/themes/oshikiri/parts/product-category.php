@@ -12,7 +12,8 @@ $args = array(
   'post_type'     => PRODUCT_POST_TYPE,
   'post__not_in'   => array($excludedId),
   'meta_key'      => 'select_category',
-  'meta_value'    => 'product'
+  'meta_value'    => 'product',
+  
 );
 $args2 = array(
   'posts_per_page'    => $itemPerPage,
@@ -28,6 +29,7 @@ $args2 = array(
 );
 
 $the_query = $isRelated ? new WP_Query( $args2 )  : new WP_Query( $args );
+$post_arr = array();
 
 $args = array(
   'taxonomy' => PRODUCT_CATEGORY,
@@ -54,19 +56,37 @@ $categories = get_categories($args);
   <?php } ?>
   <div class="product-machine-post">
     <ul class="product-machine-list">
-      <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <li class="product-machine-item">
-          <a class="product-machine-link" href="<?php echo get_permalink();?>">
-            <div class="product-machine-content">
-              <div class="product-machine-figure">
-                <img class="product-machine-image" src="<?php echo get_eyecatch_data(get_the_ID(), 'product-machine-thumbnail', '')?>"
-                  alt="bread">
+      <?php foreach($categories as $category) : 
+        $args3 = array(
+          'posts_per_page'    => -1,
+          'post_type'     => PRODUCT_POST_TYPE,
+          'meta_key'      => 'select_category',
+          'meta_value'    => 'product',
+          'tax_query'      => array(
+            array(
+              'taxonomy' => PRODUCT_CATEGORY,
+              'field'    => 'slug',
+              'terms'    => $category,
+              'hide_empty' => true,
+            )
+          )
+        );
+        $the_queries = new WP_Query( $args3 );
+      ?>
+        <?php while( $the_queries->have_posts() ) : $the_queries->the_post(); ?>
+          <li class="product-machine-item">
+            <a class="product-machine-link" href="<?php echo get_permalink();?>">
+              <div class="product-machine-content">
+                <div class="product-machine-figure">
+                  <img class="product-machine-image" src="<?php echo get_eyecatch_data(get_the_ID(), 'product-machine-thumbnail', '')?>"
+                    alt="bread">
+                </div>
+                <p class="product-machine-title"><?php the_title();?></p>
               </div>
-              <p class="product-machine-title"><?php the_title();?></p>
-            </div>
-          </a>
-        </li>
-      <?php endwhile; ?>
+            </a>
+          </li>
+        <?php endwhile; ?>
+      <?php endforeach; ?>
     </ul>
   </div>
 

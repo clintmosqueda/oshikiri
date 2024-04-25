@@ -65,8 +65,7 @@ $contents = [
   array( 'label' => '資本金', 'description' => '1億円'),
   array( 'label' => '所在地', 'description' => '<div>[ 本社 ]<br/>〒252-0811<br class="show-sp"/> 神奈川県藤沢市桐原町4番地 <br class="show-sp"/><a target=_blank"" href="https://maps.app.goo.gl/wmaWqLWYFD6XhouF8">GoogleMap</a></div>
   <div>[工場 ]<br/><span>湘南（藤沢）</span><span>山形（東根）</span></div>
-  <div>[ 営業所 ]<br/><span>東京</span><span>名古屋</span><span>大阪</span><span>福岡</span></div>
-  <div>[ 販売会社 ]<br/>オシキリ北日本（札幌・仙台）<br class="show-sp"/><a href="'. resolve_url('company/branch') .'">事業所一覧</a></div>
+  <div>[ 営業所 ]<br/><span>札幌</span><span>仙台</span><span>東京</span><span>名古屋</span><span>大阪</span><span>福岡</span></div>
   '),
   array( 'label' => '従業員数', 'description' => '285名'),
   array( 'label' => 'ISO取得', 'description' => '2000年6月'),
