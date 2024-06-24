@@ -5,8 +5,8 @@
   &-content {
     display: flex;
     gap: 0 85px;
-    margin-top: -30px;
     padding-bottom: 100px;
+    padding-top: 115px;
 
     @include viewport($mmd) {
       gap: 0 45px;
@@ -31,7 +31,7 @@
   }
 
   &-heading {
-    font-size: 79px;
+    font-size: 74px;
     font-family: $font-poppins;
     font-weight: bold;
     color: color(blue);
@@ -41,7 +41,7 @@
 
     @include viewport($lg) {
       font-size: 59px;
-      min-width: 450px
+      min-width: 450px;
     }
 
     @include viewport($md) {
@@ -59,20 +59,22 @@
     }
 
     &-inner {
-      color: color(red)
+      color: color(red);
     }
 
     span {
       &:nth-of-type(2) {
+        padding-left: 31px;
         @include viewport($md) {
           margin-left: 25px;
+          padding-left: 0;
         }
       }
     }
   }
 
   &-desc {
-    padding-top: 116px;
+    padding-top: 3px;
 
     @include viewport($md) {
       padding-top: 28px;
@@ -89,7 +91,7 @@
 
     @include viewport($md) {
       line-height: 2.5;
-      white-space: normal
+      white-space: normal;
     }
 
     @include viewport($xs) {
@@ -98,12 +100,11 @@
 
     span {
       text-decoration: underline;
-      text-decoration-color: #D3DCE5;
+      text-decoration-color: #d3dce5;
       text-underline-offset: 4px;
 
       @include viewport($md) {
         text-decoration-color: color(blue);
-
       }
     }
   }
