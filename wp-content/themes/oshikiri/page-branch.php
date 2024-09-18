@@ -133,7 +133,7 @@ get_header(); ?>
   'modifier' => '',
   'image' => resolve_asset_url('/images/banner/branch.jpg'),
   'text_jp' => '事業所一覧',
-  'text_en' => 'branches.',
+  'text_en' => 'branch.',
   'breadcrumbs' => $breadcrumbs
 ));?>
 

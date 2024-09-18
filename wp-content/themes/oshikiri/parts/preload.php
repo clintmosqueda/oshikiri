@@ -8,11 +8,11 @@
   <div class="preload-image">
   <picture>
     <source 
-    srcset="<?php echo resolve_asset_url('/images/mv-slide1.webp'); ?>"
+    srcset="<?php echo resolve_asset_url('/images/mv-slide4.webp'); ?>"
     media="(min-width: 768px)"
     />
     <img 
-    src="<?php echo resolve_asset_url('/images/mv-slide1-sp.webp'); ?>" 
+    src="<?php echo resolve_asset_url('/images/mv-slide4-sp.webp'); ?>" 
     alt=""
     />
   </picture>

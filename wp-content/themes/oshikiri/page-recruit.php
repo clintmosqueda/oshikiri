@@ -51,7 +51,15 @@ get_header(); ?>
   共に大きな可能性に挑戦しませんか？</p>
 
   <div class="recruit-workspace">
-    <span><img src="<?php echo resolve_asset_url('/images/recruit/recruit-image1.jpg')?>" alt=""></span>
+    <span>
+      <picture>
+        <source 
+        srcset="<?php echo resolve_asset_url('/images/recruit/recruit-image1.jpg'); ?>"
+        media="(min-width: 768px)"
+        />
+        <img src="<?php echo resolve_asset_url('/images/recruit/recruit-image1-sp.jpg')?>" alt="">
+      </picture>
+    </span>
   </div>
 
   <?php import_part('caption', array(

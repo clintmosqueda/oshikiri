@@ -19,7 +19,7 @@ $links = [
     'url' => resolve_url('company/profile'),
     'image' => resolve_asset_url('/images/company-image3.jpg'),
     'text_jp' => '会社概要',
-    'text_en' => 'About',
+    'text_en' => 'Profile',
   ),
   array(
     'modifier' => '',
