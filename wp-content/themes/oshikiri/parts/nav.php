@@ -7,7 +7,7 @@
       <a class="nav-link nav-dropdown js-nav-dropdown" data-dropdown="product" href="<?php echo resolve_url('product'); ?>">製品を探す</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link nav-dropdown js-nav-dropdown" data-dropdown="company" href="<?php echo resolve_url('company'); ?>">会社情報</a>
+      <a class="nav-link nav-dropdown js-nav-dropdown" data-dropdown="company" href="<?php echo resolve_url('corporate'); ?>">会社情報</a>
     </li>
     <li class="nav-item">
       <a class="nav-link " href="<?php echo resolve_archive_url('catalog'); ?>">カタログ</a>

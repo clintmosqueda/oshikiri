@@ -2,24 +2,24 @@
   $sidebar_links = [
     array(
       'text' => '企業理念',
-      'url' => resolve_url('company/philosophy'),
+      'url' => resolve_url('corporate/philosophy'),
     ),
     array(
       'text' => '事業所一覧',
-      'url' => resolve_url('company/branch'),
+      'url' => resolve_url('corporate/branch'),
     ),
     array(
       'modifier' => 'is-active',
       'text' => '会社概要',
-      'url' => resolve_url('company/profile'),
+      'url' => resolve_url('corporate/profile'),
     ),
     array(
       'text' => '沿革',
-      'url' => resolve_url('company/history'),
+      'url' => resolve_url('corporate/history'),
     ),
     array(
       'text' => '海外ネットワーク',
-      'url' => resolve_url('company/network'),
+      'url' => resolve_url('corporate/network'),
     ),
   ];
 
@@ -30,7 +30,7 @@
     ),
     array(
       'text' => '会社情報',
-      'url' => resolve_url('company'),
+      'url' => resolve_url('corporate'),
     ),
     array(
       'text' => '会社概要',
@@ -68,7 +68,6 @@ $contents = [
   <div>[ 営業所 ]<br/><span>札幌</span><span>仙台</span><span>東京</span><span>名古屋</span><span>大阪</span><span>福岡</span></div>
   '),
   array( 'label' => '従業員数', 'description' => '285名'),
-  array( 'label' => 'ISO取得', 'description' => '2000年6月'),
   array( 'label' => '事業内容', 'description' => '製パン、製菓機械の開発、製造、販売、メンテナンス
   食肉・水産機械の開発、製造、販売、メンテナンス
   微量計量装置の開発、製造、販売、メンテナンス

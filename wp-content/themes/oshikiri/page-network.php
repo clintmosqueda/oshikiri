@@ -2,24 +2,24 @@
   $sidebar_links = [
     array(
       'text' => '企業理念',
-      'url' => resolve_url('company/philosophy'),
+      'url' => resolve_url('corporate/philosophy'),
     ),
     array(
       'text' => '事業所一覧',
-      'url' => resolve_url('company/branch'),
+      'url' => resolve_url('corporate/branch'),
     ),
     array(
       'text' => '会社概要',
-      'url' => resolve_url('company/profile'),
+      'url' => resolve_url('corporate/profile'),
     ),
     array(
       'text' => '沿革',
-      'url' => resolve_url('company/history'),
+      'url' => resolve_url('corporate/history'),
     ),
     array(
       'modifier' => 'is-active',
       'text' => '海外ネットワーク',
-      'url' => resolve_url('company/network'),
+      'url' => resolve_url('corporate/network'),
     ),
   ];
 
@@ -30,7 +30,7 @@
     ),
     array(
       'text' => '会社情報',
-      'url' => resolve_url('company'),
+      'url' => resolve_url('corporate'),
     ),
     array(
       'text' => '海外ネットワーク',
@@ -105,6 +105,42 @@ get_header(); ?>
 
     </div>
   </div>
+
+  <div class="company-network-partnership">
+    <?php import_part('caption', array(
+      'modifier' => 'company-network-caption',
+      'text' => '販売代理店'
+    ));?>
+
+    <div class="company-network-partners">
+
+      <div class="partner">
+        <!-- <div class="partner-figure">
+          <img src="<?php echo resolve_asset_url('/images/network/partner-image1.jpg')?>" alt="">
+        </div> -->
+        <div class="partner-content">
+          <h3 class="partner-title">BEIJING AOXIKAIRI MACHINERY SALES CO.,LTD.(北京奥西凯瑞机械销售有限公司)</h3>
+          <p class="partner-par">A Tower Room E703. Chateau Regency No.2 Jiangtai Road, Chaoyang District, Beijing, China 100016(中国北京市朝阳区将台路2号和乔丽晶A座E703)</p>
+          <p class="partner-par">Tel：0086-10-65814480<br>Fax：0086-10-65816890</p>
+          <!-- <a class="partner-link" target="_blank" href="https://www.baro.co.id">www.baro.co.id</a> -->
+        </div>
+      </div>
+
+      <div class="partner">
+        <!-- <div class="partner-figure">
+          <img src="<?php echo resolve_asset_url('/images/network/partner-image1.jpg')?>" alt="">
+        </div> -->
+        <div class="partner-content">
+          <h3 class="partner-title">Guangzhou INAKA Trading Co., Ltd.(广州市田舍素品贸易有限公司)</h3>
+          <p class="partner-par">Room 1407,TianYi hotel, Tongfudong Road, Haizhu district,Gunagzhou(广州市海珠区同福东路644号天一酒店1407室)</p>
+          <p class="partner-par">Tel： 020-84238332<br>Fax：020-84233313</p>
+          <!-- <a class="partner-link" target="_blank" href="https://www.baro.co.id">www.baro.co.id</a> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <?php import_part('/composition-slots/composition-end');?>

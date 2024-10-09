@@ -38,13 +38,13 @@
           </div>
 
           <div class="footer-groups">
-            <span class="footer-label"><a href="<?php echo resolve_url('company')?>">会社情報</a></span>
+            <span class="footer-label"><a href="<?php echo resolve_url('corporate')?>">会社情報</a></span>
             <div class="footer-group">
-              <a class="footer-sublink" href="<?php echo resolve_url('company/philosophy')?>">企業理念</a>
-              <a class="footer-sublink" href="<?php echo resolve_url('company/profile')?>">会社概要</a>
-              <a class="footer-sublink" href="<?php echo resolve_url('company/history')?>">沿革</a>
-              <a class="footer-sublink" href="<?php echo resolve_url('company/branch')?>">事業所一覧</a>
-              <a class="footer-sublink" href="<?php echo resolve_url('company/network')?>">海外ネットワーク</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('corporate/philosophy')?>">企業理念</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('corporate/profile')?>">会社概要</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('corporate/history')?>">沿革</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('corporate/branch')?>">事業所一覧</a>
+              <a class="footer-sublink" href="<?php echo resolve_url('corporate/network')?>">海外ネットワーク</a>
               <a class="footer-sublink" href="<?php echo resolve_url('recruit')?>">採用情報</a>
               <a class="footer-sublink" href="<?php echo resolve_url('employee')?>">オシキリを支える人と技術</a>
               <a class="footer-sublink" href="<?php echo resolve_url('about')?>">オシキリの強み</a>
@@ -54,7 +54,7 @@
           <div class="footer-groups">
             <span class="footer-label"><a href="<?php echo resolve_url('contact')?>">お問い合わせ</a></span>
             <div class="footer-group">
-              <a class="footer-link" href="<?php echo resolve_url('sitemap'); ?>">サイトマップ</a>
+              <a class="footer-link" href="<?php echo resolve_url('sitemaps'); ?>">サイトマップ</a>
               <a class="footer-link" href="<?php echo resolve_archive_url('news'); ?>">ニュース</a>
               <a class="footer-link" href="<?php echo resolve_url('privacy'); ?>">プライバシーポリシー</a>
             </div>

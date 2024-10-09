@@ -2,24 +2,24 @@
   $sidebar_links = [
     array(
       'text' => '企業理念',
-      'url' => resolve_url('company/philosophy'),
+      'url' => resolve_url('corporate/philosophy'),
     ),
     array(
       'modifier' => 'is-active',
       'text' => '事業所一覧',
-      'url' => resolve_url('company/branch'),
+      'url' => resolve_url('corporate/branch'),
     ),
     array(
       'text' => '会社概要',
-      'url' => resolve_url('company/profile'),
+      'url' => resolve_url('corporate/profile'),
     ),
     array(
       'text' => '沿革',
-      'url' => resolve_url('company/history'),
+      'url' => resolve_url('corporate/history'),
     ),
     array(
       'text' => '海外ネットワーク',
-      'url' => resolve_url('company/network'),
+      'url' => resolve_url('corporate/network'),
     ),
   ];
 
@@ -30,7 +30,7 @@
     ),
     array(
       'text' => '会社情報',
-      'url' => resolve_url('company'),
+      'url' => resolve_url('corporate'),
     ),
     array(
       'text' => '事業所一覧',
@@ -194,8 +194,8 @@ get_header(); ?>
             'tel' => $facility["tel"],
             'fax' => $facility["fax"],
             'map_location' => $facility["map_location"],
-            'head_office_detail_pc' => $facility["head_office_detail_pc"],
-            'head_office_detail_sp' => $facility["head_office_detail_sp"],
+            'head_office_detail_pc' => empty($facility["head_office_detail_pc"]) ? '' :  $facility["head_office_detail_pc"],
+            'head_office_detail_sp' => empty($facility["head_office_detail_sp"]) ? '' :  $facility["head_office_detail_sp"],
           ));?>
         <?php } ?>
       </div>

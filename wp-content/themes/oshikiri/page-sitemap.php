@@ -61,11 +61,11 @@ get_header(); ?>
     'label' => '会社情報',
     'links' => [
       array( 'url' => resolve_url('about'), 'class' => '', 'data-tab' => '', 'text' => 'オシキリの強み', ),
-      array( 'url' => resolve_url('company/philosophy'), 'class' => '', 'data-tab' => '', 'text' => '企業理念', ),
-      array( 'url' => resolve_url('company/profile'), 'class' => '', 'data-tab' => '', 'text' => '会社概要', ),
-      array( 'url' => resolve_url('company/branch'), 'class' => '', 'data-tab' => '', 'text' => '事業所一覧', ),
-      array( 'url' => resolve_url('company/history'), 'class' => '', 'data-tab' => '', 'text' => '沿革', ),
-      array( 'url' => resolve_url('company/network'), 'class' => '', 'data-tab' => '', 'text' => '海外ネットワーク', ),
+      array( 'url' => resolve_url('corporate/philosophy'), 'class' => '', 'data-tab' => '', 'text' => '企業理念', ),
+      array( 'url' => resolve_url('corporate/profile'), 'class' => '', 'data-tab' => '', 'text' => '会社概要', ),
+      array( 'url' => resolve_url('corporate/branch'), 'class' => '', 'data-tab' => '', 'text' => '事業所一覧', ),
+      array( 'url' => resolve_url('corporate/history'), 'class' => '', 'data-tab' => '', 'text' => '沿革', ),
+      array( 'url' => resolve_url('corporate/network'), 'class' => '', 'data-tab' => '', 'text' => '海外ネットワーク', ),
       array( 'url' => resolve_url('recruit'), 'class' => '', 'data-tab' => '', 'text' => '採用情報', ),
       array( 'url' => resolve_url('employee'), 'class' => '', 'data-tab' => '', 'text' => 'オシキリを支える人と技術', ),
     ]

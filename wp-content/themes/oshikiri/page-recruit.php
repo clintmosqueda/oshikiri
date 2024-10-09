@@ -17,7 +17,7 @@
     ),
     array(
       'text' => '会社情報',
-      'url' => resolve_url('company'),
+      'url' => resolve_url('corporate'),
     ),
     array(
       'text' => '採用情報',

@@ -3,23 +3,23 @@
     array(
       'modifier' => 'is-active',
       'text' => '企業理念',
-      'url' => resolve_url('company/philosophy'),
+      'url' => resolve_url('corporate/philosophy'),
     ),
     array(
       'text' => '事業所一覧',
-      'url' => resolve_url('company/branch'),
+      'url' => resolve_url('corporate/branch'),
     ),
     array(
       'text' => '会社概要',
-      'url' => resolve_url('company/profile'),
+      'url' => resolve_url('corporate/profile'),
     ),
     array(
       'text' => '沿革',
-      'url' => resolve_url('company/history'),
+      'url' => resolve_url('corporate/history'),
     ),
     array(
       'text' => '海外ネットワーク',
-      'url' => resolve_url('company/network'),
+      'url' => resolve_url('corporate/network'),
     ),
   ];
 
@@ -30,7 +30,7 @@
     ),
     array(
       'text' => '会社情報',
-      'url' => resolve_url('company'),
+      'url' => resolve_url('corporate'),
     ),
     array(
       'text' => '企業理念',

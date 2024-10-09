@@ -28,17 +28,17 @@
       </li>
       <li class="menu-item">
         <div class="menu-item-group">
-          <a class="menu-link" href="<?php echo resolve_url('company'); ?>">会社情報</a>
+          <a class="menu-link" href="<?php echo resolve_url('corporate'); ?>">会社情報</a>
           <span class="menu-item-caret"></span>
         </div>
       
         
         <div class="menu-sublist">
-          <a class="menu-sublink" href="<?php echo resolve_url('company/philosophy')?>">企業理念</a>
-          <a class="menu-sublink" href="<?php echo resolve_url('company/profile')?>">会社概要</a>
-          <a class="menu-sublink" href="<?php echo resolve_url('company/history')?>">沿革</a>
-          <a class="menu-sublink" href="<?php echo resolve_url('company/branch')?>">拠点一覧</a>
-          <a class="menu-sublink" href="<?php echo resolve_url('company/network')?>">海外ネットワーク</a>
+          <a class="menu-sublink" href="<?php echo resolve_url('corporate/philosophy')?>">企業理念</a>
+          <a class="menu-sublink" href="<?php echo resolve_url('corporate/profile')?>">会社概要</a>
+          <a class="menu-sublink" href="<?php echo resolve_url('corporate/history')?>">沿革</a>
+          <a class="menu-sublink" href="<?php echo resolve_url('corporate/branch')?>">拠点一覧</a>
+          <a class="menu-sublink" href="<?php echo resolve_url('corporate/network')?>">海外ネットワーク</a>
           <a class="menu-sublink" href="<?php echo resolve_url('recruit')?>">採用情報</a>
         </div>
       </li>
