@@ -54,6 +54,13 @@ get_header(); ?>
     'link_text' => 'TOPへ戻る',
     'link_icon' => '#arrow'
     ))?>
+      <div class="" style="display:none">
+      <?php if( have_posts() ): ?>
+        <?php while (have_posts()) : the_post(); ?>
+        <?php remove_filter ('the_content', 'wpautop'); the_content();?>
+        <?php endwhile; ?>
+      <?php endif;?>
+    </div>
 </div>
 
 <?php import_part('/composition-slots/composition-end');?>
