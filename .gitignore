@@ -1,14 +1,14 @@
 node_modules
 .htaccess
-.DS_Store
-license.txt
-readme.html
-xmlrpc.php
-wp-*
-!wp-content/
-!wp-content/plugins
-!wp-content/themes
-wp-content/themes/*/assets/*
-wp-content/uploads/*
-package-lock.json
-mix-manifest.json
+# .DS_Store
+# license.txt
+# readme.html
+# xmlrpc.php
+# wp-*
+# !wp-content/
+# !wp-content/plugins
+# !wp-content/themes
+# wp-content/themes/*/assets/*
+# wp-content/uploads/*
+# package-lock.json
+# mix-manifest.json

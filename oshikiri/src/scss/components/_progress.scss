@@ -11,6 +11,14 @@
     margin: 0 auto;
   }
 
+  .contact-done & {
+    max-width: 200px;
+    &:before {
+      background-color: color(red);
+      width: 87%;
+    }
+  }
+
   &::before {
     position: absolute;
     top: 5px;

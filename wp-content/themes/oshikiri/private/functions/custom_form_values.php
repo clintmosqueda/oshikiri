@@ -18,6 +18,7 @@ function add_catalog( $children, $atts ) {
   return $children;
 }
 add_filter( 'mwform_choices_mw-wp-form-291', 'add_catalog', 10, 2 );
+add_filter( 'mwform_choices_mw-wp-form-1349', 'add_catalog', 10, 2 );
 
 /**
  * my_mwform_value
@@ -32,5 +33,6 @@ function my_mwform_value( $value, $name ) {
   return $value;
 }
 add_filter( 'mwform_value_mw-wp-form-291', 'my_mwform_value', 10, 2 );
+add_filter( 'mwform_value_mw-wp-form-1349', 'my_mwform_value', 10, 2 );
 
 

@@ -25,3 +25,17 @@ function contact_form_error_message( $error, $key, $rule ) {
 }
 
 add_filter( 'mwform_error_message_mw-wp-form-153', 'contact_form_error_message', 10, 3 );
+
+function download_form_error_message( $error, $key, $rule ) {
+  switch ( $key ) {
+
+    default:
+      $error = 'この項目を入力してください';
+      break;
+  }
+
+  return $error;
+}
+
+add_filter( 'mwform_error_message_mw-wp-form-291', 'contact_form_error_message', 10, 3 );
+add_filter( 'mwform_error_message_mw-wp-form-1349', 'contact_form_error_message', 10, 3 );

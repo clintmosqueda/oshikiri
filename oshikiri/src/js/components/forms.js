@@ -1,16 +1,17 @@
 export default function Forms() {
-  const contact = document.querySelector(".contact");
-  const confirmButton = document.querySelector(".contact-button-confirm");
-  const fileUploads = document.querySelectorAll(".js-contact-upload-file");
-  const uploadButton = document.querySelectorAll(".contact-upload-button");
-  const fileClear = document.querySelectorAll(".js-upload-fileclear");
-  const inputFileUpload = document.querySelectorAll(".js-file-upload");
+  const contact = document.querySelector('.contact');
+  const submitButton = document.querySelector('.contact-button-submit');
+  const confirmButton = document.querySelector('.contact-button-confirm');
+  const fileUploads = document.querySelectorAll('.js-contact-upload-file');
+  const uploadButton = document.querySelectorAll('.contact-upload-button');
+  const fileClear = document.querySelectorAll('.js-upload-fileclear');
+  const inputFileUpload = document.querySelectorAll('.js-file-upload');
   const outputFilenames = document.querySelectorAll(
-    ".js-contact-upload-filename"
+    '.js-contact-upload-filename'
   );
-  const resumeUpload = document.getElementById("resume");
+  const resumeUpload = document.getElementById('resume');
 
-  const agree = document.querySelector(".contact-agree-checkbox");
+  const agree = document.querySelector('.contact-agree-checkbox');
 
   if (contact) {
     // uploadButton.forEach((el, index) => {
@@ -24,20 +25,20 @@ export default function Forms() {
     // });
 
     inputFileUpload.forEach((el, index) => {
-      el.addEventListener("change", function (e) {
-        console.log("e", e);
+      el.addEventListener('change', function (e) {
+        console.log('e', e);
         let file = e.target.files[0];
         if (file) {
-          fileClear[index].classList.add("is-show");
+          fileClear[index].classList.add('is-show');
         }
-        console.log("file", file);
+        console.log('file', file);
         outputFilenames[index].innerHTML = file.name;
       });
 
-      fileClear[index].addEventListener("click", function () {
-        fileClear[index].classList.remove("is-show");
-        inputFileUpload[index].value = "";
-        outputFilenames[index].innerHTML = "";
+      fileClear[index].addEventListener('click', function () {
+        fileClear[index].classList.remove('is-show');
+        inputFileUpload[index].value = '';
+        outputFilenames[index].innerHTML = '';
       });
     });
 
@@ -56,10 +57,21 @@ export default function Forms() {
     //     });
     // });
 
-    agree.addEventListener("click", (e) => {
-      agree.checked
-        ? confirmButton.classList.remove("is-disabled")
-        : confirmButton.classList.add("is-disabled");
-    });
+    if (!!submitButton) {
+      agree.addEventListener('click', (e) => {
+        agree.checked
+          ? submitButton.classList.remove('is-disabled')
+          : submitButton.classList.add('is-disabled');
+      });
+    }
+
+    if (!!confirmButton) {
+      console.log('test');
+      agree.addEventListener('click', (e) => {
+        agree.checked
+          ? confirmButton.classList.remove('is-disabled')
+          : confirmButton.classList.add('is-disabled');
+      });
+    }
   }
 }

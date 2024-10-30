@@ -76,9 +76,9 @@ get_header(); ?>
     'label' => 'その他',
     'links' => [
       array( 'url' => resolve_url('news'), 'text' => 'お知らせ', ),
-      array( 'url' => resolve_url('contact'), 'class' => '', 'data-tab' => '', 'text' => 'お問い合わせ', ),
+      array( 'url' => resolve_url('contact-us'), 'class' => '', 'data-tab' => '', 'text' => 'お問い合わせ', ),
       array( 'url' => resolve_url('privacy'), 'class' => '', 'data-tab' => '', 'text' => 'プライバシーポリシー', ),
-      array( 'url' => resolve_url('sitemap'), 'class' => '', 'data-tab' => '', 'text' => 'サイトマップ', ),
+      array( 'url' => resolve_url('sitemaps'), 'class' => '', 'data-tab' => '', 'text' => 'サイトマップ', ),
     ]
   ))?>
 </div>

@@ -20,10 +20,10 @@ get_header(); ?>
       'text' => '入力',
       'modifier' => 'is-active'
     ),
-    array(
-      'text' => '確認',
-      'modifier' => 'is-active'
-    ),
+    // array(
+    //   'text' => '確認',
+    //   'modifier' => 'is-active'
+    // ),
     array(
       'text' => '完了',
       'modifier' => 'is-active'

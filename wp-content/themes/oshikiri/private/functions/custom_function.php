@@ -81,13 +81,13 @@ function filter_catalog_archive( $query ) {
       $categories = get_categories($args);
 
       foreach($categories as $category) {
-        echo '<pre>';
-        print_r($category);
-        echo '</pre>';
+        // echo '<pre>';
+        // print_r($category);
+        // echo '</pre>';
         array_push($categoryIDArray, $category->cat_ID);
       }
 
-      print_r($categoryIDArray);
+      // print_r($categoryIDArray);
 
       $taxquery = array(
         array(
@@ -113,4 +113,25 @@ function filter_catalog_archive( $query ) {
 add_action( 'pre_get_posts', 'filter_catalog_archive' );
 
 
+function get_catalog_option() {
+  $args = array(
+    'orderby'        => 'post_date',
+    'post_type'      => CATALOG_POST_TYPE,
+    'post_status'    => 'publish',
+    'order'          => 'DESC',
+  );
 
+  $catalogs = new WP_Query( $args );
+
+  if($catalogs->have_posts()) :
+    $html = '';
+    while($catalogs->have_posts()): $catalogs->the_post();
+      $html .= "<option value=". get_the_title() .">". get_the_title() ."</option>";
+    endwhile;
+    wp_reset_postdata();
+  endif;
+
+  return $html;
+
+}
+add_shortcode('get_catalog_option', 'get_catalog_option');
