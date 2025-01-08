@@ -48,8 +48,8 @@
       'tel' => '0466-44-6011',
       'fax' => '0466-44-6969',
       'map_location' => 'https://maps.app.goo.gl/wmaWqLWYFD6XhouF8',
-      'head_office_detail_pc' => resolve_asset_url('/images/branch/facility-details.svg'),
-      'head_office_detail_sp' => resolve_asset_url('/images/branch/facility-details-sp.svg'),
+      'head_office_detail_pc' => resolve_asset_url('/images/branch/facility-details-new.svg'),
+      'head_office_detail_sp' => resolve_asset_url('/images/branch/facility-details-sp-new.svg'),
     ),
     array(
       'modifier' => '',

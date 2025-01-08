@@ -327,6 +327,26 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
+    .wpcf7-form-control-wrap {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      white-space: nowrap;
+
+      @include viewport($md) {
+        top: auto;
+        bottom: -18px;
+      }
+    }
+
+    &:has(.wpcf7-not-valid-tip) {
+      margin-bottom: 25px;
+
+      @include viewport($md) {
+        margin-bottom: 35px;
+      }
+    }
   }
 
   &-note {
@@ -374,15 +394,53 @@
       align-items: center;
       justify-content: center;
       gap: 0 10px;
+      position: relative;
+
+      .wpcf7-form-control-wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .wpcf7-not-valid-tip {
+        display: none !important;
+      }
     }
 
     &-checkbox {
-      display: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
 
-      &:checked ~ .contact-agree-label {
+      .wpcf7-checkbox &:checked ~ .contact-agree-label {
         &:before {
           opacity: 1;
         }
+      }
+
+      .wpcf7-list-item-label {
+        display: none;
+      }
+
+      input[type='checkbox'] {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .wpcf7-list-item {
+        width: 100%;
+        height: 100%;
+        display: block;
       }
     }
 
@@ -408,6 +466,12 @@
         rotate: 45deg;
         opacity: 0;
         transition: opacity 200ms $cubic-bezier;
+      }
+
+      &.is-checked {
+        &::before {
+          opacity: 1;
+        }
       }
     }
 
@@ -495,6 +559,13 @@
       color: color(white);
     }
 
+    &-submit[type='submit'] {
+      .submitting & {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
     &-back {
       background-color: color(border);
       flex-direction: row-reverse;
@@ -568,6 +639,19 @@
       visibility: visible;
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+}
+
+.contact-form {
+  #wpcf7cpcnf {
+    opacity: 1;
+    pointer-events: auto;
+
+    table {
+      tr:last-of-type {
+        display: none;
+      }
     }
   }
 }

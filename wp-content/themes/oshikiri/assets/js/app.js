@@ -337,6 +337,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Forms)
 /* harmony export */ });
 function Forms() {
+  var form = document.querySelector('.wpcf7-form');
   var contact = document.querySelector('.contact');
   var submitButton = document.querySelector('.contact-button-submit');
   var confirmButton = document.querySelector('.contact-button-confirm');
@@ -344,28 +345,50 @@ function Forms() {
   var uploadButton = document.querySelectorAll('.contact-upload-button');
   var fileClear = document.querySelectorAll('.js-upload-fileclear');
   var inputFileUpload = document.querySelectorAll('.js-file-upload');
+  var textarea = document.querySelector('.contact-textarea textarea');
   var outputFilenames = document.querySelectorAll('.js-contact-upload-filename');
   var resumeUpload = document.getElementById('resume');
-  var agree = document.querySelector('.contact-agree-checkbox');
+  var agree = document.querySelector('.contact-agree-checkbox input[type="checkbox"]');
+  var agreeLabel = document.querySelector('.contact-agree-label');
+  var isCheck = false;
+  var requiredInputs = document.querySelectorAll('input[aria-required="true"], textarea[aria-required="true"], select[aria-required="true"]');
+  function preventEnterSubmission(e) {
+    if (e.key === 'Enter') {
+      if (!isCheck) e.preventDefault();
+    }
+  }
+  if (form) {
+    form.addEventListener('keydown', preventEnterSubmission);
+    if (textarea) {
+      textarea.addEventListener('keydown', function (e) {
+        if (e.which == 13) {
+          e.stopPropagation();
+        }
+      });
+    }
+  }
+  function checkRequiredFields() {
+    var allRequiredFilled = Array.from(requiredInputs).every(function (input) {
+      if (input.tagName === 'SELECT') {
+        return input.value.trim() !== '';
+      }
+      return input.value.trim() !== '';
+    });
+    if (allRequiredFilled && isCheck) {
+      submitButton.classList.remove('is-disabled');
+    } else {
+      submitButton === null || submitButton === void 0 ? void 0 : submitButton.classList.add('is-disabled');
+      // form.addEventListener('keydown', preventEnterSubmission);
+    }
+  }
+
   if (contact) {
-    // uploadButton.forEach((el, index) => {
-    //   el.addEventListener("click", (e) => {
-    //     fileUploads[index].click();
-    //   });
-    // });
-
-    // resumeUpload.addEventListener("change", function (e) {
-    //   console.log("change");
-    // });
-
     inputFileUpload.forEach(function (el, index) {
       el.addEventListener('change', function (e) {
-        console.log('e', e);
         var file = e.target.files[0];
         if (file) {
           fileClear[index].classList.add('is-show');
         }
-        console.log('file', file);
         outputFilenames[index].innerHTML = file.name;
       });
       fileClear[index].addEventListener('click', function () {
@@ -374,33 +397,26 @@ function Forms() {
         outputFilenames[index].innerHTML = '';
       });
     });
-
-    // fileUploads.forEach((el, index) => {
-    //   const inputName = el.getAttribute("name");
-    //   el.addEventListener("change", (e) => {
-    //     let filename = e.target.files[0].name;
-    //     outputFilenames[index].innerHTML = filename;
-    //   });
-
-    //   fileClear[index].document
-    //     .querySelector(`[data-mwform-file-delete="${inputName}"]`)
-    //     .addEventListener("click", (e) => {
-    //       outputFilenames[index].innerHTML = "";
-    //       el.click();
-    //     });
-    // });
-
-    if (!!submitButton) {
-      agree.addEventListener('click', function (e) {
-        agree.checked ? submitButton.classList.remove('is-disabled') : submitButton.classList.add('is-disabled');
-      });
-    }
     if (!!confirmButton) {
-      console.log('test');
       agree.addEventListener('click', function (e) {
         agree.checked ? confirmButton.classList.remove('is-disabled') : confirmButton.classList.add('is-disabled');
       });
     }
+    requiredInputs.forEach(function (field) {
+      field.addEventListener('input', checkRequiredFields);
+    });
+    if (!!submitButton) {
+      agree.addEventListener('click', function (e) {
+        if (agree.checked) {
+          agreeLabel.classList.add('is-checked');
+        } else {
+          agreeLabel.classList.remove('is-checked');
+        }
+        agree.checked ? isCheck = true : isCheck = false;
+        checkRequiredFields();
+      });
+    }
+    checkRequiredFields();
   }
 }
 
